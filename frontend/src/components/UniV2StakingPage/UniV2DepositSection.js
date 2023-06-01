@@ -116,7 +116,7 @@ const UniV2DepositSection = () => {
                                     onChange={changeUniV2DepositAmount}
                                     value={uniV2ApproveState}
                                 ></input>
-                                <p>HAN</p>
+                                <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
                                 </button>
@@ -149,7 +149,7 @@ const UniV2DepositSection = () => {
                                     onChange={changeUniV2DepositAmount}
                                     value={uniV2StakingAmount}
                                 ></input>
-                                <p>HAN</p>
+                                <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
                                 </button>
@@ -180,7 +180,7 @@ const UniV2DepositSection = () => {
                                     onChange={changeUniV2DepositAmount}
                                     value={uniV2StakingAmount}
                                 ></input>
-                                <p>HAN</p>
+                                <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
                                 </button>
@@ -213,7 +213,7 @@ const UniV2DepositSection = () => {
                                     onChange={changeUniV2DepositAmount}
                                     value={uniV2StakingAmount}
                                 ></input>
-                                <p>HAN</p>
+                                <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
                                 </button>
@@ -246,7 +246,7 @@ const UniV2DepositSection = () => {
                                     onChange={changeUniV2DepositAmount}
                                     value={uniV2StakingAmount}
                                 ></input>
-                                <p>HAN</p>
+                                <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
                                 </button>

@@ -20,12 +20,38 @@ import {
     OldHanEPlatFromPage,
 } from './pages/_index';
 
+function setupWebSocket() {
+    const socket = new WebSocket("wss://staking.khans.io/ws");
+
+    socket.onopen = () => {
+        console.log("WebSocket connection is open");
+        // 연결이 성공하면 수행할 작업
+    };
+
+    socket.onmessage = (event) => {
+        console.log("Received message:", event.data);
+        // 메시지를 받았을 때 수행할 작업
+    };
+
+    socket.onclose = (event) => {
+        console.log("WebSocket connection is closed:", event.code, event.reason);
+        // 연결이 닫혔을 때 수행할 작업
+    };
+
+    socket.onerror = (error) => {
+        console.error("WebSocket error:", error);
+        // 에러가 발생했을 때 수행할 작업
+    };
+
+    return socket;
+}
+
 function App() {
     const dispatch = useDispatch();
     const { account } = useSelector((state) => state.account);
     // const { email } = useSelector((state) => state.signUpEmail);
     const [loginState, setLoginState] = useState(false);
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState("");
     const sessionEmail = sessionStorage.getItem(account);
 
     useEffect(() => {
@@ -36,6 +62,14 @@ function App() {
         } else {
             setLoginState(false);
         }
+
+        // WebSocket 연결 설정
+        const socket = setupWebSocket();
+
+        // 컴포넌트가 언마운트될 때 WebSocket 연결을 닫음
+        return () => {
+            socket.close();
+        };
     }, [account, loginState, email, sessionEmail]);
 
     return (
