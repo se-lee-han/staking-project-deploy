@@ -89,7 +89,7 @@ const USDCAirDropSection = () => {
                         <div className="airDrop-USDC-TimeStampInfo">
                             <a className="USDC-DayDate">{claimUsdcDayDate}D</a>
                             <a className="USDC-HoursDate">{claimUsdcHoursDate}H</a>
-                            <a className="USDC-MinDate">{claimUsdcMinDate}</a>
+                            <a className="USDC-MinDate">{claimUsdcMinDate}M</a>
                             {/* <a> */}
                             <FiRefreshCcw
                                 className="airDrop-USDC-ReFreshTimeStamp"

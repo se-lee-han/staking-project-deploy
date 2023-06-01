@@ -76,16 +76,15 @@ const UniV2RewardSection = () => {
                     <p>
                         Estimated Interest : {uniV2RewardView}
                         <FiRefreshCcw className="uniV2-Staking-Reward-RefreshIcon" onClick={changeUsdcRakis6RewardState} />
-                        HAN
+                        HANeP
                     </p>
                 </div>
                 <div className="uniV2-Staking-Reward-AccSection">
-                    <p>Accumulated Interest : {uniV2StakedunclaimedReward} HAN</p>
+                    <p>Accumulated Interest : {uniV2StakedunclaimedReward} HANeP</p>
                 </div>
                 <div className="uniV2-Staking-Reward-InterSection">
-                    <p>Rewarded Interest : {usdcRakis6StakedrewardReleased} HAN </p>
+                    <p>Rewarded Interest : {usdcRakis6StakedrewardReleased} HANeP</p>
                 </div>
-
                 {/* 리워드 안될때 상태 추가 */}
 
                 <div className="uniV2-Staking-Rewards-ClaimBtnSection">
