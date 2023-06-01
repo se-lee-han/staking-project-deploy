@@ -1,0 +1,93 @@
+//.
+.airDropSignEmailContinaer {
+    z-index: 50;
+    position: absolute;
+    display: flex;
+    top: 18%;
+    right: 11%;
+}
+
+.airDropSignIn-Email-Section {
+    width: 100%;
+    height: 30px;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #39a2db;
+    // opacity: 0.4;
+    margin-right: 10px;
+}
+
+// .airDropSignIn-BtnSection:hover {
+//     opacity: 0.8;
+// }
+
+.airDropSignIn-Email-Section a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.airDropSignIn-Email-Section a:hover {
+    color: #24b5ee;
+}
+
+.airDropSignInUpContinaer {
+    z-index: 50;
+    position: absolute;
+    display: flex;
+    top: 18%;
+    right: 11%;
+}
+
+.airDropSignIn-BtnSection {
+    width: 80px;
+    height: 30px;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    // opacity: 0.4;
+    margin-right: 10px;
+}
+
+// .airDropSignIn-BtnSection:hover {
+//     opacity: 0.8;
+// }
+
+.airDropSignIn-BtnSection a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.airDropSignIn-BtnSection a:hover {
+    color: #24b5ee;
+}
+
+.airDropSignUp-BtnSection {
+    width: 80px;
+    height: 30px;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #39a2db;
+}
+
+// .airDropSignUp-BtnSection:hover {
+//     opacity: 0.5;
+//     color: black;
+// }
+
+.airDropSignUp-BtnSection a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+// .airDropSignUp-BtnSection a:hover {
+//     color: #0a1126;
+// }

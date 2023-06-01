@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+@charset "utf-8";
+
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  /* -ms-overflow-style: none; */
+  /* height: 100%;
+  width: 100%; */
+  overflow: hidden;
+}
+/* 
+::-webkit-scrollbar {
+  display: none;
+} */
+
+@font-face {
+  font-family: "SCDream1";
+  src: url("./assets/fonts/SCDream1.otf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "SCDream2";
+  src: url("./assets/fonts/SCDream2.otf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "SCDream3";
+  src: url("./assets/fonts/SCDream3.otf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "SCDream4";
+  src: url("./assets/fonts/SCDream4.otf");
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "SCDream5";
+  src: url("./assets/fonts/SCDream5.otf");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "SCDream6";
+  src: url("./assets/fonts/SCDream6.otf");
+}
+
+@font-face {
+  font-family: "SCDream7";
+  src: url("./assets/fonts/SCDream7.otf");
+}
+
+@font-face {
+  font-family: "SCDream8";
+  src: url("./assets/fonts/SCDream8.otf");
+}
+
+@font-face {
+  font-family: "SCDream9";
+  src: url("./assets/fonts/SCDream9.otf");
 }
