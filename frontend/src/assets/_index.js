@@ -1,35 +1,49 @@
-import ArrakisWhiteIcon from "./images/arrakis_logo01.png";
 import ArrakisBlackIcon from "./images/arrakis_logo02.png";
 import StakingBg1 from "./images/bg1.jpg";
 import StakingBg2 from "./images/bg1.jpg";
 import StakingBg3 from "./images/bg1.jpg";
-import OptimismWhiteLogo from "./images/optimism_logo01.png";
 import OptimismRedLogo from "./images/optimism_logo02.png";
-import HanGoldLogo from "./images/hanchain_logo.png";
 import HanLogo from "./images/hanchain_logo01.png";
-import HanWhiteLogo from "./images/hanchain_logo02.png";
 import SheepooriLogo from "./images/logo_sheepoori.svg";
-import MusiLogoXBack from "./images/musiLogoXBack.png";
-import MunieTestImg from "./images/munietest.jfif";
+import MusiLogoXBack from "./images/MusiKhanLogo.png";
 import USDCLogo from "./images/USDClogo.png";
-import UniV2Logo1 from "./images/UniV2Logo1.jpg";
-import UniV2Logo2 from "./images/UniV2Logo2.jpg";
+import MunieLogoBackX from "./images/MunieLogoBackX.png";
+import SprLogoBackX from "./images/SheepooriLogoBackX.png";
+import WhiteUniLogo from "./images/mainImg/unilogo1.png";
+import MainHanLogo from "./images/mainImg/MainHanLogo.png";
+import MainFacebookLogo from "./images/mainImg/facebook_logo.png";
+import MainTwitterLogo from "./images/mainImg/Twitter_logo.png";
+import MainDiscordLogo from "./images/mainImg/discord_logo.png";
+import MainTelegramLogo from "./images/mainImg/Telegram_logo.png";
+import MainMediumLogo from "./images/mainImg/medium_logo.png";
+import MainGithubLogo from "./images/mainImg/github_logo.png";
+import MainOffLogo from "./images/mainImg/off_logo.png";
+import MainAdLogo from "./images/mainImg/ad_logo.png";
+import MainEnterLogo from "./images/mainImg/enter_logo.png";
+import MainArrakisLogo from "./images/mainImg/Arrakis-Main-Icon.png";
 
 export {
-    ArrakisWhiteIcon,
     ArrakisBlackIcon,
     StakingBg1,
     StakingBg2,
     StakingBg3,
-    OptimismWhiteLogo,
     OptimismRedLogo,
-    HanGoldLogo,
     HanLogo,
-    HanWhiteLogo,
     SheepooriLogo,
     MusiLogoXBack,
-    MunieTestImg,
     USDCLogo,
-    UniV2Logo1,
-    UniV2Logo2,
+    MunieLogoBackX,
+    SprLogoBackX,
+    WhiteUniLogo,
+    MainHanLogo,
+    MainFacebookLogo,
+    MainTwitterLogo,
+    MainDiscordLogo,
+    MainTelegramLogo,
+    MainMediumLogo,
+    MainGithubLogo,
+    MainOffLogo,
+    MainAdLogo,
+    MainEnterLogo,
+    MainArrakisLogo,
 };
