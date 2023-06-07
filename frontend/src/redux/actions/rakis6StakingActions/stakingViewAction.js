@@ -1,4 +1,4 @@
-import { StakingContract, StakingTokenContract, RewardTokenContract, StakingAddress, WETHContract, ArrakisContract } from "../../../config/StakingRakis6Config";
+import { StakingContract, StakingTokenContract, RewardTokenContract, StakingAddress, WETHContract, ArrakisContract, web3 } from "../../../config/StakingRakis6Config";
 // import {
 //     StakingContract,
 //     StakingTokenContract,
@@ -7,7 +7,6 @@ import { StakingContract, StakingTokenContract, RewardTokenContract, StakingAddr
 //     WETHContract,
 //     ArrakisContract,
 // } from "../../../config/StakingRakis6ConfigTest";
-import web3 from "web3";
 import BigNumber from "bignumber.js";
 
 function stakingViewAct(account) {
@@ -15,22 +14,22 @@ function stakingViewAct(account) {
 
     return async (dispatch) => {
         try {
-            if (account !== "") {
+            if (account) {
                 const getAmountApi = await StakingContract.methods.getAmount(account).call();
                 // console.log(getAmountApi);
 
-                const getRewardReleasedApi = await StakingContract.methods.getRewardReleased(account).call();
+                // const getRewardReleasedApi = await StakingContract.methods.getRewardReleased(account).call();
 
-                const getBalanceApi = await StakingContract.methods.getBalance(account).call();
+                // const getBalanceApi = await StakingContract.methods.getBalance(account).call();
 
-                const possibleRewardTokenApi = await RewardTokenContract.methods.balanceOf(StakingAddress).call();
+                // const possibleRewardTokenApi = await RewardTokenContract.methods.balanceOf(StakingAddress).call();
 
                 // 스테이킹 할 수 있는 토큰
                 const stakingTokenBalanceApi = await StakingTokenContract.methods.balanceOf(account).call();
                 // console.log("Available", typeof stakingTokenBalanceApi);
                 // const allowanceRakis6Api = await StakingTokenContract.methods.allowance(account, StakingAddress).call();
 
-                const rewardTokenBalanceApi = await RewardTokenContract.methods.balanceOf(account).call();
+                // const rewardTokenBalanceApi = await RewardTokenContract.methods.balanceOf(account).call();
 
                 const hanTokenPerLpTokenApi = await StakingContract.methods.hanTokenPerLpToken().call();
 
@@ -64,10 +63,7 @@ function stakingViewAct(account) {
                 // // // // // 2항
                 const AmountOfLpTokenWorth1Han = getMintAmountsApi.mintAmount / 2;
 
-                const HanQuantityLpQuantityPerYear1HanValueApi = web3.utils.fromWei(
-                    String(0.000000274959775134 * 60 * 60 * 24 * 365 * AmountOfLpTokenWorth1Han),
-                    "ether"
-                );
+                const HanQuantityLpQuantityPerYear1HanValueApi = web3.utils.fromWei(String(0.000000274959775134 * 60 * 60 * 24 * 365 * AmountOfLpTokenWorth1Han), "ether");
 
                 const canAmountStakeApi = tokenVolumeFromWei - totalSupplyFromWei;
                 // console.log("canAmount", canAmountStakeApi);
@@ -125,6 +121,8 @@ function stakingViewAct(account) {
                         HanQuantityLpQuantityPerYear1HanValue: (HanQuantityLpQuantityPerYear1HanValue * 100).toFixed(2),
                     },
                 });
+            } else {
+                return null;
             }
         } catch (error) {
             console.error(error);

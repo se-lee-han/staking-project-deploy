@@ -12,8 +12,8 @@ import {
     BeforeL2MintSection,
     BeforeL2RewardSection,
     BeforeL2SwapSection,
-    BeforePrivateUniDepositSection ,
-    BeforePrivateUniRewardSection ,
+    BeforePrivateUniDepositSection,
+    BeforePrivateUniRewardSection,
     BeforePrivateUniWithdrawSection,
     BeforeMunieAirDropSection,
     BeforeUSDCAirDropSection,
@@ -188,6 +188,9 @@ const BeforeLoginPlatFromPage = () => {
 
     return (
         <div className="platFromPageMainContainer">
+            <div className="platFromPageNewChange">
+                This is the formally Staking. Old Version is live at <a href="/hanep/old">staking.khans.io/hanep/old</a>
+            </div>
             <div className="platFromPageLogoContainer">
                 <img className="platFromTopLogo" src={HanLogo} alt="HanLogo" />
                 <a>HAN e-Platform</a>

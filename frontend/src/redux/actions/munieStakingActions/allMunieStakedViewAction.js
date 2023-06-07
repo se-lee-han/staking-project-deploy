@@ -1,10 +1,9 @@
-import { MunieTokenAddress, MunieStakingContract } from "../../../config/MunieConfig";
-// import { MunieStakingContract, MunieTokenAddress } from "../../../config/MunieConfigTest";
 import axios from "axios";
+import { MunieV2StakingContract, MunieTokenAddress } from "../../../config/new/StakingMunieV2Config";
 function allMunieStakedViewAct() {
     return async (dispatch) => {
         try {
-            const getTotalMunieTokenIdsApi = await MunieStakingContract.methods.getTotalTokenIds().call();
+            const getTotalMunieTokenIdsApi = await MunieV2StakingContract.methods.getTotalTokenIds().call();
 
             // const getMunieStakingTokenImgVideoUrlToBack = await axios.get(
             //     `https://alchemyapi.khans.io/alchemy/getNFTImages?network=eth&contractAddress=${MunieTokenAddress}&tokenIds=${getTotalMunieTokenIdsApi}`
@@ -14,9 +13,7 @@ function allMunieStakedViewAct() {
             //     console.log("No Munie tokens staked.");
             //     return; // 또는 예외 처리를 위해 throw 문을 사용할 수도 있습니다.
             // }
-            const getMunieStakingTokenImgVideoUrlToBack = await axios.get(
-                `https://alchemyapi.khans.io/alchemy/getNFTImages?contractAddress=${MunieTokenAddress}&tokenIds=${getTotalMunieTokenIdsApi}`
-            );
+            const getMunieStakingTokenImgVideoUrlToBack = await axios.get(`https://alchemyapi.khans.io/alchemy/getNFTImages?contractAddress=${MunieTokenAddress}&tokenIds=${getTotalMunieTokenIdsApi}`);
 
             // console.log(getMunieStakingTokenImgVideoUrlToBack);
 

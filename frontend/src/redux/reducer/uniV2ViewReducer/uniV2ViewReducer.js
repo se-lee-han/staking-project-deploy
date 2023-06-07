@@ -7,6 +7,7 @@ let initialState = {
     successUniV2Approve: false,
     uniV2ApproveState: "",
     uniV2RewardView: "",
+    stakingUniV2APR: 0,
 };
 
 function uniV2ViewReducer(state = initialState, action) {
@@ -38,6 +39,11 @@ function uniV2ViewReducer(state = initialState, action) {
             return {
                 ...state,
                 uniV2RewardView: payload.uniV2RewardView,
+            };
+        case "UNIV2_STAKING_APR":
+            return {
+                ...state,
+                stakingUniV2APR: payload.stakingUniV2APR,
             };
 
         default:

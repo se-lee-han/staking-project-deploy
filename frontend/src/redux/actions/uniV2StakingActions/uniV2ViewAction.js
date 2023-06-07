@@ -1,5 +1,4 @@
-import Web3 from "web3";
-import { StakingTokenContract, StakingUniV2Contract } from "../../../config/new/StakingUniV2Config";
+import { StakingTokenContract, StakingUniV2Contract, web3 } from "../../../config/new/StakingUniV2Config";
 // import { StakingTokenContract, StakingRakis6Contract } from "../../../config/new/StakingRakis6ConfigTest";
 
 function uniV2ViewAct(account) {
@@ -8,18 +7,18 @@ function uniV2ViewAct(account) {
             if (account) {
                 const uniV2StakingTokenBalanceApi = await StakingTokenContract.methods.balanceOf(account).call();
 
-                const uniV2StakingTokenBalance = Web3.utils.fromWei(String(uniV2StakingTokenBalanceApi), "ether");
+                const uniV2StakingTokenBalance = web3.utils.fromWei(String(uniV2StakingTokenBalanceApi), "ether");
 
                 const uniV2StakerApi = await StakingUniV2Contract.methods.stakers(account).call();
 
-                const uniV2StakedAmount = Web3.utils.fromWei(String(uniV2StakerApi.amount), "ether");
-                const uniV2StakedrewardReleased = Web3.utils.fromWei(String(uniV2StakerApi.rewardReleased), "ether");
-                const uniV2StakedunclaimedReward = Web3.utils.fromWei(String(uniV2StakerApi.unclaimedReward), "ether");
+                const uniV2StakedAmount = web3.utils.fromWei(String(uniV2StakerApi.amount), "ether");
+                const uniV2StakedrewardReleased = web3.utils.fromWei(String(uniV2StakerApi.rewardReleased), "ether");
+                const uniV2StakedunclaimedReward = web3.utils.fromWei(String(uniV2StakerApi.unclaimedReward), "ether");
 
                 // 컨트랙트에 유저들이 스테이킹한 토큰 양
                 const uniV2TotalSupplyApi = await StakingUniV2Contract.methods.totalSupply().call();
 
-                const uniV2TotalSupply = Web3.utils.fromWei(String(uniV2TotalSupplyApi), "ether");
+                const uniV2TotalSupply = web3.utils.fromWei(String(uniV2TotalSupplyApi), "ether");
 
                 dispatch({
                     type: "UNIV2_STAKING_VIEW_SUCCESS",

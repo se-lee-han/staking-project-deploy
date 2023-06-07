@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { L2WithdrawTokenListAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2WithdrawTokenListAction";
 import { L2WithdrawViewAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2WithdrawViewAction";
-import { MusiKhanLogo } from "../../../../../img/_index";
+import { MusiLogoXBack } from "../../../../../assets/_index";
 
 const L2WithdrawModal = (props) => {
     const dispatch = useDispatch();
@@ -43,21 +43,16 @@ const L2WithdrawModal = (props) => {
                     <div className="withdrawL2-ModalTokenInfoContainer">
                         <div className="withdrawL2-ModalTokensSearchInputSection">
                             <FaSearch className="withdrawL2-ModalSearchIcon" />
-                            <input
-                                placeholder="Search name or symbol"
-                                className="withdrawL2-ModalTokensSearchInput"
-                                onChange={(e) => setSearchWithdrawTokenData(e.target.value.toLowerCase())}
-                            ></input>
+                            <input placeholder="Search name or symbol" className="withdrawL2-ModalTokensSearchInput" onChange={(e) => setSearchWithdrawTokenData(e.target.value.toLowerCase())}></input>
                         </div>
                         <div className="withdrawL2-ModalTokenListSection">
                             <ul className="withdrawL2-TokenList_PickerToken">
                                 {withdrawTokenList
                                     .filter(
                                         (withdrawTokenList) =>
-                                            withdrawTokenList.name.toLowerCase().includes(searchWithdrawTokenData) ||
-                                            withdrawTokenList.symbol.toLowerCase().includes(searchWithdrawTokenData)
+                                            withdrawTokenList.name.toLowerCase().includes(searchWithdrawTokenData) || withdrawTokenList.symbol.toLowerCase().includes(searchWithdrawTokenData)
                                     )
-                                    .map((withdrawTokenList, index) => (
+                                    ?.map((withdrawTokenList, index) => (
                                         <li
                                             key={index}
                                             onClick={() => {
@@ -66,7 +61,7 @@ const L2WithdrawModal = (props) => {
                                             }}
                                         >
                                             <div className="withdrawL2-TokenListTokenImgTextSection">
-                                                <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                                <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                                 <div className="withdrawL2-TokenListNameSymbolSection">
                                                     <div className="withdrawL2-TokenListNameSection">
                                                         <h2>{withdrawTokenList.name}</h2>

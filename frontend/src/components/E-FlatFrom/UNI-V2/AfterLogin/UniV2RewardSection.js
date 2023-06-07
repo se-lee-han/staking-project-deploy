@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { networksAction } from "../../../../redux/actions/networksAction";
 import "./UniV2RewardSection.scss";
-import { HanLogo, USDCLogo } from "../../../../assets/_index";
+import { HanLogo } from "../../../../assets/_index";
 import { FiRefreshCcw } from "react-icons/fi";
 
 const UniV2RewardSection = () => {
@@ -80,14 +80,14 @@ const UniV2RewardSection = () => {
                     <p>
                         Estimated Interest :
                         <FiRefreshCcw className="eplat-UniV2-Reward-RefreshIcon" />
-                        HAN
+                        HANeP
                     </p>
                 </div>
                 {/* <div className="eplat-UniV2-Reward-AccSection">
     <p>Accumulated Interest : {hanRewardPerSecondView} HAN</p>
 </div> */}
                 <div className="eplat-UniV2-Reward-InterSection">
-                    <p>Rewarded Interest : HAN </p>
+                    <p>Rewarded Interest : HANeP </p>
                 </div>
 
                 {/* 리워드 안될때 상태 추가 */}
@@ -106,12 +106,7 @@ const UniV2RewardSection = () => {
                 {/* )} */}
             </>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <img src={HanLogo} onClick={addRewardToken} className="hanIcon" alt="HanIcon" />
             </div>
         </div>

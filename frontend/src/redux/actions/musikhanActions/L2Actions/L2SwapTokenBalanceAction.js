@@ -1,4 +1,4 @@
-import Web3 from "web3";
+import { web3 } from "../../../../config/MusikhanConfig";
 
 function L2SwapTokenBalanceAct(account, L2SwapContract) {
     return async (dispatch) => {
@@ -7,7 +7,7 @@ function L2SwapTokenBalanceAct(account, L2SwapContract) {
             dispatch({
                 type: "L2_SWAP_TOKEN_BALANCE",
                 payload: {
-                    L2SwapTokenBalance: Web3.utils.fromWei(String(L2SwapTokenBalanceApi), "ether"),
+                    L2SwapTokenBalance: web3.utils.fromWei(String(L2SwapTokenBalanceApi), "ether"),
                 },
             });
         } catch (error) {

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { networksAction } from "../../../../redux/actions/networksAction";
-import Swal from "sweetalert2";
 import "./PrivateUniWithdrawSection.scss";
-import { USDCLogo } from "../../../../assets/_index";
 import { GiClick } from "react-icons/gi";
 import { FiRefreshCcw } from "react-icons/fi";
 import PrivateUniWithdrawModal from "./Modal/PrivateUniWithdrawModal";
-import {  UniV2PrivateWithdrawListAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateWithdrawListAction";
-import {  UniV2PrivateRemainingDurationAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateRemainingDurationAction";
-import {  UniV2PrivateUnStakeAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateUnStakeAction";
+import { UniV2PrivateWithdrawListAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateWithdrawListAction";
+import { UniV2PrivateRemainingDurationAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateRemainingDurationAction";
+import { UniV2PrivateUnStakeAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateUnStakeAction";
 // import { HanEpUnStakeAction } from "../../../../redux/actions/airdropActions/HanEpActions/HanEpUnStakeAction";
 
 const PrivateUniWithdrawSection = () => {
@@ -18,8 +16,8 @@ const PrivateUniWithdrawSection = () => {
     const [hanEpWithdrawModal, setHanEpWithdrawModal] = useState(false);
     const { account } = useSelector((state) => state.account);
 
-    const { privateUniV2TotalStaked, totalUniV2PrivateStakedAmount, privateWithdrawAmountToModal, privateWithdrawIndex } = useSelector((state) => state.hanEpView);
-    const { prUniV2ClaimDayDate, prUniV2ClaimHoursDate, prUniV2ClaimMinDate, prUniV2ClaimSecDate } = useSelector((state) => state.hanEpRemainingDuration);
+    const { privateUniV2TotalStaked, totalUniV2PrivateStakedAmount, privateWithdrawAmountToModal, privateWithdrawIndex, stakingPrUniV2APR } = useSelector((state) => state.UniV2PrivateView);
+    const { prUniV2ClaimDayDate, prUniV2ClaimHoursDate, prUniV2ClaimMinDate, prUniV2ClaimSecDate } = useSelector((state) => state.UniV2PrRemainingDuration);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -72,7 +70,6 @@ const PrivateUniWithdrawSection = () => {
         dispatch(UniV2PrivateUnStakeAction.UniV2PrivateUnStakeAct(account, privateWithdrawIndex));
     };
 
-
     useEffect(() => {
         dispatch(UniV2PrivateWithdrawListAction.UniV2PrivateWithdrawListAct(account));
     }, [account]);
@@ -104,15 +101,15 @@ const PrivateUniWithdrawSection = () => {
             </>
             <div className="eplat-PrUni-Withdraw-APR-Container">
                 <div className="eplat-PrUni-Withdraw-APR-Title">
-                    <a>0.000694953927154714 HANeP</a>
+                    <a>APR</a>
                 </div>
                 <div className="eplat-PrUni-Withdraw-APR-Info">
-                    <a>for each HANeP per second</a>
+                    <a>{stakingPrUniV2APR}%</a>
                 </div>
             </div>
             <div className="eplat-PrUni-Withdraw-AmountSection">
                 <input type="number" step="0.00000000000001" id="maxPrivateUnstakeAmount" placeholder="0" defaultValue={privateWithdrawAmountToModal}></input>
-                <p>RAKIS-6</p>
+                <p>UNI-V2</p>
                 {/* <button className="eplat-PrUni-Withdraw-AmountMaxBtn">Max</button> */}
                 <button className="eplat-PrUni-Select-Token-Btn" onClick={openHanEpWithdrawModal}>
                     SELECT
@@ -164,12 +161,7 @@ const PrivateUniWithdrawSection = () => {
                 )}
             </div>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <div className="HanEpTxtContinaer">
                     <span className="HanEpTxt" onClick={addRewardToken}>
                         HANeP

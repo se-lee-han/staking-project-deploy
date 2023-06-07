@@ -90,7 +90,7 @@ const BeforeUniV2WithdrawSection = () => {
             </div>
             <div className="eplat-UniV2-Withdraw-AmountSection">
                 <input type="number" step="0.00000000000001" id="maxUnstakeAmount" placeholder="0" readOnly></input>
-                <p>RAKIS-6</p>
+                <p>HANeP</p>
                 {/* <button className="eplat-UniV2-Withdraw-AmountMaxBtn">Max</button> */}
                 <button className="eplat-UniV2-Select-Token-Btn" onClick={loginAlert}>
                     SELECT
@@ -131,12 +131,7 @@ UNSTAKE
                 </div>
             </div>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <img src={USDCLogo} onClick={addRewardToken} className="hanIcon" alt="HanIcon" />
             </div>
         </div>

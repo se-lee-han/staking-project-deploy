@@ -23,9 +23,9 @@ function uniV2ApproveAct(account, hanChainStakingNum) {
                         // reverseButtons: true,
                     });
                     dispatch({
-                        type: "USDC_RAKIS6_APPORVE_SUCCESS",
+                        type: "UNIV2_STAKING_APPORVE_SUCCESS",
                         payload: {
-                            successUsdcRakis6Approve: true,
+                            successUniV2Approve: true,
                         },
                     });
                 }

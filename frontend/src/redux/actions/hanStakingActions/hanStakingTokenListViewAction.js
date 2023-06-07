@@ -1,5 +1,4 @@
-import Web3 from "web3";
-import { HanBonusStakingContract } from "../../../config/StakingHanChain";
+import { HanBonusStakingContract, web3 } from "../../../config/StakingHanChain";
 // import { StakingHanChainContract } from "../../../config/StakingHanchainTest";
 
 function hanStakingTokenListViewAct(account) {
@@ -24,7 +23,7 @@ function hanStakingTokenListViewAct(account) {
                     const hanClaimYearsDate = newDate.getFullYear().toString().substr(2, 4);
                     const hanClaimDayDate = newDate.getDate();
                     const hanClaimHoursDate = newDate.getHours();
-                    const hanClaimAmount = Web3.utils.fromWei(String(getHanStakerDataArray[i][0]), "ether");
+                    const hanClaimAmount = web3.utils.fromWei(String(getHanStakerDataArray[i][0]), "ether");
                     getHanStakerDataArray[i].splice(4, 1, hanClaimYearsDate);
                     getHanStakerDataArray[i].splice(5, 1, hanClaimDayDate);
                     getHanStakerDataArray[i].splice(6, 1, hanClaimHoursDate);

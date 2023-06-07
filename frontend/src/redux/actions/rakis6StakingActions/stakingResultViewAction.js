@@ -1,6 +1,5 @@
-import { StakingContract } from "../../../config/StakingRakis6Config";
+import { StakingContract, web3 } from "../../../config/StakingRakis6Config";
 // import { StakingContract } from "../../../config/StakingRakis6ConfigTest";
-import web3 from "web3";
 import BigNumber from "bignumber.js";
 
 function stakingResultViewAct(account) {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { MusiKhanLogo } from "../../../../img/_index";
 import Loading from "../../../SprStakingPage/Loading";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Swal from "sweetalert2";
+import { MusiLogoXBack } from "../../../../assets/_index";
 
 const BeforeWithdrawSection = () => {
     const [checkChainId, setCheckChainId] = useState("");
@@ -44,7 +44,7 @@ const BeforeWithdrawSection = () => {
                             <input type="number" placeholder="0.0" min="0" step="0.000000000000001"></input>
                             <div className="musiStakingL2WithdrawPickerSection">
                                 <button className="musiStakingL2WithdrawPicker_SelectBtn" onClick={loginAlert}>
-                                    <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                    <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                     <MdKeyboardArrowDown size="15" />
                                 </button>
                             </div>

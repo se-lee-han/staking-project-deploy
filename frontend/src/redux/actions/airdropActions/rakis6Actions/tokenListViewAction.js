@@ -1,6 +1,5 @@
-import { PrivateStakingContract } from '../../../../config/PrivateStakingRakis6Config';
+import { PrivateStakingContract, web3 } from "../../../../config/PrivateStakingRakis6Config";
 // import { PrivateStakingContract } from "../../../../config/PrivateStakingRakis6ConfigTest";
-import Web3 from 'web3';
 
 function tokenListViewAct(account) {
     return async (dispatch) => {
@@ -22,7 +21,7 @@ function tokenListViewAct(account) {
                         const rakis6ClaimYearsDate = newDate.getFullYear().toString().substr(2, 4);
                         const rakis6ClaimDayDate = newDate.getDate();
                         const rakis6ClaimHoursDate = newDate.getHours();
-                        const rakis6ClaimAmount = Web3.utils.fromWei(String(stakerDataArray[i][0]), 'ether');
+                        const rakis6ClaimAmount = web3.utils.fromWei(String(stakerDataArray[i][0]), "ether");
                         stakerDataArray[i].splice(5, 1, rakis6ClaimYearsDate);
                         stakerDataArray[i].splice(6, 1, rakis6ClaimDayDate);
                         stakerDataArray[i].splice(7, 1, rakis6ClaimHoursDate);
@@ -31,7 +30,7 @@ function tokenListViewAct(account) {
                 }
 
                 dispatch({
-                    type: 'WITHDRAW_TOKEN_LIST',
+                    type: "WITHDRAW_TOKEN_LIST",
                     payload: {
                         stakerDataArray: stakerDataArray,
                     },

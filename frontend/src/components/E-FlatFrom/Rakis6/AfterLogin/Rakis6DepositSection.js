@@ -22,9 +22,7 @@ const Rakis6DepositSection = () => {
     const [rakis6StakingAmount, setRakis6StakingAmount] = useState("");
     const { account } = useSelector((state) => state.account);
 
-    const { rakis6StakingBalanceOf, canStakedQuatoAmount, allowance, successRakis6Apporve, HanQuantityLpQuantityPerYear1HanValue } = useSelector(
-        (state) => state.rakis6AirDropView
-    );
+    const { rakis6StakingBalanceOf, canStakedQuatoAmount, allowance, successRakis6Apporve, HanQuantityLpQuantityPerYear1HanValue } = useSelector((state) => state.rakis6AirDropView);
 
     const { rakis6TotalRewardAmount } = useSelector((state) => state.rakis6AirDropReward);
 
@@ -161,37 +159,180 @@ const Rakis6DepositSection = () => {
                     <p>Available Quota : {canStakedQuatoAmount}</p>
                 </div>
             </>
-            <div className="rakis6-AirDrop-Deposit-APR-Container">
+            {/* <div className="rakis6-AirDrop-Deposit-APR-Container">
                 <div className="rakis6-AirDrop-Deposit-APR-Title">
                     <a>APR</a>
                 </div>
                 <div className="rakis6-AirDrop-Deposit-APR-Info">
                     <a>{HanQuantityLpQuantityPerYear1HanValue}%</a>
                 </div>
+            </div> */}
+            <div className="stakingMunieAmountContainer">
+                <div className="stakingMunieAmountTitle">
+                    <div className="stakingMunieAmountTxt">
+                        <a>0.000000048445704606 HAN</a>
+                    </div>
+
+                    {/* <div className="tooltip-container">
+                            <i className="info-icon material-icons">
+                                <HelpIcon />
+                            </i>
+                            <div className="tooltip-content">
+                                <span>
+                                    The right to possess digital content forever and get yourself a Sheepoori card -Ms. Caring one of three sheep siblings
+                                    characters from Sewoori Union for AdKhan: Advertising Platform
+                                </span>
+                                <span className="align-right">
+                                    {" "}
+                                    <a href="https://medium.com/@HanIdentity/as-the-second-staking-of-the-hanchain-project-e29da8da25e3" target="_blank">
+                                        Read More
+                                    </a>
+                                </span>
+                            </div>
+                        </div> */}
+                </div>
+                <div className="stakingMunieAmountNum">
+                    <a>for each 1Rakis6 per second</a>
+                </div>
             </div>
             {canStakedQuatoAmount ? (
-                <>
-                    <div className="rakis6-AirDrop-Deposit-TokenBalanceSection">
-                        <p>Available : {rakis6StakingBalanceOf}</p>
-                    </div>
-                    <div className="rakis6-AirDrop-Deposit-AmountSection">
-                        <input
-                            type="number"
-                            step="0.00000000000001"
-                            id="maxRakis6StakeAmount"
-                            placeholder="0"
-                            onChange={changeRakis6DepositAmount}
-                            value={rakis6StakingAmount}
-                        ></input>
-                        <p>RAKIS-6</p>
-                        <button className="rakis6-AirDrop-Deposit-AmountMaxBtn">Max</button>
-                    </div>
-                    <div className="rakis6-AirDrop-DepositStakeBtnSection">
-                        <button className="rakis6-AirDrop-Deposit-EnterBtn" disabled={true}>
-                            COMING SOON
-                        </button>
-                    </div>
-                </>
+                allowance > 0 ? (
+                    <>
+                        <div className="rakis6-AirDrop-Deposit-TokenBalanceSection">
+                            <p>Available : {rakis6StakingBalanceOf}</p>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-StakedAmountSection">
+                            <input type="number" onChange={changeRakis6DepositAmount} step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" value={allowance}></input>
+                            <p>RAKIS-6</p>
+                            <button className="rakis6-AirDrop-Deposit-AmountMaxBtn">Max</button>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-Pswd-Container">
+                            <div className="rakis6-AirDrop-Deposit-Pswd-Section">
+                                <div className="rakis6-AirDrop-Deposit-Pswd-Lock">
+                                    <HiOutlineLockClosed />
+                                </div>
+                                <input
+                                    name="stakingPassword"
+                                    placeholder="Enter Password"
+                                    type={isRevealPwd ? "text" : "password"}
+                                    value={stakingPassword}
+                                    maxLength="4"
+                                    onChange={(e) => setStakingPassword(e.target.value)}
+                                />
+                                <span className="rakis6-AirDrop-Deposit-Pswd-Hide">
+                                    <FaEye
+                                        className="rakis6-AirDrop-Deposit-Pswd-HideIcon"
+                                        title={isRevealPwd ? "Hide password" : "Show password"}
+                                        // src={isRevealPwd ? FaEye : FaEye}
+                                        onClick={() => setIsRevealPwd((prevState) => !prevState)}
+                                    />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="rakis6-AirDrop-DepositStakeBtnSection">
+                            <button className="rakis6-AirDrop-Deposit-CanBtn" onClick={setRakis6Staking}>
+                                STAKE
+                            </button>
+                        </div>
+                    </>
+                ) : rakis6StakingAmount === "" ? (
+                    <>
+                        <div className="rakis6-AirDrop-Deposit-TokenBalanceSection">
+                            <p>Available : {rakis6StakingBalanceOf}</p>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-AmountSection">
+                            <input type="number" step="0.00000000000001" id="maxRakis6StakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
+                            <p>RAKIS-6</p>
+                            <button className="rakis6-AirDrop-Deposit-AmountMaxBtn" onClick={changeMaxDepositAmount}>
+                                Max
+                            </button>
+                        </div>
+                        <div className="rakis6-AirDrop-DepositStakeBtnSection">
+                            <button className="rakis6-AirDrop-Deposit-EnterBtn" onClick={setRakis6Approve}>
+                                ENTER AMOUNT
+                            </button>
+                        </div>
+                    </>
+                ) : rakis6StakingBalanceOf === "0" || rakis6StakingAmount > rakis6StakingBalanceOf ? (
+                    <>
+                        <div className="rakis6-AirDrop-Deposit-TokenBalanceSection">
+                            <p>Available : {rakis6StakingBalanceOf}</p>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-AmountSection">
+                            <input type="number" step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
+                            <p>RAKIS-6</p>
+                            <button className="rakis6-AirDrop-Deposit-AmountMaxBtn" onClick={changeMaxDepositAmount}>
+                                Max
+                            </button>
+                        </div>
+
+                        <div className="rakis6-AirDrop-DepositStakeBtnSection">
+                            <button className="rakis6-AirDrop-Deposit-CantBtn" disabled={true}>
+                                INSUFFICIENT RAKIS-6 BALANCE
+                            </button>
+                        </div>
+                    </>
+                ) : successRakis6Apporve === false ? (
+                    <>
+                        <div className="rakis6-AirDrop-Deposit-TokenBalanceSection">
+                            <p>Available : {rakis6StakingBalanceOf}</p>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-Approve-AmountSection">
+                            <input type="number" step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
+                            <p>RAKIS-6</p>
+                            <button className="rakis6-AirDrop-Deposit-AmountMaxBtn" onClick={changeMaxDepositAmount}>
+                                Max
+                            </button>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-LockedTxt">
+                            <a>Locked 365-Day</a>
+                        </div>
+                        <div className="rakis6-AirDrop-DepositStakeBtnSection">
+                            <button className="rakis6-AirDrop-Deposit-CanBtn" onClick={setRakis6Approve}>
+                                APPROVE
+                            </button>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <div className="rakis6-AirDrop-Deposit-TokenBalanceSection">
+                            <p>Available : {rakis6StakingBalanceOf}</p>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-StakedAmountSection">
+                            <input type="number" step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" value={rakis6StakingAmount}></input>
+                            <p>RAKIS-6</p>
+                            <button className="rakis6-AirDrop-Deposit-AmountMaxBtn">Max</button>
+                        </div>
+                        <div className="rakis6-AirDrop-Deposit-Pswd-Container">
+                            <div className="rakis6-AirDrop-Deposit-Pswd-Section">
+                                <div className="rakis6-AirDrop-Deposit-Pswd-Lock">
+                                    <HiOutlineLockClosed />
+                                </div>
+                                <input
+                                    name="stakingPassword"
+                                    placeholder="Enter Password"
+                                    type={isRevealPwd ? "text" : "password"}
+                                    value={stakingPassword}
+                                    maxLength="3"
+                                    onChange={(e) => setStakingPassword(e.target.value)}
+                                />
+                                <span className="rakis6-AirDrop-Deposit-Pswd-Hide">
+                                    <FaEye
+                                        className="rakis6-AirDrop-Deposit-Pswd-HideIcon"
+                                        title={isRevealPwd ? "Hide password" : "Show password"}
+                                        // src={isRevealPwd ? FaEye : FaEye}
+                                        onClick={() => setIsRevealPwd((prevState) => !prevState)}
+                                    />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="rakis6-AirDrop-DepositStakeBtnSection">
+                            <button className="rakis6-AirDrop-Deposit-CanBtn" onClick={setRakis6Staking}>
+                                STAKE
+                            </button>
+                        </div>
+                    </>
+                )
             ) : (
                 <div className="rakis6-AirDrop-Deposit-LoadingContainer">
                     <Loading />

@@ -18,9 +18,7 @@ const Rakis6WithdrawSection = () => {
     const [checkChainId, setCheckChainId] = useState("");
     const [rakis6WithdrawModal, setRakis6WithdrawModal] = useState(false);
     const { account } = useSelector((state) => state.account);
-    const { canStakedQuatoAmount, rakis6WithdrawAmount, withdrawIndex, HanQuantityLpQuantityPerYear1HanValue } = useSelector(
-        (state) => state.rakis6AirDropView
-    );
+    const { canStakedQuatoAmount, rakis6WithdrawAmount, withdrawIndex, HanQuantityLpQuantityPerYear1HanValue } = useSelector((state) => state.rakis6AirDropView);
     const { rakis6TotalRewardAmount } = useSelector((state) => state.rakis6AirDropReward);
     const { rakis6ClaimDayDate, rakis6ClaimHoursDate, rakis6ClaimMinDate } = useSelector((state) => state.rakis6AirDropTimeStamp);
 
@@ -149,14 +147,42 @@ const Rakis6WithdrawSection = () => {
                     <p>Available Quota : {canStakedQuatoAmount}</p>
                 </div>
             </>
-            <div className="rakis6-AirDrop-Withdraw-APR-Container">
+            <div className="stakingMunieAmountContainer">
+                <div className="stakingMunieAmountTitle">
+                    <div className="stakingMunieAmountTxt">
+                        <a>0.000000048445704606 HAN</a>
+                    </div>
+
+                    {/* <div className="tooltip-container">
+                            <i className="info-icon material-icons">
+                                <HelpIcon />
+                            </i>
+                            <div className="tooltip-content">
+                                <span>
+                                    The right to possess digital content forever and get yourself a Sheepoori card -Ms. Caring one of three sheep siblings
+                                    characters from Sewoori Union for AdKhan: Advertising Platform
+                                </span>
+                                <span className="align-right">
+                                    {" "}
+                                    <a href="https://medium.com/@HanIdentity/as-the-second-staking-of-the-hanchain-project-e29da8da25e3" target="_blank">
+                                        Read More
+                                    </a>
+                                </span>
+                            </div>
+                        </div> */}
+                </div>
+                <div className="stakingMunieAmountNum">
+                    <a>for each 1Rakis6 per second</a>
+                </div>
+            </div>
+            {/* <div className="rakis6-AirDrop-Withdraw-APR-Container">
                 <div className="rakis6-AirDrop-Withdraw-APR-Title">
                     <a>APR</a>
                 </div>
                 <div className="rakis6-AirDrop-Withdraw-APR-Info">
                     <a>{HanQuantityLpQuantityPerYear1HanValue}%</a>
                 </div>
-            </div>
+            </div> */}
             <div className="rakis6-AirDrop-Withdraw-AmountSection">
                 <input type="number" step="0.00000000000001" id="maxUnstakeAmount" placeholder="0" readOnly value={rakis6WithdrawAmount}></input>
                 <p>RAKIS-6</p>
@@ -193,12 +219,19 @@ const Rakis6WithdrawSection = () => {
             UNSTAKE
         </button>
     </div> */}
-
-                <div className="rakis6-AirDrop-Withdraw-Can-BtnSection">
-                    <button className="rakis6-AirDrop-Withdraw-SelectBtn" disabled={true}>
-                        COMING SOON
-                    </button>
-                </div>
+                {rakis6WithdrawAmount === "" ? (
+                    <div className="rakis6-AirDrop-Withdraw-Can-BtnSection">
+                        <button className="rakis6-AirDrop-Withdraw-SelectBtn" disabled={true}>
+                            UNSTAKE
+                        </button>
+                    </div>
+                ) : (
+                    <div className="rakis6-AirDrop-Withdraw-Can-BtnSection">
+                        <button className="rakis6-AirDrop-Withdraw-CanBtn" onClick={setRakis6UnStake}>
+                            UNSTAKE
+                        </button>
+                    </div>
+                )}
             </div>
             <div className="logoContainer">
                 <img src={OptimismRedLogo} onClick={changeOpNetwork} className="opIcon" alt="OptimismIcon" />

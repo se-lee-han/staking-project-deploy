@@ -1,6 +1,5 @@
-import { MusikhanStakingContract } from "../../../../config/MusikhanConfig";
+import { MusikhanStakingContract, web3 } from "../../../../config/MusikhanConfig";
 // import { MusikhanStakingContract } from "../../../../config/MusikhanConfigTest";
-import Web3 from "web3";
 
 function L2RewardResultAct(rewardTimeOfLastUpdate, rewardTokenAmount) {
     return async (dispatch) => {
@@ -13,7 +12,7 @@ function L2RewardResultAct(rewardTimeOfLastUpdate, rewardTokenAmount) {
             const musiResult1 = (musiStakedTime * (rewardTokenAmount * hanTokenPerLpToken)) / 10 ** 18;
             const musiResult2 = Math.floor(musiResult1);
 
-            const musiResultValueApi = Web3.utils.fromWei(String(musiResult2), "ether");
+            const musiResultValueApi = web3.utils.fromWei(String(musiResult2), "ether");
 
             let [musiResultValue] = await Promise.all([musiResultValueApi]);
             dispatch({

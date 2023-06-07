@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { WETHLogo } from "../../../../img/_index";
 import { FiRefreshCcw } from "react-icons/fi";
 import { USDCLogo } from "../../../../assets/_index";
 
 const BeforeWethAirDropSection = () => {
     const [checkChainId, setCheckChainId] = useState("");
-
-    const { getLatestPrice } = useSelector((state) => state.airDropLatestPrice);
 
     useEffect(() => {
         if (window.ethereum?.chainId === "0x1") {

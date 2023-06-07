@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { MusiKhanLogo } from "../../../../img/_index";
 import L2WithdrawModal from "./Modal/L2WithdrawModal";
 import Loading from "../../../SprStakingPage/Loading";
 import { L2MusikhanUnStakingAction } from "../../../../redux/actions/musikhanActions/L2Actions/L2MusikhanUnStakingAction";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./L2WithdrawSection.scss";
+import { MusiLogoXBack } from "../../../../assets/_index";
 
 const L2WithdrawSection = () => {
     const dispatch = useDispatch();
@@ -72,18 +72,10 @@ const L2WithdrawSection = () => {
                                     Max
                                 </button>
                             </div>
-                            <input
-                                type="number"
-                                placeholder="0.0"
-                                min="0"
-                                step="0.000000000000001"
-                                id="maxUnStakingAmount"
-                                onChange={changeL2UnStakingAmount}
-                                value={unStakingAmount}
-                            ></input>
+                            <input type="number" placeholder="0.0" min="0" step="0.000000000000001" id="maxUnStakingAmount" onChange={changeL2UnStakingAmount} value={unStakingAmount}></input>
                             <div className="musiStakingL2WithdrawPickerSection">
                                 <button className="musiStakingL2WithdrawPicker_SelectBtn" onClick={openL2WithdrawModal}>
-                                    <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                    <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                     <span>{L2WithdrawTokenSymbol}</span>
                                     <MdKeyboardArrowDown size="15" />
                                 </button>

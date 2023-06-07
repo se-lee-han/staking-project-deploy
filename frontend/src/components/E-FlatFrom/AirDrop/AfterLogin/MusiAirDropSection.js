@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import "./MusiAirDropSection.scss";
 import { GiClick } from "react-icons/gi";
 import { FiRefreshCcw } from "react-icons/fi";
-import { MusiKhanLogo } from "../../../../img/_index";
 import MusiTokenListModal from "./Modal/MusiTokenListModal";
 import { musiAirDropTimeStampAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropTimeStampAction";
 import { musiAirDropClaimAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropClaimAction";
@@ -11,6 +10,7 @@ import AirDropLoading from "../../../AirDropPage/AirDropLoading";
 import { musiAirDropViewAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropViewAction";
 import { musiAirDropTokenListAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropTokenListAction";
 import { musiAirDropBackDataInfoAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropBackDataInfoAction";
+import { MusiLogoXBack } from "../../../../assets/_index";
 
 const MusiAirDropSection = () => {
     const dispatch = useDispatch();
@@ -20,22 +20,9 @@ const MusiAirDropSection = () => {
     const { account } = useSelector((state) => state.account);
 
     const { getLatestPrice } = useSelector((state) => state.airDropLatestPrice);
-    const {
-        musiRoot,
-        musiName,
-        musiSymbol,
-        musiL2Ca,
-        musiClaimDayDate,
-        musiClaimHoursDate,
-        musiClaimMinDate,
-        musiKhanNewRoot,
-        getmusiProofToBack,
-        getmusiTokenCaToBack,
-        getmusiAmountToBack,
-        musiCanClaim,
-        musiClaimed,
-        timeStampErrorState,
-    } = useSelector((state) => state.musiAirDropView);
+    const { musiSymbol, musiL2Ca, musiClaimDayDate, musiClaimHoursDate, musiClaimMinDate, getmusiProofToBack, getmusiTokenCaToBack, getmusiAmountToBack, musiCanClaim, musiClaimed } = useSelector(
+        (state) => state.musiAirDropView
+    );
 
     // MusiClaim
     const musiAirDropClaim = () => {
@@ -86,7 +73,7 @@ const MusiAirDropSection = () => {
             {checkChainId === "Oxa" ? (
                 <div className="airDropMusikhanSection">
                     <div className="airDropMusiKhanLogoSection">
-                        <img src={MusiKhanLogo} alt="MusikhanLogo" />
+                        <img src={MusiLogoXBack} alt="MusikhanLogo" />
                     </div>
                     {musiSymbol ? (
                         <div className="airDropMusiTxt">
@@ -101,7 +88,6 @@ const MusiAirDropSection = () => {
                     {musiSymbol === "" ? (
                         <div className="musiBeforePickerSection">
                             <button className="musiAirDropBeforePicker_SelectBtn" onClick={openMusiTokenListModal}>
-                                {/* <img src={MusiKhanLogo}></img> */}
                                 <span></span>
                                 <GiClick size="20" className="modalClickIcon" />
                             </button>
@@ -110,7 +96,6 @@ const MusiAirDropSection = () => {
                     ) : (
                         <div className="musiAfterPickerSection">
                             <button className="musiAirDropAfterPicker_SelectBtn" onClick={openMusiTokenListModal}>
-                                {/* <img src={MusiKhanLogo}></img> */}
                                 <span></span>
                                 <GiClick size="20" className="modalClickIcon" />
                             </button>
@@ -159,10 +144,7 @@ const MusiAirDropSection = () => {
                                 <a className="musiDayDate">N/A</a>
                                 <a className="musiHoursDate">N/A</a>
                                 <a className="musiMinDate">N/A</a>
-                                <FiRefreshCcw
-                                    className="airDropCantMusiReFreshTimeStamp"
-                                    // onClick={changeMusiTimeStampState}
-                                />
+                                <FiRefreshCcw className="airDropCantMusiReFreshTimeStamp" />
                             </div>
                         )}
                     </div>
@@ -170,7 +152,7 @@ const MusiAirDropSection = () => {
             ) : (
                 <div className="airDropMusikhanSection">
                     <div className="airDropMusiKhanLogoSection">
-                        <img src={MusiKhanLogo} alt="MusikhanLogo" />
+                        <img src={MusiLogoXBack} alt="MusikhanLogo" />
                     </div>
                     {musiSymbol ? (
                         <div className="airDropMusiTxt">
@@ -185,7 +167,6 @@ const MusiAirDropSection = () => {
                     {musiSymbol === "" ? (
                         <div className="musiBeforePickerSection">
                             <button className="musiAirDropBeforePicker_SelectBtn" onClick={openMusiTokenListModal}>
-                                {/* <img src={MusiKhanLogo}></img> */}
                                 <span></span>
                                 <GiClick size="20" className="modalClickIcon" />
                             </button>
@@ -194,7 +175,6 @@ const MusiAirDropSection = () => {
                     ) : (
                         <div className="musiAfterPickerSection">
                             <button className="musiAirDropAfterPicker_SelectBtn" onClick={openMusiTokenListModal}>
-                                {/* <img src={MusiKhanLogo}></img> */}
                                 <span></span>
                                 <GiClick size="20" className="modalClickIcon" />
                             </button>
@@ -224,10 +204,7 @@ const MusiAirDropSection = () => {
                                 <a className="musiDayDate">N/A</a>
                                 <a className="musiHoursDate">N/A</a>
                                 <a className="musiMinDate">N/A</a>
-                                <FiRefreshCcw
-                                    className="airDropCantMusiReFreshTimeStamp"
-                                    // onClick={changeMusiTimeStampState}
-                                />
+                                <FiRefreshCcw className="airDropCantMusiReFreshTimeStamp" />
                             </div>
                         )}
                     </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./UniV2WithdrawSection.scss";
 import { networksAction } from "../../../../redux/actions/networksAction";
-import { HanLogo, USDCLogo } from "../../../../assets/_index";
+import { HanLogo } from "../../../../assets/_index";
 import { GiClick } from "react-icons/gi";
 import { FiRefreshCcw } from "react-icons/fi";
 import UniV2WithdrawModal from "./Modal/UniV2WithdrawModal";
@@ -90,7 +90,7 @@ const UniV2WithdrawSection = () => {
             </div>
             <div className="eplat-UniV2-Withdraw-AmountSection">
                 <input type="number" step="0.00000000000001" id="maxUnstakeAmount" placeholder="0" readOnly></input>
-                <p>RAKIS-6</p>
+                <p>HANeP</p>
                 {/* <button className="eplat-UniV2-Withdraw-AmountMaxBtn">Max</button> */}
                 <button className="eplat-UniV2-Select-Token-Btn" onClick={openUniV2WithdrawModal}>
                     SELECT
@@ -132,12 +132,7 @@ UNSTAKE
                 </div>
             </div>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <img src={HanLogo} onClick={addRewardToken} className="hanIcon" alt="HanIcon" />
             </div>
         </div>

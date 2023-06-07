@@ -1,6 +1,4 @@
-import Web3 from "web3";
-
-import { StakingTokenContract, StakingPrivateUniV2Contract } from "../../../../config/new/StakingPrivateUniV2Config";
+import { StakingTokenContract, StakingPrivateUniV2Contract, web3 } from "../../../../config/new/StakingPrivateUniV2Config";
 // import { StakingTokenContract, StakingPrivateRakis6Contract } from "../../../../config/new/StakingPrivateRakis6";
 
 function UniV2PrivateViewAct(account) {
@@ -9,14 +7,14 @@ function UniV2PrivateViewAct(account) {
             if (account) {
                 const privateStakingTokenBalanceApi = await StakingTokenContract.methods.balanceOf(account).call();
 
-                const privateUniV2StakingTokenBalance = Web3.utils.fromWei(String(privateStakingTokenBalanceApi), "ether");
+                const privateUniV2StakingTokenBalance = web3.utils.fromWei(String(privateStakingTokenBalanceApi), "ether");
 
                 const privateTotalStakedApi = await StakingPrivateUniV2Contract.methods.totalSupply().call();
-                const privateUniV2TotalStaked = Web3.utils.fromWei(String(privateTotalStakedApi), "ether");
+                const privateUniV2TotalStaked = web3.utils.fromWei(String(privateTotalStakedApi), "ether");
 
                 const totalPrivateStakedAmountApi = await StakingPrivateUniV2Contract.methods.totalStakedAmount(account).call();
 
-                const totalUniV2PrivateStakedAmount = Web3.utils.fromWei(String(totalPrivateStakedAmountApi), "ether");
+                const totalUniV2PrivateStakedAmount = web3.utils.fromWei(String(totalPrivateStakedAmountApi), "ether");
 
                 dispatch({
                     type: "UNIV2_PRIVATE_VIEW_SUCCESS",

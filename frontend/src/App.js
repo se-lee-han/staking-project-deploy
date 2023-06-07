@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { signUpAction } from './redux/actions/airdropActions/signUpActions/signUpAction';
-import { connectAccount } from './redux/actions/connectAccount';
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { signUpAction } from "./redux/actions/airdropActions/signUpActions/signUpAction";
+import { connectAccount } from "./redux/actions/connectAccount";
 
-import './App.css';
+import "./App.css";
 import {
     MainPage,
     StakingPage,
@@ -18,7 +18,9 @@ import {
     Uni2V2StakingPage,
     BeforeOldHanEplatFromPage,
     OldHanEPlatFromPage,
-} from './pages/_index';
+    OldHanEplatSignInPage,
+    OldHanEplatSingUpPage,
+} from "./pages/_index";
 
 function setupWebSocket() {
     const socket = new WebSocket("wss://staking.khans.io/ws");
@@ -74,24 +76,18 @@ function App() {
 
     return (
         <>
-            <Routes>
+             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/rakis6" element={<StakingPage />} />
                 <Route path="/spr" element={<SprStakingPage />} />
                 <Route path="/hanbonus" element={<HanStakingPage />} />
                 <Route path="/univ2" element={<Uni2V2StakingPage />} />
-                {loginState === false ? (
-                    <Route path="/hanep" element={<HanEPlatFromPage />} />
-                ) : (
-                    <Route path="/hanep" element={<BeforeLoginPlatFromPage />} />
-                )}
-                {/* {loginState === false ? (
-                    <Route path="/oldhanep" element={<OldHanEPlatFromPage />} />
-                ) : (
-                    <Route path="/oldhanep" element={<BeforeOldHanEplatFromPage />} />
-                )} */}
+                {loginState === false ? <Route path="/hanep" element={<HanEPlatFromPage />} /> : <Route path="/hanep" element={<BeforeLoginPlatFromPage />} />}
+                {loginState === false ? <Route path="/hanep/old" element={<OldHanEPlatFromPage />} /> : <Route path="/hanep/old" element={<BeforeOldHanEplatFromPage />} />}
                 <Route path="/hanep/signin" element={<AirDropSignInPage />} />
                 <Route path="/hanep/signup" element={<AirDropSignUpPage />} />
+                <Route path="/hanep/old/signin" element={<OldHanEplatSignInPage />} />
+                <Route path="/hanep/old/signup" element={<OldHanEplatSingUpPage />} />
             </Routes>
         </>
     );

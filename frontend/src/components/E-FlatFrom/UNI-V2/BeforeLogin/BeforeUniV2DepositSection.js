@@ -88,7 +88,7 @@ const BeforeUniV2DepositSection = () => {
                         // onChange={changeRakis6DepositAmount}
                         // value={rakis6StakingAmount}
                     ></input>
-                    <p>RAKIS-6</p>
+                    <p>HANeP</p>
                     <button className="eplat-UniV2-Deposit-AmountMaxBtn">Max</button>
                 </div>
                 <div className="eplat-UniV2-DepositStakeBtnSection">
@@ -98,12 +98,7 @@ const BeforeUniV2DepositSection = () => {
                 </div>
             </>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <img src={HanLogo} onClick={addRewardToken} className="hanIcon" alt="HanIcon" />
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FiRefreshCcw } from "react-icons/fi";
-import { SheepooriLogoBackX } from "../../../../img/_index";
+import { SprLogoBackX } from "../../../../assets/_index";
 
 const BeforeSprtAirDropSection = () => {
     const [checkChainId, setCheckChainId] = useState("");
@@ -18,7 +18,7 @@ const BeforeSprtAirDropSection = () => {
         <>
             <div className="airDropSprSection">
                 <div className="airDropSprLogoSection">
-                    <img src={SheepooriLogoBackX} alt="SprLogo" />
+                    <img src={SprLogoBackX} alt="SprLogo" />
                 </div>
                 <div className="airDropSprTxt">
                     <a>NFT Munie</a>

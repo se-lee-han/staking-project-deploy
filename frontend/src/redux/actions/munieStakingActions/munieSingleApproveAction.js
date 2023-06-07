@@ -1,12 +1,12 @@
-import { MunieTokenContract, MunieStakingAddress } from "../../../config/MunieConfig";
-// import { MunieTokenContract, MunieStakingAddress } from "../../../config/MunieConfigTest";
 import Swal from "sweetalert2";
+import { MunieTokenContract, MunieV2StakingAddress } from "../../../config/new/StakingMunieV2Config";
 
 function munieSingleApproveAct(stakingMunieTokenId, account) {
     return async (dispatch) => {
         try {
             if (account) {
-                const munieApprove = await MunieTokenContract.methods.approve(MunieStakingAddress, stakingMunieTokenId).send({ from: account });
+                // console.log(stakingMunieTokenId);
+                const munieApprove = await MunieTokenContract.methods.approve(MunieV2StakingAddress, stakingMunieTokenId).send({ from: account });
                 if (munieApprove.status) {
                     Swal.fire({
                         title: "Success",

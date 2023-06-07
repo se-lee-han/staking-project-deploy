@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import "./MunieAirDropSection.scss";
 import { FiRefreshCcw } from "react-icons/fi";
 import { GiClick } from "react-icons/gi";
-import { MunieLogoBackX } from "../../../../img/_index";
 import MunieTokenListModal from "./Modal/MunieTokenListModal";
 import { munieAirDropTokenListAction } from "../../../../redux/actions/airdropActions/munieActions/munieAirDropTokenListAction";
 import { munieAirDropViewAction } from "../../../../redux/actions/airdropActions/munieActions/munieAirDropViewAction";
 import { munieAirDropGetTokenAction } from "../../../../redux/actions/airdropActions/munieActions/munieAirDropGetTokenAction";
+import { MunieLogoBackX } from "../../../../assets/_index";
 
 const MunieAirDropSection = () => {
     const dispatch = useDispatch();
@@ -71,7 +71,6 @@ const MunieAirDropSection = () => {
                 )}
                 <div className="munieBeforePickerSection">
                     <button className="munieAirDropBeforePicker_SelectBtn" onClick={openMunieTokenListModal}>
-                        {/* <img src={MusiKhanLogo}></img> */}
                         <span></span>
                         <GiClick size="20" className="modalClickIcon" />
                     </button>

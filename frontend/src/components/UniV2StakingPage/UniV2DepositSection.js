@@ -6,7 +6,7 @@ import { uniV2ViewAction } from "../../redux/actions/uniV2StakingActions/uniV2Vi
 import Web3 from "web3";
 import Loading from "../SprStakingPage/Loading";
 import { uniV2ApproveStateAction } from "../../redux/actions/uniV2StakingActions/uniV2ApproveStateAction";
-import { uniV2StakeAction,  } from "../../redux/actions/uniV2StakingActions/uniV2StakeAction";
+import { uniV2StakeAction } from "../../redux/actions/uniV2StakingActions/uniV2StakeAction";
 import { uniV2ApproveAction } from "../../redux/actions/uniV2StakingActions/uniV2ApproveAction";
 
 const UniV2DepositSection = () => {
@@ -15,9 +15,7 @@ const UniV2DepositSection = () => {
     const [uniV2StakingAmount, setUniV2StakingAmount] = useState("");
     const { account } = useSelector((state) => state.account);
 
-    const { uniV2StakingTokenBalance, successUniV2Approve, uniV2ApproveState, usdcRakis6StakedAmount, uniV2TotalSupply } = useSelector(
-        (state) => state.uniV2View
-    );
+    const { uniV2StakingTokenBalance, successUniV2Approve, uniV2ApproveState, usdcRakis6StakedAmount, uniV2TotalSupply } = useSelector((state) => state.uniV2View);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -108,14 +106,7 @@ const UniV2DepositSection = () => {
                                 <p>Available : {uniV2StakingTokenBalance} </p>
                             </div>
                             <div className="uniV2-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxUniV2StakeAmount"
-                                    placeholder="0"
-                                    onChange={changeUniV2DepositAmount}
-                                    value={uniV2ApproveState}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxUniV2StakeAmount" placeholder="0" onChange={changeUniV2DepositAmount} value={uniV2ApproveState}></input>
                                 <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
@@ -141,14 +132,7 @@ const UniV2DepositSection = () => {
                                 <p>Available : {uniV2StakingTokenBalance} </p>
                             </div>
                             <div className="uniV2-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxUniV2StakeAmount"
-                                    placeholder="0"
-                                    onChange={changeUniV2DepositAmount}
-                                    value={uniV2StakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxUniV2StakeAmount" placeholder="0" onChange={changeUniV2DepositAmount} value={uniV2StakingAmount}></input>
                                 <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
@@ -172,14 +156,7 @@ const UniV2DepositSection = () => {
                                 <p>Available : {uniV2StakingTokenBalance} </p>
                             </div>
                             <div className="uniV2-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxUniV2StakeAmount"
-                                    placeholder="0"
-                                    onChange={changeUniV2DepositAmount}
-                                    value={uniV2StakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxUniV2StakeAmount" placeholder="0" onChange={changeUniV2DepositAmount} value={uniV2StakingAmount}></input>
                                 <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
@@ -205,14 +182,7 @@ const UniV2DepositSection = () => {
                                 <p>Available : {uniV2StakingTokenBalance} </p>
                             </div>
                             <div className="uniV2-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxUniV2StakeAmount"
-                                    placeholder="0"
-                                    onChange={changeUniV2DepositAmount}
-                                    value={uniV2StakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxUniV2StakeAmount" placeholder="0" onChange={changeUniV2DepositAmount} value={uniV2StakingAmount}></input>
                                 <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
@@ -238,14 +208,7 @@ const UniV2DepositSection = () => {
                                 <p>Available : {uniV2StakingTokenBalance} </p>
                             </div>
                             <div className="uniV2-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxUniV2StakeAmount"
-                                    placeholder="0"
-                                    onChange={changeUniV2DepositAmount}
-                                    value={uniV2StakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxUniV2StakeAmount" placeholder="0" onChange={changeUniV2DepositAmount} value={uniV2StakingAmount}></input>
                                 <p>UNI-V2</p>
                                 <button className="uniV2-Staking-Deposit-AmountMaxBtn" onClick={changeUniV2MaxDepositAmount}>
                                     Max
@@ -274,12 +237,7 @@ const UniV2DepositSection = () => {
             </>
 
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <div className="HanEpTxtContinaer">
                     <span className="HanEpTxt" onClick={addRewardToken}>
                         HANeP

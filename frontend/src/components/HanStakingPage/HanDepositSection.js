@@ -10,7 +10,6 @@ import Web3 from "web3";
 import { hanStakingApproveStateAction } from "../../redux/actions/hanStakingActions/hanStakingApproveStateAction";
 import Loading from "../SprStakingPage/Loading";
 import { HiOutlineLockClosed } from "react-icons/hi";
-import { FaEye } from "react-icons/fa";
 
 const HanDepositSection = () => {
     const dispatch = useDispatch();
@@ -131,14 +130,7 @@ const HanDepositSection = () => {
                                 <p>Available : {hanChainBalanceOf} </p>
                             </div>
                             <div className="han-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxHanChainStakeAmount"
-                                    placeholder="0"
-                                    onChange={changeHanDepositAmount}
-                                    value={hanChainAllowance}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxHanChainStakeAmount" placeholder="0" onChange={changeHanDepositAmount} value={hanChainAllowance}></input>
                                 <p>HAN</p>
                                 <button className="han-Staking-Deposit-AmountMaxBtn" onClick={changeMaxHanDepositAmount}>
                                     Max
@@ -164,14 +156,7 @@ const HanDepositSection = () => {
                                 <p>Available : {hanChainBalanceOf} </p>
                             </div>
                             <div className="han-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxHanChainStakeAmount"
-                                    placeholder="0"
-                                    onChange={changeHanDepositAmount}
-                                    value={hanStakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxHanChainStakeAmount" placeholder="0" onChange={changeHanDepositAmount} value={hanStakingAmount}></input>
                                 <p>HAN</p>
                                 <button className="han-Staking-Deposit-AmountMaxBtn" onClick={changeMaxHanDepositAmount}>
                                     Max
@@ -196,14 +181,7 @@ const HanDepositSection = () => {
                                 <p>Available : {hanChainBalanceOf} </p>
                             </div>
                             <div className="han-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxHanChainStakeAmount"
-                                    placeholder="0"
-                                    onChange={changeHanDepositAmount}
-                                    value={hanStakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxHanChainStakeAmount" placeholder="0" onChange={changeHanDepositAmount} value={hanStakingAmount}></input>
                                 <p>HAN</p>
                                 <button className="han-Staking-Deposit-AmountMaxBtn" onClick={changeMaxHanDepositAmount}>
                                     Max
@@ -230,14 +208,7 @@ const HanDepositSection = () => {
                                 <p>Available : {hanChainBalanceOf} </p>
                             </div>
                             <div className="han-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxHanChainStakeAmount"
-                                    placeholder="0"
-                                    onChange={changeHanDepositAmount}
-                                    value={hanStakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxHanChainStakeAmount" placeholder="0" onChange={changeHanDepositAmount} value={hanStakingAmount}></input>
                                 <p>HAN</p>
                                 <button className="han-Staking-Deposit-AmountMaxBtn" onClick={changeMaxHanDepositAmount}>
                                     Max
@@ -263,14 +234,7 @@ const HanDepositSection = () => {
                                 <p>Available : {hanChainBalanceOf} </p>
                             </div>
                             <div className="han-Staking-Deposit-Approve-AmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000000001"
-                                    id="maxHanChainStakeAmount"
-                                    placeholder="0"
-                                    onChange={changeHanDepositAmount}
-                                    value={hanStakingAmount}
-                                ></input>
+                                <input type="number" step="0.000000000000000001" id="maxHanChainStakeAmount" placeholder="0" onChange={changeHanDepositAmount} value={hanStakingAmount}></input>
                                 <p>HAN</p>
                                 <button className="han-Staking-Deposit-AmountMaxBtn" onClick={changeMaxHanDepositAmount}>
                                     Max

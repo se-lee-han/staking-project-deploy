@@ -1,5 +1,4 @@
-import Web3 from "web3";
-import { HanBonusStakingContract, HanChainContract } from "../../../config/StakingHanChain";
+import { HanBonusStakingContract, HanChainContract, web3 } from "../../../config/StakingHanChain";
 // import { StakingHanChainContract, MyTokenContract } from "../../../config/StakingHanchainTest";
 
 function hanStakingViewAct(account) {
@@ -8,15 +7,15 @@ function hanStakingViewAct(account) {
             if (account) {
                 const hanChainBalanceOfApi = await HanChainContract.methods.balanceOf(account).call();
 
-                const hanChainBalanceOf = Web3.utils.fromWei(String(hanChainBalanceOfApi), "ether");
+                const hanChainBalanceOf = web3.utils.fromWei(String(hanChainBalanceOfApi), "ether");
 
                 const totalSupplyApi = await HanBonusStakingContract.methods.totalSupply().call();
 
-                const totalSupply = Web3.utils.fromWei(String(totalSupplyApi), "ether");
+                const totalSupply = web3.utils.fromWei(String(totalSupplyApi), "ether");
 
                 const totalStakedAmountApi = await HanBonusStakingContract.methods.totalStakedAmount(account).call();
 
-                const totalHanStakedAmount = Web3.utils.fromWei(String(totalStakedAmountApi), "ether");
+                const totalHanStakedAmount = web3.utils.fromWei(String(totalStakedAmountApi), "ether");
 
                 dispatch({
                     type: "HAN_STAKING_VIEW",

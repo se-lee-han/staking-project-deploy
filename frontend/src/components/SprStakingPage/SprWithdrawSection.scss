@@ -1,0 +1,166 @@
+// ----------------------- WITHDRAW SECTION ----------------------- //
+
+// -------------- UnStake INSUFFICIENT --------------- //
+
+.sprStakingCantChoiceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.sprStakingCantChoiceSection {
+    width: 150px;
+    height: 150px;
+    background: url("../../assets/images/sheeprilogo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    // border: 3px solid black;
+    cursor: not-allowed;
+}
+
+.cantStakingSprBtn {
+    text-shadow: #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px;
+    color: #0a1126;
+    font-size: 20px;
+}
+
+// .sprUnStakingChoiceImgContainer {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+// }
+
+.sprUnStakingChoiceImgSection {
+    width: 150px;
+    height: 150px;
+    // border: 3px solid black;
+}
+
+.sprBeforeSelectButton {
+    box-shadow: inset 0px 0.998px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
+    border-radius: 6px;
+    border: 0.998px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    // height: 99.998px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 57px 33px;
+    text-decoration: none;
+}
+
+.sprUnStakingComImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 6px;
+}
+
+.mySelectEndButton {
+    box-shadow: inset 0px 0.998px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
+    border-radius: 6px;
+    border: 0.998px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    // height: 99.998px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 9.998px 35.002px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #1570cd;
+    margin-bottom: 15px;
+}
+
+.sprUnStakingComImgSection {
+    width: 150px;
+    height: 150px;
+    // border: 3px solid black;
+}
+
+.sprUnStakeComBtnSection {
+    margin-top: 14.002px;
+}
+
+.sprUnStakeBtnSection {
+    margin-top: 10px;
+}
+
+.unStakeCantTxt {
+    font-size: 35.002px;
+}
+
+// ------------------ Slider Section ---------------//
+.mainUnSlider {
+    width: 100%;
+    /* margin-right: 100px; */
+    // margin-left: 10%;
+}
+
+.sprUnSlider {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+#sprUnStakingImgIdCardContainer {
+    // padding-left: 50px;
+    display: inline-block;
+    // width: 150px;
+    // height: 150px;
+}
+
+.sprUnStakingImgContainer {
+    // display: flex;
+    // width: 150px;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // height: 200px;
+}
+
+.sprUnStakingImgCard {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // border: 3px solid black;
+}
+
+.modalTitleTxt p {
+    color: #0a1126;
+}
+
+.unStakingModalMainContainer p {
+    color: #0a1126;
+}
+
+/* ------------------- Check Box -------------------*/
+.imgUnCheckBox {
+    position: relative;
+    top: -40%;
+    right: -37%;
+    width: 10px;
+    height: 10px;
+}
+
+.sprUnStakingImgCard input {
+    zoom: 2;
+}

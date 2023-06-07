@@ -1,4 +1,4 @@
-import { StakingTokenContract, StakingAddress, StakingTokenAddress, web3 } from "../../../config/StakingRakis6Config";
+import { StakingTokenContract, StakingAddress } from "../../../config/StakingRakis6Config";
 // import { StakingTokenContract, StakingAddress, StakingTokenAddress, web3 } from "../../../config/StakingRakis6ConfigTest";
 
 import Swal from "sweetalert2";

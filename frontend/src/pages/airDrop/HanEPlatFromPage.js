@@ -24,9 +24,9 @@ import {
     MusiCompensationSection,
     MusiConnectWalletSection,
     MusiFooter,
-    PrivateUniDepositSection ,
+    PrivateUniDepositSection,
     PrivateUniWithdrawSection,
-    PrivateUniRewardSection ,
+    PrivateUniRewardSection,
     PrivateUniV2TopSection,
     PrivateUniConnectWalletSection,
     Rakis6DepositSection,
@@ -67,6 +67,7 @@ const HanEPlatFromPage = () => {
 
     const mainTabChange = () => {
         setChangeMainTab(changeMainTab + 1);
+        console.log("123142");
         dispatch({ type: "MAIN_TAB_CHANGE", payload: changeMainTab });
     };
 
@@ -118,6 +119,9 @@ const HanEPlatFromPage = () => {
     }, []);
     return (
         <div className="platFromPageMainContainer">
+            <div className="platFromPageNewChange">
+                This is the formally Staking. Old Version is live at <a href="/hanep/old">staking.khans.io/hanep/old</a>
+            </div>
             <div className="platFromPageLogoContainer">
                 <img className="platFromTopLogo" src={HanLogo} alt="HanLogo" />
                 <a>HAN e-Platform</a>
@@ -151,7 +155,6 @@ const HanEPlatFromPage = () => {
 
                                     <USDCAirDropSection />
                                     {/* <WethAirDropSection /> */}
-                                    
 
                                     <MunieAirDropSection />
                                 </div>
@@ -176,7 +179,7 @@ const HanEPlatFromPage = () => {
                             <PrivateUniDepositSection />
                         </TabPanel>
                         <TabPanel>
-                            < PrivateUniRewardSection/>
+                            <PrivateUniRewardSection />
                         </TabPanel>
                         <TabPanel>
                             <PrivateUniWithdrawSection />
