@@ -90,7 +90,7 @@ const BeforePrivateUniWithdrawSection = () => {
             </div>
             <div className="eplat-PrUni-Withdraw-AmountSection">
                 <input type="number" step="0.00000000000001" id="maxUnstakeAmount" placeholder="0" readOnly></input>
-                <p>RAKIS-6</p>
+                <p>UNI-V2</p>
                 {/* <button className="eplat-PrUni-Withdraw-AmountMaxBtn">Max</button> */}
                 <button className="eplat-PrUni-Select-Token-Btn" onClick={loginAlert}>
                     SELECT
@@ -131,12 +131,7 @@ const BeforePrivateUniWithdrawSection = () => {
                 </div>
             </div>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <div className="HanEpTxtContinaer">
                     <span className="HanEpTxt" onClick={addRewardToken}>
                         HANeP

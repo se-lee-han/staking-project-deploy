@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { SlArrowUp } from "react-icons/sl";
 import { SlArrowDown } from "react-icons/sl";
 import Loading from "../../../SprStakingPage/Loading";
+import { allMunieStakedViewAction } from "../../../../redux/actions/munieStakingActions/allMunieStakedViewAction";
 
 const BeforeMunieViewAdsSection = () => {
     const dispatch = useDispatch();
@@ -49,6 +50,12 @@ const BeforeMunieViewAdsSection = () => {
             setCheckChainId("0x1a4");
         }
     }, [window.ethereum?.chainId]);
+
+    useEffect(() => {
+        if (account) {
+            dispatch(allMunieStakedViewAction.allMunieStakedViewAct());
+        }
+    }, []);
     return (
         <div>
             {getMunieStakingTokenIdImgVideoUrl.length === 0 ? (

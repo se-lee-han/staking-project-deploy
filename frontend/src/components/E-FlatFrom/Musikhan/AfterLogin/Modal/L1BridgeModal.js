@@ -7,7 +7,7 @@ import { L1TokenListToBackAction } from "../../../../../redux/actions/musikhanAc
 import { L1MusiKhanViewAction } from "../../../../../redux/actions/musikhanActions/L1Actions/L1MusiKhanViewAction";
 import { L1TokenContractAction } from "../../../../../redux/actions/musikhanActions/L1Actions/L1TokenContractAction";
 import { L1TokenBalanceViewAction } from "../../../../../redux/actions/musikhanActions/L1Actions/L1TokenBalanceViewAction";
-import { MusiKhanLogo } from "../../../../../img/_index";
+import { MusiLogoXBack } from "../../../../../assets/_index";
 
 const L1BridgeModal = (props) => {
     const dispatch = useDispatch();
@@ -26,11 +26,27 @@ const L1BridgeModal = (props) => {
 
     useEffect(() => {
         dispatch(L1TokenListToBackAction.L1TokenListToBackAct());
-        dispatch(L1TokenContractAction.L1TokenContractAct());
+        dispatch(L1TokenContractAction.L1TokenContractAct()).catch((error) => {
+            console.error(error);
+            // 예외 처리
+            // 주소 설정 오류에 대한 처리 로직을 추가하세요.
+        });
     }, []);
 
+    // useEffect(() => {
+    //     if (api_Status) dispatch(L1TokenBalanceViewAction.L1TokenBalanceViewAct(account, L1Contract));
+    //     return () => {
+    //         dispatch({ type: "API_STATUS", payload: false });
+    //     };
+    // }, [api_Status]);
     useEffect(() => {
-        if (api_Status) dispatch(L1TokenBalanceViewAction.L1TokenBalanceViewAct(account, L1Contract));
+        if (api_Status) {
+            dispatch(L1TokenBalanceViewAction.L1TokenBalanceViewAct(account, L1Contract)).catch((error) => {
+                console.error(error);
+                // 예외 처리
+                // 주소 설정 오류에 대한 처리 로직을 추가하세요.
+            });
+        }
         return () => {
             dispatch({ type: "API_STATUS", payload: false });
         };
@@ -64,19 +80,17 @@ const L1BridgeModal = (props) => {
                         <div className="bridgeL1-ModalTokenListSection">
                             <ul className="bridgeL1-TokenList_PickerToken">
                                 {L1TokenList.filter(
-                                    (tokenlist) =>
-                                        tokenlist.name.toLowerCase().includes(searchL1BridgeTokenData) ||
-                                        tokenlist.symbol.toLowerCase().includes(searchL1BridgeTokenData)
-                                ).map((tokenlist) => (
+                                    (tokenlist) => tokenlist.name.toLowerCase().includes(searchL1BridgeTokenData) || tokenlist.symbol.toLowerCase().includes(searchL1BridgeTokenData)
+                                ).map((tokenlist, index) => (
                                     <li
-                                        key={tokenlist.id}
+                                        key={index}
                                         onClick={() => {
                                             selectTokenListToPage(tokenlist);
                                             close();
                                         }}
                                     >
                                         <div className="bridgeL1-TokenListTokenImgTextSection">
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <div className="bridgeL1-TokenListNameSymbolSection">
                                                 <div className="bridgeL1-TokenListNameSection">
                                                     <h2>{tokenlist.name}</h2>

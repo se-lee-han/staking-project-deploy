@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { networksAction } from "../../../../redux/actions/networksAction";
-import Swal from "sweetalert2";
 import "./PrivateUniRewardSection.scss";
-import { USDCLogo } from "../../../../assets/_index";
 import { FiRefreshCcw } from "react-icons/fi";
-import { HanEpRewardViewAction, UniV2PrivateRewardViewAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateRewardViewAction";
-import { HanEpClaimAction, UniV2PrivateClaimAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateClaimAction";
+import { UniV2PrivateRewardViewAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateRewardViewAction";
+import { UniV2PrivateClaimAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateClaimAction";
 
 const PrivateUniRewardSection = () => {
     const dispatch = useDispatch();
     const [checkChainId, setCheckChainId] = useState("");
     const { account } = useSelector((state) => state.account);
-    const { privateUniV2TotalStaked, totalUniV2PrivateStakedAmount, privateUniV2RewardPerSecondView, privateUniV2TotalRewardReleased } = useSelector((state) => state.hanEpView);
+    const { privateUniV2TotalStaked, totalUniV2PrivateStakedAmount, privateUniV2RewardPerSecondView, privateUniV2TotalRewardReleased, stakingPrUniV2APR } = useSelector(
+        (state) => state.UniV2PrivateView
+    );
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -89,24 +89,24 @@ const PrivateUniRewardSection = () => {
                 </>
                 <div className="eplat-PrUni-Reward-APR-Container">
                     <div className="eplat-PrUni-Reward-APR-Title">
-                        <a>0.000694953927154714 HANeP</a>
+                        <a>APR</a>
                     </div>
                     <div className="eplat-PrUni-Reward-APR-Info">
-                        <a>for each HANeP per second</a>
+                        <a>{stakingPrUniV2APR}%</a>
                     </div>
                 </div>
                 <div className="eplat-PrUni-Reward-EstSection">
                     <p>
                         Estimated Interest : {privateUniV2RewardPerSecondView}
                         <FiRefreshCcw className="eplat-PrUni-Reward-RefreshIcon" onClick={changePrivateUniV2RewardState} />
-                        HAN
+                        HANeP
                     </p>
                 </div>
                 {/* <div className="eplat-PrUni-Reward-AccSection">
             <p>Accumulated Interest : {hanRewardPerSecondView} HAN</p>
         </div> */}
                 <div className="eplat-PrUni-Reward-InterSection">
-                    <p>Rewarded Interest : {privateUniV2TotalRewardReleased} HAN </p>
+                    <p>Rewarded Interest : {privateUniV2TotalRewardReleased} HANeP </p>
                 </div>
 
                 {/* 리워드 안될때 상태 추가 */}
@@ -125,12 +125,7 @@ const PrivateUniRewardSection = () => {
                 )}
             </>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <div className="HanEpTxtContinaer">
                     <span className="HanEpTxt" onClick={addRewardToken}>
                         HANeP

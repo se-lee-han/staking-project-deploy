@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { L2RewardTokenListAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2RewardTokenListAction";
 import { L2RewardViewAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2RewardViewAction";
 import { L2RewardResultAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2RewardResultAction";
-import { MusiKhanLogo } from "../../../../../img/_index";
+import { MusiLogoXBack } from "../../../../../assets/_index";
 
 const L2RewardModal = (props) => {
     const { open, close, header } = props;
@@ -23,17 +23,7 @@ const L2RewardModal = (props) => {
         const rewardClaimedReward = rewardTokenList.claimedReward;
         const rewardTimeOfLastUpdate = rewardTokenList.timeOfLastUpdate;
         const rewardTokenCa = rewardTokenList.l2Ca;
-        dispatch(
-            L2RewardViewAction.L2RewardViewAct(
-                rewardTokenName,
-                rewardTokenSymbol,
-                rewardUnClaimedReward,
-                rewardClaimedReward,
-                rewardTokenAmount,
-                rewardTokenCa,
-                rewardTimeOfLastUpdate
-            )
-        );
+        dispatch(L2RewardViewAction.L2RewardViewAct(rewardTokenName, rewardTokenSymbol, rewardUnClaimedReward, rewardClaimedReward, rewardTokenAmount, rewardTokenCa, rewardTimeOfLastUpdate, account));
         dispatch(L2RewardResultAction.L2RewardResultAct(rewardTimeOfLastUpdate, rewardTokenAmount));
     };
 
@@ -59,19 +49,13 @@ const L2RewardModal = (props) => {
                     <div className="rewardL2-ModalTokenInfoContainer">
                         <div className="rewardL2-ModalTokensSearchInputSection">
                             <FaSearch className="rewardL2-ModalSearchIcon" />
-                            <input
-                                placeholder="Search name or symbol"
-                                className="rewardL2-ModalTokensSearchInput"
-                                onChange={(e) => setSearchRewardTokenData(e.target.value.toLowerCase())}
-                            ></input>
+                            <input placeholder="Search name or symbol" className="rewardL2-ModalTokensSearchInput" onChange={(e) => setSearchRewardTokenData(e.target.value.toLowerCase())}></input>
                         </div>
                         <div className="rewardL2-ModalTokenListSection">
                             <ul className="rewardL2-TokenList_PickerToken">
                                 {rewardTokenList
                                     .filter(
-                                        (rewardTokenList) =>
-                                            rewardTokenList.name.toLowerCase().includes(searchRewardTokenData) ||
-                                            rewardTokenList.symbol.toLowerCase().includes(searchRewardTokenData)
+                                        (rewardTokenList) => rewardTokenList.name.toLowerCase().includes(searchRewardTokenData) || rewardTokenList.symbol.toLowerCase().includes(searchRewardTokenData)
                                     )
                                     .map((rewardTokenList, index) => (
                                         <li
@@ -82,7 +66,7 @@ const L2RewardModal = (props) => {
                                             }}
                                         >
                                             <div className="rewardL2-TokenListTokenImgTextSection">
-                                                <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                                <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                                 <div className="depositL2-TokenListNameSymbolSection">
                                                     <div className="depositL2-TokenListNameSection">
                                                         <h2>{rewardTokenList.name}</h2>

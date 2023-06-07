@@ -53,10 +53,8 @@ const MunieViewAdsSection = () => {
     }, [window.ethereum?.chainId]);
 
     useEffect(() => {
-        if (account) {
-            dispatch(allMunieStakedViewAction.allMunieStakedViewAct());
-        }
-    }, []);
+        dispatch(allMunieStakedViewAction.allMunieStakedViewAct(account));
+    }, [account]);
     // console.log("viewAdsaccount", account);
     // console.log("viewAds", getMunieStakingTokenIdImgVideoUrl);
 

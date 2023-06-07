@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { MusiKhanLogo } from "../../../../img/_index";
-import { OptimismRedLogo } from "../../../../assets/_index";
+import { MusiLogoXBack, OptimismRedLogo } from "../../../../assets/_index";
 import L1BridgeModal from "./Modal/L1BridgeModal";
 import L2DepositModal from "./Modal/L2DepositModal";
 import { L2MusikhanStakingAction } from "../../../../redux/actions/musikhanActions/L2Actions/L2MusikhanStakingAction";
@@ -111,11 +110,7 @@ const L1BridgeL2DepositSection = () => {
                     <div className="musiStakingBridgeSection">
                         <div className="musiStakingBirdgeTitleSection">
                             <a className="musiStakingTitleTxt">From</a>
-                            <img
-                                src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                                className="musiStakingMainNetImg"
-                                alt="EtheruemIcon"
-                            />
+                            <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" className="musiStakingMainNetImg" alt="EtheruemIcon" />
                             <a className="musiStakingMainTxt">Ethereum Mainnet</a>
                         </div>
                         <div className="musiStakingBridgeAmountSection">
@@ -124,13 +119,13 @@ const L1BridgeL2DepositSection = () => {
                             <div className="musiStakingBridgePickerSection">
                                 {successL1TokenApprove === false ? (
                                     <button className="musiStakingBridgePicker_SelectBtn" onClick={openSelectTokenModal}>
-                                        <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                        <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                         <span>{L1TokenSymbol}</span>
                                         <MdKeyboardArrowDown size="15" />
                                     </button>
                                 ) : (
                                     <button className="musiStakingBridgePicker_2SelectBtn">
-                                        <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                        <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                         <span>{L1TokenSymbol}</span>
                                         {/* <MdKeyboardArrowDown size="15" /> */}
                                     </button>
@@ -196,18 +191,10 @@ const L1BridgeL2DepositSection = () => {
                                             Max
                                         </button>
                                     </div>
-                                    <input
-                                        type="number"
-                                        placeholder="0.0"
-                                        min="0"
-                                        step="0.0000000000000000001"
-                                        id="maxStakingAmount"
-                                        onChange={changeL2StakingAmount}
-                                        value={stakingAmount}
-                                    ></input>
+                                    <input type="number" placeholder="0.0" min="0" step="0.0000000000000000001" id="maxStakingAmount" onChange={changeL2StakingAmount} value={stakingAmount}></input>
                                     <div className="musiStakingL2DepositPickerSection">
                                         <button className="musiStakingL2DepositPicker_SelectBtn" onClick={openL2DepositModal}>
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <span>{L2DepositTokenSymbol}</span>
                                             <MdKeyboardArrowDown size="15" />
                                         </button>
@@ -239,7 +226,7 @@ const L1BridgeL2DepositSection = () => {
                                     ></input>
                                     <div className="musiStakingL2DepositPickerSection">
                                         <button className="musiStakingCantL2DepositPicker_SelectBtn" onClick={openL2DepositModal}>
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <span>{L2DepositTokenSymbol}</span>
                                             <MdKeyboardArrowDown size="15" />
                                         </button>
@@ -263,18 +250,10 @@ const L1BridgeL2DepositSection = () => {
                                             Max
                                         </button>
                                     </div>
-                                    <input
-                                        type="number"
-                                        placeholder="0.0"
-                                        min="0"
-                                        step="0.0000000000000000001"
-                                        id="maxStakingAmount"
-                                        onChange={changeL2StakingAmount}
-                                        value={stakingAmount}
-                                    ></input>
+                                    <input type="number" placeholder="0.0" min="0" step="0.0000000000000000001" id="maxStakingAmount" onChange={changeL2StakingAmount} value={stakingAmount}></input>
                                     <div className="musiStakingL2DepositPickerSection">
                                         <button className="musiStakingL2DepositPicker_SelectBtn" onClick={openL2DepositModal}>
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <span>{L2DepositTokenSymbol}</span>
                                             <MdKeyboardArrowDown size="15" />
                                         </button>
@@ -296,18 +275,10 @@ const L1BridgeL2DepositSection = () => {
                                             Max
                                         </button>
                                     </div>
-                                    <input
-                                        type="number"
-                                        placeholder="0.0"
-                                        min="0"
-                                        step="0.0000000000000000001"
-                                        id="maxStakingAmount"
-                                        onChange={changeL2StakingAmount}
-                                        value={stakingAmount}
-                                    ></input>
+                                    <input type="number" placeholder="0.0" min="0" step="0.0000000000000000001" id="maxStakingAmount" onChange={changeL2StakingAmount} value={stakingAmount}></input>
                                     <div className="musiStakingL2DepositPickerSection">
                                         <button className="musiStakingL2DepositPicker_SelectBtn" onClick={openL2DepositModal}>
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <span>{L2DepositTokenSymbol}</span>
                                             <MdKeyboardArrowDown size="15" />
                                         </button>
@@ -331,18 +302,10 @@ const L1BridgeL2DepositSection = () => {
                                             Max
                                         </button>
                                     </div>
-                                    <input
-                                        type="number"
-                                        placeholder="0.0"
-                                        min="0"
-                                        step="0.0000000000000000001"
-                                        id="maxStakingAmount"
-                                        onChange={changeL2StakingAmount}
-                                        value={stakingAmount}
-                                    ></input>
+                                    <input type="number" placeholder="0.0" min="0" step="0.0000000000000000001" id="maxStakingAmount" onChange={changeL2StakingAmount} value={stakingAmount}></input>
                                     <div className="musiStakingL2DepositPickerSection">
                                         <button className="musiStakingL2DepositPicker_SelectBtn" onClick={openL2DepositModal}>
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <span>{L2DepositTokenSymbol}</span>
                                             <MdKeyboardArrowDown size="15" />
                                         </button>
@@ -376,7 +339,7 @@ const L1BridgeL2DepositSection = () => {
                                     ></input>
                                     <div className="musiStakingL2DepositPickerSection">
                                         <button className="musiStakingCantL2DepositPicker_SelectBtn" onClick={openL2DepositModal}>
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <span>{L2DepositTokenSymbol}</span>
                                             <MdKeyboardArrowDown size="15" />
                                         </button>

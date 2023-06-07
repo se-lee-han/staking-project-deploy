@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { FiRefreshCcw } from "react-icons/fi";
-import { MunieLogoBackX } from "../../../../img/_index";
+import { useSelector } from "react-redux";
+import { GiClick } from "react-icons/gi";
+import Swal from "sweetalert2";
+import { MunieLogoBackX } from "../../../../assets/_index";
 
 const BeforeMunieAirDropSection = () => {
     const { account } = useSelector((state) => state.account);
     const [checkChainId, setCheckChainId] = useState("");
+
+    const loginAlert = () => {
+        Swal.fire({
+            text: "Please try again after log in",
+            icon: "error",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+            footer: '<a href="/hanep/signin">Go to the login page?</a>',
+        });
+    };
 
     useEffect(() => {
         if (window.ethereum?.chainId === "0x1") {
@@ -22,16 +33,22 @@ const BeforeMunieAirDropSection = () => {
                 <div className="airDropMunieLogoSection">
                     <img src={MunieLogoBackX} alt="MunieLogo" />
                 </div>
-                <div className="airDropMuniTxt">
+                <div className="selectBeforeAirDropMuniTxt">
                     <a>NFT Munie</a>
                 </div>
-
+                <div className="munieBeforePickerSection">
+                    <button className="munieAirDropBeforePicker_SelectBtn">
+                        {/* <img src={MusiKhanLogo}></img> */}
+                        <span></span>
+                        <GiClick size="20" className="modalClickIcon" onClick={loginAlert} />
+                    </button>
+                </div>
                 <div className="airDropMuniBtn">
                     <button className="cant-airdrop-munie-learn-more" disabled={true}>
                         Nothing to Claim
                     </button>
                 </div>
-                <div className="airDropMuniTimeStampSection">
+                {/* <div className="airDropMuniTimeStampSection">
                     <div className="airDropMuniTimeStampTitle">
                         <a>Remaining Duration</a>
                     </div>
@@ -44,7 +61,7 @@ const BeforeMunieAirDropSection = () => {
                             // onClick={changeTimeStampState}
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     );

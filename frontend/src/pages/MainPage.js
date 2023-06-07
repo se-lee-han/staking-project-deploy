@@ -1,25 +1,24 @@
 import React, { useEffect } from "react";
 import "./MainPage.scss";
+import { MdHelp } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { hanChainPriceActtion } from "../redux/actions/mainActions/hanChainPriceAction";
 import {
+    SprLogoBackX,
     MainHanLogo,
-    MainArrakisLogo,
-    MainUniLogo,
-    MainTwitterLogo,
+    WhiteUniLogo,
+    MunieLogoBackX,
     MainFacebookLogo,
+    MainTwitterLogo,
     MainDiscordLogo,
     MainTelegramLogo,
     MainMediumLogo,
     MainGithubLogo,
-    MainEnterLogo,
     MainOffLogo,
     MainAdLogo,
-    MunieLogoBackX,
-} from "../img/_index";
-import HelpIcon from "@mui/icons-material/Help";
-import { SheepooriLogoBackX } from "../img/_index";
-import { useDispatch, useSelector } from "react-redux";
-import { hanChainPriceActtion } from "../redux/actions/mainActions/hanChainPriceAction";
-import { HanLogo, USDCLogo } from "../assets/_index";
+    MainEnterLogo,
+    MainArrakisLogo,
+} from "../assets/_index";
 
 const MainPage = () => {
     const dispatch = useDispatch();
@@ -83,7 +82,7 @@ const MainPage = () => {
                     <img src={MainHanLogo} alt="HanLogo" />
                 </div>
                 <div className="mainPageTitleTxtSection">
-                    <a>HANCHAIN PROJECT</a>
+                    <a>KHAN's STAKING</a>
                 </div>
             </div>
             <div className="hanChainPriceContainer">
@@ -128,7 +127,7 @@ const MainPage = () => {
                     <div className="mainPageStakingBoxSection">
                         <div className="stakingBoxHanepSection">
                             <div className="stakingBoxHanepLogoSection">
-                                <img src={MainUniLogo} alt="ArrakisLogo" />
+                                <img src={WhiteUniLogo} alt="ArrakisLogo" />
                             </div>
                             <div className="stakingBoxHanepTxtSection">
                                 <p>Uniswap V2 USDC/HANeP</p>
@@ -171,19 +170,14 @@ const MainPage = () => {
                             </div>
                             <div className="tooltip-rakis6-main-container">
                                 <i className="info-icon material-main-icons">
-                                    <HelpIcon />
+                                    <MdHelp />
                                 </i>
                                 <div className="tooltip-rakis6-main-content">
                                     <p>
-                                        APR displayed is not historical statistics. According to the LP token quantity standard that fluctuates with the HAN
-                                        weight of the POOL, when staking at the present time, APR is the annual interest rate of the amount of HAN to be
-                                        obtained against the liquidity supplied.
+                                        APR displayed is not historical statistics. According to the LP token quantity standard that fluctuates with the HAN weight of the POOL, when staking at the
+                                        present time, APR is the annual interest rate of the amount of HAN to be obtained against the liquidity supplied.
                                         <br></br>
-                                        <a
-                                            className="align-rakis6-main-right"
-                                            href="https://medium.com/@HanIdentity/hanchain-x-optimism-x-uniswap-v3-x-arrakis-af564de80f81"
-                                            target="_blank"
-                                        >
+                                        <a className="align-rakis6-main-right" href="https://medium.com/@HanIdentity/hanchain-x-optimism-x-uniswap-v3-x-arrakis-af564de80f81" target="_blank">
                                             Read More
                                         </a>
                                         l{" "}
@@ -233,25 +227,21 @@ const MainPage = () => {
                         </div> */}
                         <div className="stakingBoxSpriSection">
                             <div className="stakingBoxSpriLogoSection">
-                                <img src={SheepooriLogoBackX} alt="SprLogo" />
+                                <img src={SprLogoBackX} alt="SprLogo" />
                             </div>
                             <div className="stakingBoxSpriTxtSection">
                                 <p>Sheepoori SPR NFT</p>
                             </div>
                             <div className="tooltip-main-spri-container">
                                 <i className="info-icon material-main-spri-icons">
-                                    <HelpIcon />
+                                    <MdHelp />
                                 </i>
                                 <div className="tooltip-main-spri-content">
                                     <p>
-                                        The right to possess digital content forever and get yourself a Sheepoori card -Ms. Caring one of three sheep siblings
-                                        characters from Sewoori Union for AdKhan: Advertising Platform
+                                        The right to possess digital content forever and get yourself a Sheepoori card -Ms. Caring one of three sheep siblings characters from Sewoori Union for AdKhan:
+                                        Advertising Platform
                                         <br></br>
-                                        <a
-                                            className="align-main-spri-right"
-                                            href="https://medium.com/@HanIdentity/as-the-second-staking-of-the-hanchain-project-e29da8da25e3"
-                                            target="_blank"
-                                        >
+                                        <a className="align-main-spri-right" href="https://medium.com/@HanIdentity/as-the-second-staking-of-the-hanchain-project-e29da8da25e3" target="_blank">
                                             Read More
                                         </a>
                                     </p>
@@ -306,16 +296,13 @@ const MainPage = () => {
                     <div className="mainPagePoolBoxSection">
                         <div className="poolBoxHanEpSection">
                             <div className="poolBoxHanEpLogoSection">
-                                <img src={MainUniLogo} alt="ArrakisLogo" />
+                                <img src={WhiteUniLogo} alt="ArrakisLogo" />
                             </div>
                             <div className="poolBoxHanEpTxtSection">
                                 <p>USDC-V2-HANeP</p>
                             </div>
                             <div className="poolBoxHanEpBtnSection">
-                                <a
-                                    href="https://app.uniswap.org/#/add/v2/0x5052fa4a2a147eaAa4c0242e9Cc54a10A4f42070/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-                                    target="_blank"
-                                >
+                                <a href="https://app.uniswap.org/#/add/v2/0x5052fa4a2a147eaAa4c0242e9Cc54a10A4f42070/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" target="_blank">
                                     ADD POOL
                                 </a>
                             </div>
@@ -335,23 +322,20 @@ const MainPage = () => {
                         </div>
                         <div className="poolBoxUsdcSection">
                             <div className="poolBoxUsdcLogoSection">
-                                <img src={MainUniLogo} alt="MunieLogo" />
+                                <img src={WhiteUniLogo} alt="MunieLogo" />
                             </div>
                             <div className="poolBoxUsdcTxtSection">
                                 <p>USDC-V2-HAN</p>
                             </div>
                             <div className="poolBoxUsdcBtnSection">
-                                <a
-                                    href="https://app.uniswap.org/#/add/v2/0x0c90C57aaf95A3A87eadda6ec3974c99D786511F/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-                                    target="_blank"
-                                >
+                                <a href="https://app.uniswap.org/#/add/v2/0x0c90C57aaf95A3A87eadda6ec3974c99D786511F/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" target="_blank">
                                     ADD POOL
                                 </a>
                             </div>
                         </div>
                         <div className="poolBoxSpriSection">
                             <div className="poolBoxSpriLogoSection">
-                                <img src={SheepooriLogoBackX} alt="SprLogo" />
+                                <img src={SprLogoBackX} alt="SprLogo" />
                             </div>
                             <div className="poolBoxSpriTxtSection">
                                 <p>Sheepoori SPR NFT</p>
@@ -390,19 +374,9 @@ const MainPage = () => {
                     <div>
                         <div className="ether">
                             <span className="ether_logo">
-                                <img
-                                    width="20px"
-                                    height="20px"
-                                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                                    alt="EthereumIcon"
-                                />
+                                <img width="20px" height="20px" src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" alt="EthereumIcon" />
                             </span>
-                            <input
-                                className="ether_txt"
-                                id="myInput"
-                                defaultValue="0x0c90c57aaf95a3a87eadda6ec3974c99d786511f"
-                                style={{ border: "none", background: "transparent" }}
-                            />
+                            <input className="ether_txt" id="myInput" defaultValue="0x0c90c57aaf95a3a87eadda6ec3974c99d786511f" style={{ border: "none", background: "transparent" }} />
                             <a className="ether_copy tooltip">
                                 <button
                                     onClick={myFunction}

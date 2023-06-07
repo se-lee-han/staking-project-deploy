@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./WethAirDropSection.scss";
-import { WETHLogo } from "../../../../img/_index";
 import { FiRefreshCcw } from "react-icons/fi";
-import AirDropLoading from "../../../AirDropPage/AirDropLoading";
 import { airDropClaimAction } from "../../../../redux/actions/airdropActions/wethActions/airDropClaimAction";
 import { airDropTimeStampAction } from "../../../../redux/actions/airdropActions/wethActions/airDropTimeStampAction";
 import { airDropPriceAction } from "../../../../redux/actions/airdropActions/wethActions/airDropPriceAction";

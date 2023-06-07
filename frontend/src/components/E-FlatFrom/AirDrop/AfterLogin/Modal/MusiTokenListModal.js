@@ -3,12 +3,12 @@ import "./MusiTokenListModal.scss";
 import { BsX } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { MusiKhanLogo } from "../../../../../img/_index";
 import { musiAirDropTokenListAction } from "../../../../../redux/actions/airdropActions/musiActions/musiAirDropTokenListAction";
 import { musiAirDropViewAction } from "../../../../../redux/actions/airdropActions/musiActions/musiAirDropViewAction";
 import { musiAirDropTimeStampAction } from "../../../../../redux/actions/airdropActions/musiActions/musiAirDropTimeStampAction";
 import { musiAirDropClaimedAction } from "../../../../../redux/actions/airdropActions/musiActions/musiAirDropClaimedAction";
 import { musiAirDropBackDataInfoAction } from "../../../../../redux/actions/airdropActions/musiActions/musiAirDropBackDataInfoAction";
+import { MusiLogoXBack } from "../../../../../assets/_index";
 const MusiTokenListModal = (props) => {
     const { open, close, header } = props;
     const dispatch = useDispatch();
@@ -80,7 +80,7 @@ const MusiTokenListModal = (props) => {
                                             }}
                                         >
                                             <div className="musikhan-TokenListTokenImgTextSection">
-                                                <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                                <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                                 <div className="musikhan-TokenListNameSymbolSection">
                                                     <div className="musikhan-TokenListNameSection">
                                                         <h2>{musiAirDropTokenList.name} </h2>

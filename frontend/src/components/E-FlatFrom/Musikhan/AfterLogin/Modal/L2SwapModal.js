@@ -7,7 +7,7 @@ import { L2SwapTokenListToBackAction } from "../../../../../redux/actions/musikh
 import { L2SwapViewAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2SwapViewAction";
 import { L2SwapTokenContractAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2SwapTokenContractAction";
 import { L2SwapTokenBalanceAction } from "../../../../../redux/actions/musikhanActions/L2Actions/L2SwapTokenBalanceAction";
-import { MusiKhanLogo } from "../../../../../img/_index";
+import { MusiLogoXBack } from "../../../../../assets/_index";
 
 const L2SwapModal = (props) => {
     const dispatch = useDispatch();
@@ -55,18 +55,12 @@ const L2SwapModal = (props) => {
                     <div className="swapL2-ModalTokenInfoContainer">
                         <div className="swapL2-ModalTokensSearchInputSection">
                             <FaSearch className="swapL2-ModalSearchIcon" />
-                            <input
-                                placeholder="Search name or symbol"
-                                className="swapL2-ModalTokensSearchInput"
-                                onChange={(e) => setSearchSwapTokenData(e.target.value.toLowerCase())}
-                            ></input>
+                            <input placeholder="Search name or symbol" className="swapL2-ModalTokensSearchInput" onChange={(e) => setSearchSwapTokenData(e.target.value.toLowerCase())}></input>
                         </div>
                         <div className="swapL2-ModalTokenListSection">
                             <ul className="swapL2-TokenList_PickerToken">
                                 {L2SwapTokenList.filter(
-                                    (L2SwapTokenList) =>
-                                        L2SwapTokenList.name.toLowerCase().includes(searchSwapTokenData) ||
-                                        L2SwapTokenList.symbol.toLowerCase().includes(searchSwapTokenData)
+                                    (L2SwapTokenList) => L2SwapTokenList.name.toLowerCase().includes(searchSwapTokenData) || L2SwapTokenList.symbol.toLowerCase().includes(searchSwapTokenData)
                                 ).map((L2SwapTokenList, index) => (
                                     <li
                                         key={index}
@@ -76,7 +70,7 @@ const L2SwapModal = (props) => {
                                         }}
                                     >
                                         <div className="swapL2-TokenListTokenImgTextSection">
-                                            <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                            <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                             <div className="swapL2-TokenListNameSymbolSection">
                                                 <div className="swapL2-TokenListNameSection">
                                                     <h2>{L2SwapTokenList.name}</h2>

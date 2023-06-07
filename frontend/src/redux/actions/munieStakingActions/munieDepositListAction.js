@@ -1,17 +1,13 @@
-import { MunieTokenAddress, MunieStakingContract } from "../../../config/MunieConfig";
-// import { MunieTokenAddress } from "../../../config/MunieConfigTest";
+import { MunieV2StakingContract, MunieTokenAddress, web3 } from "../../../config/new/StakingMunieV2Config";
 import axios from "axios";
-import Web3 from "web3";
 
 function munieDepositListAct(account) {
     return async (dispatch) => {
         try {
-            if (account !== "") {
+            if (account) {
                 // 주소별 가지고 있는 민팅된 tokenID
                 // console.log(account);
-                const getMyMunieTokenToBack = await axios.get(
-                    `https://alchemyapi.khans.io/alchemy/getNFTs?owner=${account}&contractAddress=${MunieTokenAddress}`
-                );
+                const getMyMunieTokenToBack = await axios.get(`https://alchemyapi.khans.io/alchemy/getNFTs?owner=${account}&contractAddress=${MunieTokenAddress}`);
                 // const getMyMunieTokenToBack = await axios.get(
                 //     `https://alchemyapi.khans.io/alchemy/getNFTs?network=eth&owner=${account}&contractAddress=${MunieTokenAddress}`
                 // );
@@ -23,14 +19,14 @@ function munieDepositListAct(account) {
                     // 가지고 있는 민팅 ID로 Token정보 뽑기
                     for (let i = 0; i < getMyMunieTokenIdsApi.length; i++) {
                         let myMunieMetaDataTokenid = getMyMunieTokenIdsApi[i];
-                        let mTokenId = Web3.utils.hexToNumber(myMunieMetaDataTokenid.nft.tokenId);
+                        let mTokenId = web3.utils.hexToNumber(myMunieMetaDataTokenid.nft.tokenId);
                         getMyMunieTokenIdsApi[i].tokenId = mTokenId;
                     }
                 } else {
                     getMyMunieTokenIdsApi = [];
                 }
 
-                const getMunieStakerData = await MunieStakingContract.methods.getStakerData(account).call();
+                const getMunieStakerData = await MunieV2StakingContract.methods.getStakerData(account).call();
 
                 const depositStakedAmountApi = getMunieStakerData.countStaked;
 
@@ -41,6 +37,8 @@ function munieDepositListAct(account) {
                         depositStakedAmount: depositStakedAmountApi,
                     },
                 });
+            } else {
+                return null;
             }
         } catch (error) {
             console.error(error);

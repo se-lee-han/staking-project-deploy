@@ -3,10 +3,7 @@ import "./MunieTokenListModal.scss";
 import { BsX } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { MunieTestImg } from "../../../../../assets/_index";
-import { munieAirDropTokenListAction } from "../../../../../redux/actions/airdropActions/munieActions/munieAirDropTokenListAction";
 import { munieAirDropViewAction } from "../../../../../redux/actions/airdropActions/munieActions/munieAirDropViewAction";
-import { munieAirDropGetTokenAction } from "../../../../../redux/actions/airdropActions/munieActions/munieAirDropGetTokenAction";
 import { munieAirDropCheckOwnerAction } from "../../../../../redux/actions/airdropActions/munieActions/munieAirDropCheckOwnerAction";
 
 const MunieTokenListModal = (props) => {
@@ -56,9 +53,7 @@ const MunieTokenListModal = (props) => {
                             <div className="munie-ModalTokenListSection">
                                 <ul className="munie-TokenList_PickerToken">
                                     {getMunieAirDropTokenImg
-                                        .filter((getMunieAirDropTokenImg) =>
-                                            getMunieAirDropTokenImg.nft.name.toLowerCase().includes(searchMunieAirDropTokenData)
-                                        )
+                                        .filter((getMunieAirDropTokenImg) => getMunieAirDropTokenImg.nft.name.toLowerCase().includes(searchMunieAirDropTokenData))
                                         .map((getMunieAirDropTokenImg, index) => (
                                             <div
                                                 className="munie-TokenListTokenImgTextSection"

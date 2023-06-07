@@ -1,30 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { FiRefreshCcw } from 'react-icons/fi';
-import { USDCLogo } from '../../../../assets/_index';
-
-import './USDCAirDropSection.scss';
-import { usdcAirDropViewAction } from '../../../../redux/actions/airdropActions/USDCActions/usdcAirDropViewAction';
-import { usdcAirDropTimeStampAction } from '../../../../redux/actions/airdropActions/USDCActions/usdcAirDropTimeStampAction';
-import { usdcAirDropPriceAction } from '../../../../redux/actions/airdropActions/USDCActions/usdcAirDropPriceAction';
-import { usdcAirDropClaimedAction } from '../../../../redux/actions/airdropActions/USDCActions/usdcAirDropClaimedAction';
-import { usdcAirDropClaimAction } from '../../../../redux/actions/airdropActions/USDCActions/usdcAirDropClaimAction';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { FiRefreshCcw } from "react-icons/fi";
+import { USDCLogo } from "../../../../assets/_index";
+import "./USDCAirDropSection.scss";
+import { usdcAirDropViewAction } from "../../../../redux/actions/airdropActions/USDCActions/usdcAirDropViewAction";
+import { usdcAirDropTimeStampAction } from "../../../../redux/actions/airdropActions/USDCActions/usdcAirDropTimeStampAction";
+import { usdcAirDropPriceAction } from "../../../../redux/actions/airdropActions/USDCActions/usdcAirDropPriceAction";
+import { usdcAirDropClaimedAction } from "../../../../redux/actions/airdropActions/USDCActions/usdcAirDropClaimedAction";
+import { usdcAirDropClaimAction } from "../../../../redux/actions/airdropActions/USDCActions/usdcAirDropClaimAction";
 
 const USDCAirDropSection = () => {
     const dispatch = useDispatch();
-    const [checkChainId, setCheckChainId] = useState('');
+    const [checkChainId, setCheckChainId] = useState("");
     const { account } = useSelector((state) => state.account);
 
-    const {
-        getUsdcProofToBack,
-        getUsdcAmountToBack,
-        canUsdcClaim,
-        claimUsdcDayDate,
-        claimUsdcHoursDate,
-        claimUsdcMinDate,
-        usdcClaimed,
-        successUsdcAirDropClaim,
-    } = useSelector((state) => state.usdcAirDropView);
+    const { getUsdcProofToBack, getUsdcAmountToBack, canUsdcClaim, claimUsdcDayDate, claimUsdcHoursDate, claimUsdcMinDate, usdcClaimed, successUsdcAirDropClaim } = useSelector(
+        (state) => state.usdcAirDropView
+    );
 
     const usdcAirDropClaim = () => {
         dispatch(usdcAirDropClaimAction.usdcAirDropClaimAct(account, getUsdcProofToBack, getUsdcAmountToBack));
@@ -44,17 +36,17 @@ const USDCAirDropSection = () => {
     // console.log('USDCAirDrop', account);
 
     useEffect(() => {
-        if (window.ethereum?.chainId === '0x1') {
-            setCheckChainId('0x1');
+        if (window.ethereum?.chainId === "0x1") {
+            setCheckChainId("0x1");
         }
-        if (window.ethereum?.chainId === '0xa') {
-            setCheckChainId('Oxa');
+        if (window.ethereum?.chainId === "0xa") {
+            setCheckChainId("Oxa");
         }
     }, [window.ethereum?.chainId]);
 
     return (
         <>
-            {checkChainId === '0x1' ? (
+            {checkChainId === "0x1" ? (
                 <div className="airDrop-USDC-Section">
                     <div className="airDrop-USDC-LogoSection">
                         <img src={USDCLogo} alt="-USDC-Logo" />
@@ -91,10 +83,7 @@ const USDCAirDropSection = () => {
                             <a className="USDC-HoursDate">{claimUsdcHoursDate}H</a>
                             <a className="USDC-MinDate">{claimUsdcMinDate}M</a>
                             {/* <a> */}
-                            <FiRefreshCcw
-                                className="airDrop-USDC-ReFreshTimeStamp"
-                                onClick={changeUsdcTimeStampState}
-                            />
+                            <FiRefreshCcw className="airDrop-USDC-ReFreshTimeStamp" onClick={changeUsdcTimeStampState} />
                             {/* </a> */}
                         </div>
 
@@ -128,10 +117,7 @@ const USDCAirDropSection = () => {
                             <a className="USDC-HoursDate">N/A</a>
                             <a className="USDC-MinDate">N/A</a>
                             {/* <a> */}
-                            <FiRefreshCcw
-                                className="airDrop-USDC-ReFreshTimeStamp"
-                                onClick={changeUsdcTimeStampState}
-                            />
+                            <FiRefreshCcw className="airDrop-USDC-ReFreshTimeStamp" onClick={changeUsdcTimeStampState} />
                             {/* </a> */}
                         </div>
                         <p></p>

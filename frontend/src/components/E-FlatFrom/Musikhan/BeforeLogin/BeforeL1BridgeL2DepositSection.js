@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { MusiKhanLogo } from "../../../../img/_index";
-import { OptimismRedLogo } from "../../../../assets/_index";
+import { MusiLogoXBack, OptimismRedLogo } from "../../../../assets/_index";
 import Loading from "../../../SprStakingPage/Loading";
 import Swal from "sweetalert2";
 
@@ -39,11 +38,7 @@ const BeforeL1BridgeL2DepositSection = () => {
                     <div className="musiStakingBridgeSection">
                         <div className="musiStakingBirdgeTitleSection">
                             <a className="musiStakingTitleTxt">From</a>
-                            <img
-                                src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                                className="musiStakingMainNetImg"
-                                alt="EtheruemIcon"
-                            />
+                            <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" className="musiStakingMainNetImg" alt="EtheruemIcon" />
                             <a className="musiStakingMainTxt">Ethereum Mainnet</a>
                         </div>
                         <div className="musiStakingBridgeAmountSection">
@@ -51,7 +46,7 @@ const BeforeL1BridgeL2DepositSection = () => {
 
                             <div className="musiStakingBridgePickerSection">
                                 <button className="musiStakingBridgePicker_SelectBtn" onClick={loginAlert}>
-                                    <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                    <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                     <MdKeyboardArrowDown size="15" />
                                 </button>
                             </div>
@@ -87,7 +82,7 @@ const BeforeL1BridgeL2DepositSection = () => {
                                 <input type="number" placeholder="0.0" min="0" step="0.0000000000000000001"></input>
                                 <div className="musiStakingL2DepositPickerSection">
                                     <button className="musiStakingL2DepositPicker_SelectBtn" onClick={loginAlert}>
-                                        <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                        <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                         <MdKeyboardArrowDown size="15" />
                                     </button>
                                 </div>

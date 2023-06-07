@@ -113,14 +113,42 @@ const BeforeRakis6DepositSection = () => {
                     <p>Available Quota : {canStakedQuatoAmount}</p>
                 </div>
             </>
-            <div className="rakis6-AirDrop-Deposit-APR-Container">
+            <div className="stakingMunieAmountContainer">
+                <div className="stakingMunieAmountTitle">
+                    <div className="stakingMunieAmountTxt">
+                        <a>0.000000048445704606 HAN</a>
+                    </div>
+
+                    {/* <div className="tooltip-container">
+                            <i className="info-icon material-icons">
+                                <HelpIcon />
+                            </i>
+                            <div className="tooltip-content">
+                                <span>
+                                    The right to possess digital content forever and get yourself a Sheepoori card -Ms. Caring one of three sheep siblings
+                                    characters from Sewoori Union for AdKhan: Advertising Platform
+                                </span>
+                                <span className="align-right">
+                                    {" "}
+                                    <a href="https://medium.com/@HanIdentity/as-the-second-staking-of-the-hanchain-project-e29da8da25e3" target="_blank">
+                                        Read More
+                                    </a>
+                                </span>
+                            </div>
+                        </div> */}
+                </div>
+                <div className="stakingMunieAmountNum">
+                    <a>for each 1Rakis6 per second</a>
+                </div>
+            </div>
+            {/* <div className="rakis6-AirDrop-Deposit-APR-Container">
                 <div className="rakis6-AirDrop-Deposit-APR-Title">
                     <a>APR</a>
                 </div>
                 <div className="rakis6-AirDrop-Deposit-APR-Info">
                     <a>{HanQuantityLpQuantityPerYear1HanValue}%</a>
                 </div>
-            </div>
+            </div> */}
             <>
                 <div className="rakis6-AirDrop-Deposit-TokenBalanceSection">
                     <p>Available : {rakis6StakingBalanceOf} </p>

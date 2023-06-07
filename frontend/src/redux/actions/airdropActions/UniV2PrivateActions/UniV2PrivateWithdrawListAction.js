@@ -1,5 +1,4 @@
-import Web3 from "web3";
-import { StakingPrivateUniV2Contract } from "../../../../config/new/StakingPrivateUniV2Config";
+import { StakingPrivateUniV2Contract, web3 } from "../../../../config/new/StakingPrivateUniV2Config";
 // import { StakingPrivateRakis6Contract } from "../../../../config/new/StakingPrivateRakis6";
 
 function UniV2PrivateWithdrawListAct(account) {
@@ -24,7 +23,7 @@ function UniV2PrivateWithdrawListAct(account) {
                         const hanClaimYearsDate = newDate.getFullYear().toString().substr(2, 4);
                         const hanClaimDayDate = newDate.getDate();
                         const hanClaimHoursDate = newDate.getHours();
-                        const hanClaimAmount = Web3.utils.fromWei(String(getUniPrivateStakerDataArray[i][0]), "ether");
+                        const hanClaimAmount = web3.utils.fromWei(String(getUniPrivateStakerDataArray[i][0]), "ether");
                         getUniPrivateStakerDataArray[i].splice(4, 1, hanClaimYearsDate);
                         getUniPrivateStakerDataArray[i].splice(5, 1, hanClaimDayDate);
                         getUniPrivateStakerDataArray[i].splice(6, 1, hanClaimHoursDate);

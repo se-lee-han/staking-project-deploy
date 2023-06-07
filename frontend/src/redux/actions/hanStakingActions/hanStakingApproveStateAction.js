@@ -1,5 +1,4 @@
-import Web3 from "web3";
-import { HanChainContract, HanBonusStakingAddress } from "../../../config/StakingHanChain";
+import { HanChainContract, HanBonusStakingAddress, web3 } from "../../../config/StakingHanChain";
 // import { MyTokenContract, StakingHanChainAddress } from "../../../config/StakingHanchainTest";
 
 function hanStakingApproveStateAct(account) {
@@ -8,7 +7,7 @@ function hanStakingApproveStateAct(account) {
             if (account) {
                 const hanChainAllowanceApi = await HanChainContract.methods.allowance(account, HanBonusStakingAddress).call();
 
-                const hanChainAllowance = Web3.utils.fromWei(String(hanChainAllowanceApi), "ether");
+                const hanChainAllowance = web3.utils.fromWei(String(hanChainAllowanceApi), "ether");
 
                 // console.log(hanChainAllowance);
 

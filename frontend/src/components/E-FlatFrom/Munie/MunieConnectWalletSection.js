@@ -41,6 +41,7 @@ const MunieConnectWalletSection = () => {
             setCheckChainId("0x1a4");
         }
     }, [window.ethereum?.chainId]);
+
     return (
         <div>
             {account === "" ? (
@@ -59,13 +60,7 @@ const MunieConnectWalletSection = () => {
             ) : checkChainId === "0x1" ? (
                 <div className="connectMunieComWalletSection">
                     <a className="social-button button--social-login button--google" href="#">
-                        <img
-                            width="20px"
-                            height="20px"
-                            src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                            className="social-icon fa fa-google"
-                            alt="EthereumIcon"
-                        ></img>
+                        <img width="20px" height="20px" src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" className="social-icon fa fa-google" alt="EthereumIcon"></img>
                         {account.substr(0, 6)}...{account.slice(-6)}
                     </a>
                 </div>

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GiClick } from "react-icons/gi";
 import { FiRefreshCcw } from "react-icons/fi";
-import { MusiKhanLogo } from "../../../../img/_index";
 import Swal from "sweetalert2";
+import { MusiLogoXBack } from "../../../../assets/_index";
 
 const BeforeMusiAirDropSection = () => {
     const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const BeforeMusiAirDropSection = () => {
         <>
             <div className="airDropMusikhanSection">
                 <div className="airDropMusiKhanLogoSection">
-                    <img src={MusiKhanLogo} alt="MusikhanLogo" />
+                    <img src={MusiLogoXBack} alt="MusikhanLogo" />
                 </div>
 
                 <div className="airDropMusiTxt">

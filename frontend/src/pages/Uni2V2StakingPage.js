@@ -4,13 +4,7 @@ import "./Uni2V2StakingPage.scss";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { connectAccount } from "../redux/actions/connectAccount";
 import { networksAction } from "../redux/actions/networksAction";
-import {
-    UniV2ConnectWalletSection,
-    UniV2DepositSection,
-    UniV2TopSection,
-    UniV2RewardSection,
-    UniV2WithdrawSection,
-} from "../components";
+import { UniV2ConnectWalletSection, UniV2DepositSection, UniV2TopSection, UniV2RewardSection, UniV2WithdrawSection } from "../components";
 
 const Uni2V2StakingPage = () => {
     const dispatch = useDispatch();

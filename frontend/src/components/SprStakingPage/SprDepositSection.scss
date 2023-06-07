@@ -1,0 +1,180 @@
+// ----------------------- DEPOSIT SECTION ----------------------- //
+.stakedSprCanAmountSection {
+    position: absolute;
+    top: 1%;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
+    color: #72cef2;
+    font-size: 15px;
+}
+.sprStakingCantChoiceImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.sprStakingCantChoiceImgSection {
+    width: 150px;
+    height: 150px;
+    background: url("../../assets/images/sheeprilogo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    // border: 3px solid black;
+    cursor: not-allowed;
+}
+.cantStakingSprBtn {
+    text-shadow: #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px, #24b5ee 0px 0px 1.5px;
+    color: #0a1126;
+    font-size: 20px;
+}
+
+//  -----------------Deposit Slider Section -------------------- //
+// .mainSlider {
+//   width: 100%;
+// }
+
+.sprSlider {
+    // width: 200px;
+    // height: 150px;
+    // position: relative;
+}
+
+.sprStakingImgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.sprStakingImgCard {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // border: 3px solid black;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+    position: absolute;
+    top: 45px;
+    width: auto;
+    font-size: 35px;
+}
+
+.alice-carousel__prev-btn {
+    left: -48%;
+}
+
+.alice-carousel__next-btn {
+    right: -48%;
+}
+
+.sprStakingImgTokenId {
+    font-size: 15px;
+}
+
+.modalTitleTxt p {
+    color: #0a1126;
+}
+
+.modalMainContainer p {
+    color: #0a1126;
+}
+
+.sprStakingImgCard {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // border: 3px solid black;
+}
+
+.alice-carousel__prev-btn {
+    text-align: none;
+}
+
+.alice-carousel__next-btn {
+    text-align: left;
+}
+
+/* ------------------- Check Box -------------------*/
+.imgCheckBox {
+    position: relative;
+    top: -40%;
+    right: -37%;
+    width: 10px;
+    height: 10px;
+}
+
+.sprStakingImgCard input {
+    zoom: 2;
+}
+
+.sprStakingChoiceImgSection {
+    width: 150px;
+    height: 150px;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // border: 3px solid black;
+}
+
+.sprStakingBeforeChoiceImgSection:hover {
+    opacity: 0.5;
+}
+
+// ----------------------- Choose Nft Big Btn ------------------------- //
+.myButton {
+    box-shadow: inset 0px 0.998px 0px 0px #97c4fe;
+    background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+    background-color: #3d94f6;
+    border-radius: 6px;
+    border: 0.998px solid #337fed;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    // height: 99.998px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 57px 23.003px;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #1570cd;
+}
+.myButton:hover {
+    background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+    background-color: #1e62d0;
+}
+.myButton:active {
+    position: relative;
+    top: 0.998px;
+}
+
+.rewardsClaimSprBtnSection button {
+    height: 50.002px;
+}
+
+.sprUnStakeBtnSection button {
+    height: 50.002px;
+}
+
+.depositSprStakeBtnSection {
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+}
+
+.depositSprStakeBtnSection button {
+    height: 50.002px;
+}

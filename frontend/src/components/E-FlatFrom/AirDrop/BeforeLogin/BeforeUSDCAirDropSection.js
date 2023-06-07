@@ -4,7 +4,6 @@ import { FiRefreshCcw } from "react-icons/fi";
 import { USDCLogo } from "../../../../assets/_index";
 
 const BeforeUSDCAirDropSection = () => {
-
     const dispatch = useDispatch();
     const [checkChainId, setCheckChainId] = useState("");
     const { account } = useSelector((state) => state.account);
@@ -17,81 +16,81 @@ const BeforeUSDCAirDropSection = () => {
             setCheckChainId("Oxa");
         }
     }, [window.ethereum?.chainId]);
-  return (
-    <>
-    {checkChainId === "0x1" ? (
-        <div className="airDrop-USDC-Section">
-            <div className="airDrop-USDC-LogoSection">
-                <img src={USDCLogo} alt="-USDC-Logo" />
-            </div>
-            <div className="airDrop-USDC-Txt">
-                <a>USDC</a>
-            </div>
-            <div className="airDrop-USDC-Btn">
-                <button className="cant--USDC--learn-more" disabled={true}>
-                    COMING SOON
-                </button>
-            </div>
-            <div className="airDrop-USDC-TimeStampSection">
-                <div className="airDrop-USDC-TimeStampTitle">
-                    <a>Remaining Duration</a>
-                </div>
-                <div className="airDrop-USDC-TimeStampInfo">
-                    <a className="-USDC-DayDate">N/A</a>
-                    <a className="-USDC-HoursDate">N/A</a>
-                    <a className="-USDC-MinDate">N/A</a>
-                    {/* <a> */}
-                    <FiRefreshCcw className="airDrop-USDC-ReFreshTimeStamp"  />
-                    {/* </a> */}
-                </div>
-                {/* <div className="airDrop-USDC-TimeStampInfo">
+    return (
+        <>
+            {checkChainId === "0x1" ? (
+                <div className="airDrop-USDC-Section">
+                    <div className="airDrop-USDC-LogoSection">
+                        <img src={USDCLogo} alt="-USDC-Logo" />
+                    </div>
+                    <div className="airDrop-USDC-Txt">
+                        <a>USDC</a>
+                    </div>
+                    <div className="airDrop-USDC-Btn">
+                        <button className="cant-USDC-learn-more" disabled={true}>
+                            Nothing to Claim
+                        </button>
+                    </div>
+                    <div className="airDrop-USDC-TimeStampSection">
+                        <div className="airDrop-USDC-TimeStampTitle">
+                            <a>Remaining Duration</a>
+                        </div>
+                        <div className="airDrop-USDC-TimeStampInfo">
+                            <a className="USDC-DayDate">N/A</a>
+                            <a className="USDC-HoursDate">N/A</a>
+                            <a className="USDC-MinDate">N/A</a>
+                            {/* <a> */}
+                            <FiRefreshCcw className="airDrop-USDC-ReFreshTimeStamp" />
+                            {/* </a> */}
+                        </div>
+                        {/* <div className="airDrop-USDC-TimeStampInfo">
                     <a className="-USDC-DayDate">{claimDayDate}D</a>
                     <a className="-USDC-HoursDate">{claimHoursDate}H</a>
                     <a className="-USDC-MinDate">{claimMinDate}M</a>
                     <FiRefreshCcw className="airDrop-USDC-ReFreshTimeStamp" onClick={changeTimeStampState} />
                 </div> */}
-                <p></p>
-            </div>
-            {/* <div className="airDrop-USDC-PriceSection">
+                        <p></p>
+                    </div>
+                    {/* <div className="airDrop-USDC-PriceSection">
                 <a>1 -USDC- = {getLatestPrice} USD</a>
             </div> */}
-        </div>
-    ) : (
-        <div className="airDrop-USDC-Section">
-            <div className="airDrop-USDC-LogoSection">
-                <img src={USDCLogo} alt="-USDC-Logo" />
-            </div>
-            <div className="airDrop-USDC-Txt">
-                <a>USDC</a>
-            </div>
-
-            <div className="airDrop-USDC-Btn">
-                <button className="switch--USDC--learn-more" disabled={true}>
-                    Switch to Ethereum
-                </button>
-            </div>
-
-            <div className="airDrop-USDC-TimeStampSection">
-                <div className="airDrop-USDC-TimeStampTitle">
-                    <a>Remaining Duration</a>
                 </div>
-                <div className="airDrop-USDC-TimeStampInfo">
-                    <a className="-USDC-DayDate">N/A</a>
-                    <a className="-USDC-HoursDate">N/A</a>
-                    <a className="-USDC-MinDate">N/A</a>
-                    {/* <a> */}
-                    <FiRefreshCcw className="airDrop-USDC-ReFreshTimeStamp" />
-                    {/* </a> */}
-                </div>
-                <p></p>
-            </div>
-            {/* <div className="airDrop-USDC-PriceSection">
+            ) : (
+                <div className="airDrop-USDC-Section">
+                    <div className="airDrop-USDC-LogoSection">
+                        <img src={USDCLogo} alt="-USDC-Logo" />
+                    </div>
+                    <div className="airDrop-USDC-Txt">
+                        <a>USDC</a>
+                    </div>
+
+                    <div className="airDrop-USDC-Btn">
+                        <button className="switch-Usdc-learn-more" disabled={true}>
+                            Switch to Ethereum
+                        </button>
+                    </div>
+
+                    <div className="airDrop-USDC-TimeStampSection">
+                        <div className="airDrop-USDC-TimeStampTitle">
+                            <a>Remaining Duration</a>
+                        </div>
+                        <div className="airDrop-USDC-TimeStampInfo">
+                            <a className="USDC-DayDate">N/A</a>
+                            <a className="USDC-HoursDate">N/A</a>
+                            <a className="USDC-MinDate">N/A</a>
+                            {/* <a> */}
+                            <FiRefreshCcw className="airDrop-USDC-ReFreshTimeStamp" />
+                            {/* </a> */}
+                        </div>
+                        <p></p>
+                    </div>
+                    {/* <div className="airDrop-USDC-PriceSection">
                 <a>1 -USDC- = {getLatestPrice} USD</a>
             </div> */}
-        </div>
-    )}
-</>
-  )
-}
+                </div>
+            )}
+        </>
+    );
+};
 
-export default BeforeUSDCAirDropSection
+export default BeforeUSDCAirDropSection;

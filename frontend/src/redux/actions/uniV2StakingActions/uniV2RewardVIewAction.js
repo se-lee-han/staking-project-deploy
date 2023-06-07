@@ -1,5 +1,4 @@
-import Web3 from "web3";
-import { StakingUniV2Contract } from "../../../config/new/StakingUniV2Config";
+import { StakingUniV2Contract, web3 } from "../../../config/new/StakingUniV2Config";
 
 function uniV2RewardVIewAct(account) {
     return async (dispatch) => {
@@ -11,7 +10,7 @@ function uniV2RewardVIewAct(account) {
 
                 const hanRakis6StartTime = stakersApi.startTime;
 
-                const hanRakis6StakedAmount = Web3.utils.fromWei(String(stakersApi.amount), "ether");
+                const hanRakis6StakedAmount = web3.utils.fromWei(String(stakersApi.amount), "ether");
 
                 const currentTimeApi = Math.floor(new Date().getTime() / 1000);
 
@@ -19,7 +18,7 @@ function uniV2RewardVIewAct(account) {
 
                 const hanTokenPerLpTokenApi = await StakingUniV2Contract.methods.hanTokenPerLpToken().call();
 
-                const hanTokenPerLpToken = Web3.utils.fromWei(String(hanTokenPerLpTokenApi), "ether");
+                const hanTokenPerLpToken = web3.utils.fromWei(String(hanTokenPerLpTokenApi), "ether");
 
                 const uniV2RewardView = stakedStartTime * (hanRakis6StakedAmount * hanTokenPerLpToken);
 

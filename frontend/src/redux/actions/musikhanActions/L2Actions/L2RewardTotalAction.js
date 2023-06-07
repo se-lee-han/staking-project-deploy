@@ -1,6 +1,4 @@
-import Web3 from "web3";
-
-import { MusikhanStakingContract } from "../../../../config/MusikhanConfig";
+import { MusikhanStakingContract, web3 } from "../../../../config/MusikhanConfig";
 // import { MusikhanStakingContract } from "../../../../config/MusikhanConfigTest";
 
 function L2RewardTotalAct(account) {
@@ -8,7 +6,7 @@ function L2RewardTotalAct(account) {
         try {
             if (account) {
                 const totalRewardApi = await MusikhanStakingContract.methods.totalReward(account).call();
-                const totalReward = Web3.utils.fromWei(String(totalRewardApi), "ether");
+                const totalReward = web3.utils.fromWei(String(totalRewardApi), "ether");
                 dispatch({
                     type: "L2_TOTAL_REWARD_TOKEN",
                     payload: {

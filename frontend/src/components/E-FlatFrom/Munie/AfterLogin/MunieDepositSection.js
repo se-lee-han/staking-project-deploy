@@ -12,7 +12,6 @@ import Carousel from "react-multi-carousel";
 import { networksAction } from "../../../../redux/actions/networksAction";
 import { munieDepositListAction } from "../../../../redux/actions/munieStakingActions/munieDepositListAction";
 import { munieSingleApproveStateAction } from "../../../../redux/actions/munieStakingActions/munieSingleApproveStateAction";
-import { HanLogo } from "../../../../assets/_index";
 
 const MunieDepositSection = () => {
     const dispatch = useDispatch();
@@ -29,10 +28,10 @@ const MunieDepositSection = () => {
 
     // add to Reward Token
     const addRewardToken = async () => {
-        const tokenAddress = "0xC7483FbDB5c03E785617a638E0f22a08da10084B";
-        const tokenSymbol = "HAN";
+        const tokenAddress = "0x5052fa4a2a147eaAa4c0242e9Cc54a10A4f42070";
+        const tokenSymbol = "HANeP";
         const tokenDecimals = 18;
-        const tokenImage = "https://raw.githubusercontent.com/hanchain-paykhan/hanchain/3058eecc5d26f980db884f1318da6c4de18a7aea/logo/logo.svg";
+        // const tokenImage = "https://raw.githubusercontent.com/hanchain-paykhan/hanchain/3058eecc5d26f980db884f1318da6c4de18a7aea/logo/logo.svg";
 
         try {
             const wasAdded = await window.ethereum?.request({
@@ -43,7 +42,7 @@ const MunieDepositSection = () => {
                         address: tokenAddress,
                         symbol: tokenSymbol,
                         decimals: tokenDecimals,
-                        image: tokenImage,
+                        // image: tokenImage,
                     },
                 },
             });
@@ -57,16 +56,6 @@ const MunieDepositSection = () => {
             console.log(error);
         }
     };
-
-    // const munieMint = async () => {
-    //     const munieMint = await MunieTokenContract.methods.Mint().send({ from: account });
-    //     console.log(munieMint);
-    // };
-
-    // const munieTest = async () => {
-    //     const getTotalMunieTokenIdsApi = await MunieTokenContract.methods.getTotalTokenIds(account).call();
-    //     console.log(getTotalMunieTokenIdsApi);
-    // };
 
     const munieSingleApprove = () => {
         dispatch(munieSingleApproveAction.munieSingleApproveAct(Number(stakingMunieTokenId), account));
@@ -116,7 +105,6 @@ const MunieDepositSection = () => {
             <div className="carousel-button-group">
                 <SlArrowRight id="sliderRightBtn" onClick={() => next()} />
                 <SlArrowLeft id="sliderLeftBtn" className={currentSlide === 0 ? "disable" : ""} onClick={() => previous()} />
-                {/* <ButtonThree onClick={() => goToSlide(currentSlide + 1)}> Go to any slide </ButtonThree> */}
             </div>
         );
     };
@@ -141,33 +129,17 @@ const MunieDepositSection = () => {
             dispatch(munieDepositListAction.munieDepositListAct(account));
         }
     }, [mainTabArr]);
-    // useEffect(() => {
-    //     if (account) {
-    //         dispatch(munieDepositListAction.munieDepositListAct(account));
-    //         console.log("123412");
-    //         console.log("Deposit", getMyMunieTokenIds);
-    //         console.log("DepositAmount", depositStakedAmount);
-    //     }
-    // }, [account, dispatch]);
 
     useEffect(() => {
         dispatch(munieSingleApproveStateAction.munieSingleApproveStateAct(Number(stakingMunieTokenId), account));
     }, [Number(stakingMunieTokenId), account]);
-
-    // useEffect(() => {
-    //     if (account && stakingMunieTokenId) {
-    //         dispatch(munieSingleApproveStateAction.munieSingleApproveStateAct(account, Number(stakingMunieTokenId)));
-    //     }
-    // }, [account, Number(stakingMunieTokenId), dispatch]);
-
-    // console.log("test1");
 
     return (
         <div>
             <div className="stakingMunieAmountContainer">
                 <div className="stakingMunieAmountTitle">
                     <div className="stakingMunieAmountTxt">
-                        <a>0.000001157407407407 HAN</a>
+                        <a>0.000001157407407407 HANeP</a>
                     </div>
 
                     {/* <div className="tooltip-container">
@@ -196,7 +168,7 @@ const MunieDepositSection = () => {
                 <p>STAKED : {depositStakedAmount}</p>
             </div>
             {getMyMunieTokenIds !== null ? (
-                getMyMunieTokenIds.length === 0 ? (
+                getMyMunieTokenIds?.length === 0 ? (
                     <div className="munieStakingDepositContainer">
                         <div className="munieStakingCantChoiceImgContainer">
                             <div className="munieStakingCantChoiceImgSection">
@@ -210,15 +182,8 @@ const MunieDepositSection = () => {
                     <div className="munieStakingDepositContainer">
                         <div className="munieStakingBeforeChoiceImgContainer">
                             {getMyMunieTokenIds !== "" ? (
-                                <Carousel
-                                    responsive={responsive}
-                                    arrows={false}
-                                    className="mainUnSlider"
-                                    partialVisible
-                                    customButtonGroup={<ButtonGroup />}
-                                    renderButtonGroupOutside
-                                >
-                                    {getMyMunieTokenIds.map((item, index) => {
+                                <Carousel responsive={responsive} arrows={false} className="mainUnSlider" partialVisible customButtonGroup={<ButtonGroup />} renderButtonGroupOutside>
+                                    {getMyMunieTokenIds?.map((item, index) => {
                                         return (
                                             <div className="munieStakingSlider" key={index}>
                                                 <div className="munieStakingImgContainer">
@@ -247,22 +212,26 @@ const MunieDepositSection = () => {
                                     })}
                                 </Carousel>
                             ) : null}
-
-                            {/* {getMyMunieTokenIds.map((item, index) => {
-                                return <div>{item.tokenId}</div>;
-                            })} */}
-
-                            {/* <div className="munieStakingSelectBtnSection">
-                                <button onClick={munieMint}>Test Minting</button>
-                                <button onClick={munieTest}>Test Token</button>
-                            </div> */}
                         </div>
-
-                        <div className="depositMunieStakeBtnSection">
-                            <button className="cant-munie-com-learn-more" disabled={true}>
-                                COMING SOON
-                            </button>
-                        </div>
+                        {getMunieSingleApproved === MunieStakingAddress ? (
+                            <div className="depositMunieStakeBtnSection">
+                                <button onClick={munieStaking} className="munie-learn-more">
+                                    STAKE
+                                </button>
+                            </div>
+                        ) : successMunieApprove === false ? (
+                            <div className="depositMunieStakeBtnSection">
+                                <button onClick={munieSingleApprove} className="munie-learn-more">
+                                    APPORVE
+                                </button>
+                            </div>
+                        ) : (
+                            <div className="depositMunieStakeBtnSection">
+                                <button onClick={munieStaking} className="munie-learn-more">
+                                    STAKE
+                                </button>
+                            </div>
+                        )}
                     </div>
                 )
             ) : (
@@ -273,13 +242,12 @@ const MunieDepositSection = () => {
                 </div>
             )}
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
-                <img src={HanLogo} onClick={addRewardToken} className="hanIcon" alt="HanIcon" />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
+                <div className="HanEpTxtContinaer">
+                    <span className="HanEpTxt" onClick={addRewardToken}>
+                        HANeP
+                    </span>
+                </div>
             </div>
         </div>
     );

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { OptimismRedLogo } from "../../../../assets/_index";
-import { MusiKhanLogo } from "../../../../img/_index";
+import { MusiLogoXBack, OptimismRedLogo } from "../../../../assets/_index";
 import Loading from "../../../SprStakingPage/Loading";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { AiOutlineArrowDown } from "react-icons/ai";
@@ -48,7 +47,7 @@ const BeforeL2SwapSection = () => {
                             <input type="number" placeholder="0.0" min="0" disabled></input>
                             <div className="musiStakingL2SwapPickerSection">
                                 <button className="musiStakingL2SwapPicker_SelectBtn" onClick={loginAlert}>
-                                    <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                    <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                     <MdKeyboardArrowDown size="15" />
                                 </button>
                             </div>

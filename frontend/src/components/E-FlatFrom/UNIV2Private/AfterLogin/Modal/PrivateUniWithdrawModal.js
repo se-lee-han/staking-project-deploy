@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { BsX } from "react-icons/bs";
 import "./PrivateUniWithdrawModal.scss";
 import { ArrakisBlackIcon } from "../../../../../assets/_index";
-import {  UniV2PrivateWithdrawBalanceAction } from "../../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateWithdrawBalanceAction";
+import { UniV2PrivateWithdrawBalanceAction } from "../../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateWithdrawBalanceAction";
 import { UniV2PrivateRemainingDurationAction } from "../../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateRemainingDurationAction";
 
 const PrivateUniWithdrawModal = (props) => {
     const { open, close } = props;
     const dispatch = useDispatch();
     const { account } = useSelector((state) => state.account);
-    const { getUniPrivateStakerDataArray } = useSelector((state) => state.hanEpView);
+    const { getUniPrivateStakerDataArray } = useSelector((state) => state.UniV2PrivateView);
 
     const selectPrivateRakis6TokenToPage = (item, index) => {
         const privateStakeAmount = item[7];

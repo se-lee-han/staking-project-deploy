@@ -22,10 +22,10 @@ import { stakingViewAction } from "../redux/actions/rakis6StakingActions/staking
 import { Loading } from "../components";
 import { OptimismRedLogo, ArrakisBlackIcon } from "../assets/_index";
 import { stakingApproveAction } from "../redux/actions/rakis6StakingActions/stakingApproveAction";
-import HelpIcon from "@mui/icons-material/Help";
 import { stakingResultViewAction } from "../redux/actions/rakis6StakingActions/stakingResultViewAction";
 import { FcCancel } from "react-icons/fc";
 import Swal from "sweetalert2";
+import { MdHelp } from "react-icons/md";
 
 const StakingPage = () => {
     const dispatch = useDispatch();
@@ -36,16 +36,9 @@ const StakingPage = () => {
     const [withdrawAmount, setWithdrawAmount] = useState("");
     const [checkChainId, setCheckChainId] = useState("");
 
-    const {
-        getAmount,
-        stakingTokenBalance,
-        stakingTokenAmount,
-        getWithdrawAmount,
-        canAmountStake,
-        successApprove,
-        HanQuantityLpQuantityPerYear1HanValue,
-        allowanceAmount,
-    } = useSelector((state) => state.stakingView);
+    const { getAmount, stakingTokenBalance, stakingTokenAmount, getWithdrawAmount, canAmountStake, successApprove, HanQuantityLpQuantityPerYear1HanValue, allowanceAmount } = useSelector(
+        (state) => state.stakingView
+    );
     // console.log(stakingTokenBalance);
     const { resultValue, getBalance, getRewardReleased } = useSelector((state) => state.rakis6StakingResultView);
     //---------------- Optimism Network Switching ---------------- //
@@ -322,16 +315,14 @@ const StakingPage = () => {
                         </div>
                         <div className="tooltip-container">
                             <i className="info-icon material-icons">
-                                <HelpIcon />
+                                <MdHelp />
                             </i>
                             <div className="tooltip-content">
                                 <span>
-                                    APR displayed is not historical statistics. According to the LP token quantity standard that fluctuates with the HAN weight
-                                    of the POOL, when staking at the present time, APR is the annual interest rate of the amount of HAN to be obtained against
-                                    the liquidity supplied.
+                                    APR displayed is not historical statistics. According to the LP token quantity standard that fluctuates with the HAN weight of the POOL, when staking at the present
+                                    time, APR is the annual interest rate of the amount of HAN to be obtained against the liquidity supplied.
                                 </span>
                                 <span className="align-right">
-                                    {" "}
                                     <a href="https://medium.com/@HanIdentity/hanchain-x-optimism-x-uniswap-v3-x-arrakis-af564de80f81" target="_blank">
                                         Read More
                                     </a>
@@ -391,28 +382,109 @@ const StakingPage = () => {
             <p>Available : {stakingTokenBalance}</p>
           </div> */}
                     {HanQuantityLpQuantityPerYear1HanValue ? (
-                        <>
-                            <div className="stakingTokenBalanceSection">
-                                <p>Available : {stakingTokenBalance}</p>
-                            </div>
-                            <div className="depositAmountSection">
-                                <input
-                                    type="number"
-                                    step="0.000000000000001"
-                                    id="maxStakeAmount"
-                                    placeholder="0"
-                                    onChange={changeStakingAmount}
-                                    value={stakingAmount}
-                                ></input>
-                                <p className="amountTxt">RAKIS-6</p>
-                                <button className="amountMaxBtn">Max</button>
-                            </div>
-                            <div className="depositStakeBtnSection">
-                                <button className="enter-learn-more" disabled={true}>
-                                    COMING SOON
-                                </button>
-                            </div>
-                        </>
+                        allowanceAmount > 0 ? (
+                            <>
+                                <div className="stakingTokenBalanceSection">
+                                    <p>Available : {stakingTokenBalance}</p>
+                                </div>
+                                <div className="depositAmountSection">
+                                    <input
+                                        type="number"
+                                        step="0.00000000000001"
+                                        id="maxStakeAmount"
+                                        placeholder="0"
+                                        // onChange={changeStakingAmount}
+                                        value={allowanceAmount}
+                                    ></input>
+                                    <p className="amountTxt">RAKIS-6</p>
+                                    <button className="amountMaxBtn" onClick={changeMaxDepositAmount}>
+                                        Max
+                                    </button>
+                                </div>
+                                <div className="depositStakeBtnSection">
+                                    <button className="learn-more" onClick={staking}>
+                                        STAKE
+                                    </button>
+                                </div>
+                            </>
+                        ) : stakingAmount === "" ? (
+                            <>
+                                <div className="stakingTokenBalanceSection">
+                                    <p>Available : {stakingTokenBalance}</p>
+                                </div>
+                                <div className="depositAmountSection">
+                                    <input type="number" step="0.000000000000001" id="maxStakeAmount" placeholder="0" onChange={changeStakingAmount} value={stakingAmount}></input>
+                                    <p className="amountTxt">RAKIS-6</p>
+                                    <button className="amountMaxBtn" onClick={changeMaxDepositAmount}>
+                                        Max
+                                    </button>
+                                </div>
+                                <div className="depositStakeBtnSection">
+                                    <button className="enter-learn-more">ENTER AMOUNT</button>
+                                </div>
+                            </>
+                        ) : stakingTokenBalance === "0" || stakingAmount > stakingTokenBalance ? (
+                            <>
+                                <div className="stakingTokenBalanceSection">
+                                    <p>Available : {stakingTokenBalance}</p>
+                                </div>
+                                <div className="depositAmountSection">
+                                    <input type="number" step="0.00000000000001" id="maxStakeAmount" placeholder="0" onChange={changeStakingAmount} value={stakingAmount}></input>
+                                    <p className="amountTxt">RAKIS-6</p>
+                                    <button className="amountMaxBtn" onClick={changeMaxDepositAmount}>
+                                        Max
+                                    </button>
+                                </div>
+                                <div className="depositStakeBtnSection">
+                                    <button className="cant-learn-more" disabled={true}>
+                                        INSUFFICIENT RAKIS-6 BALANCE
+                                    </button>
+                                </div>
+                            </>
+                        ) : successApprove === false ? (
+                            <>
+                                <div className="stakingTokenBalanceSection">
+                                    <p>Available : {stakingTokenBalance}</p>
+                                </div>
+                                <div className="depositAmountSection">
+                                    <input type="number" step="0.00000000000001" id="maxStakeAmount" placeholder="0" onChange={changeStakingAmount} value={stakingAmount}></input>
+                                    <p className="amountTxt">RAKIS-6</p>
+                                    <button className="amountMaxBtn" onClick={changeMaxDepositAmount}>
+                                        Max
+                                    </button>
+                                </div>
+                                <div className="depositStakeBtnSection">
+                                    <button className="learn-more" onClick={Approve}>
+                                        APPROVE
+                                    </button>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div className="stakingTokenBalanceSection">
+                                    <p>Available : {stakingTokenBalance}</p>
+                                </div>
+                                <div className="depositAmountSection">
+                                    <input
+                                        type="number"
+                                        step="0.00000000000001"
+                                        id="maxStakeAmount"
+                                        placeholder="0"
+                                        // onChange={changeStakingAmount}
+                                        value={stakingAmount}
+                                    ></input>
+                                    <p className="amountTxt">RAKIS-6</p>
+                                    <button className="amountMaxBtn" onClick={changeMaxDepositAmount}>
+                                        Max
+                                    </button>
+                                </div>
+                                <div className="depositStakeBtnSection">
+                                    <button className="learn-more" onClick={staking}>
+                                        STAKE
+                                    </button>
+                                </div>
+                            </>
+                        )
                     ) : (
                         <>
                             <div className="depositLoadingAmountSection">
@@ -449,25 +521,30 @@ const StakingPage = () => {
                 </TabPanel>
                 <TabPanel>
                     <div className="withdrawAmountSection">
-                        <input
-                            type="number"
-                            step="0.00000000000001"
-                            id="maxUnstakeAmount"
-                            placeholder="0"
-                            onChange={changeWithdrawAmount}
-                            value={withdrawAmount}
-                        ></input>
+                        <input type="number" step="0.00000000000001" id="maxUnstakeAmount" placeholder="0" onChange={changeWithdrawAmount} value={withdrawAmount}></input>
                         <p className="amountTxt">RAKIS-6</p>
                         <button className="amountMaxBtn" onClick={changeMaxWithdrawAmount}>
                             Max
                         </button>
                     </div>
                     <div className="withdrawUnstakeBtnSection">
-                        <div className="unStakeBtnSection">
-                            <button className="enter-learn-more" disabled={true}>
-                                COMING SOON
-                            </button>
-                        </div>
+                        {withdrawAmount === "" ? (
+                            <div className="unStakeBtnSection">
+                                <button className="enter-learn-more">ENTER AMOUNT</button>
+                            </div>
+                        ) : getAmount === 0 || withdrawAmount > getAmount ? (
+                            <div className="unStakeCantBtnSection">
+                                <button className="cant-learn-more" disabled={true}>
+                                    INSUFFICIENT RAKIS-6 BALANCE
+                                </button>
+                            </div>
+                        ) : (
+                            <div className="unStakeBtnSection">
+                                <button className="learn-more" onClick={unStaking}>
+                                    UNSTAKE
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </TabPanel>
                 <div className="logoContainer">

@@ -12,7 +12,7 @@ const UniV2WithdrawSection = () => {
     const [usdcHanStakingWithdrawAmount, setUsdcHanStakingWithdrawAmount] = useState("");
 
     const { account } = useSelector((state) => state.account);
-    const { usdcRakis6StakedAmount, usdcRakis6TotalSupply } = useSelector((state) => state.uniV2View);
+    const { usdcRakis6StakedAmount, uniV2TotalSupply } = useSelector((state) => state.uniV2View);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -77,7 +77,7 @@ const UniV2WithdrawSection = () => {
         <div>
             <>
                 <div className="uniV2-Staking-Withdraw-Quaota-Section">
-                    <p>TOTAL STAKED : {usdcRakis6TotalSupply}</p>
+                    <p>TOTAL STAKED : {uniV2TotalSupply}</p>
                 </div>
                 <div className="uniV2-Staking-Withdraw-StakeAmount-Section">
                     <p>STAKED : {usdcRakis6StakedAmount} </p>
@@ -85,14 +85,7 @@ const UniV2WithdrawSection = () => {
             </>
 
             <div className="uniV2-Staking-Withdraw-AmountSection">
-                <input
-                    type="number"
-                    step="0.000000000000000001"
-                    id="maxhanRakis6UnStakeAmount"
-                    placeholder="0"
-                    onChange={changeUsdcRakis6Amount}
-                    value={usdcHanStakingWithdrawAmount}
-                ></input>
+                <input type="number" step="0.000000000000000001" id="maxhanRakis6UnStakeAmount" placeholder="0" onChange={changeUsdcRakis6Amount} value={usdcHanStakingWithdrawAmount}></input>
                 <p>HAN</p>
                 <button className="uniV2-Staking-Withdraw-AmountMaxBtn" onClick={changeUsdcMaxWithdrawAmount}>
                     Max
@@ -118,12 +111,7 @@ const UniV2WithdrawSection = () => {
                 </div>
             </div>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <div className="HanEpTxtContinaer">
                     <span className="HanEpTxt" onClick={addRewardToken}>
                         HANeP

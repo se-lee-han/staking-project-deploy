@@ -1,6 +1,5 @@
 import React from "react";
 import "./HanStakingPageTopSection.scss";
-import HelpIcon from "@mui/icons-material/Help";
 import { HanLogo } from "../../assets/_index";
 
 const HanStakingPageTopSection = () => {

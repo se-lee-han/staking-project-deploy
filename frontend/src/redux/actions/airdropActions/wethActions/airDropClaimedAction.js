@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { AirDropAddress, AirDropContract, web3 } from '../../../../config/AirDropConfig';
+import axios from "axios";
+import { AirDropContract } from "../../../../config/AirDropConfig";
 // import {
 //   AirDropAddress,
 //   AirDropContract,
@@ -9,21 +9,19 @@ import { AirDropAddress, AirDropContract, web3 } from '../../../../config/AirDro
 function airDropClaimedAct(account) {
     return async (dispatch) => {
         try {
-            if (account !== '') {
+            if (account !== "") {
                 const getProofAmountToBack = await axios.post(`https://back.khans.io/block/wethAirdrop`, { account });
 
                 if (!getProofAmountToBack.data.proof) {
                     return;
                 }
 
-                const claimedApi = await AirDropContract.methods
-                    .claimed(getProofAmountToBack.data.proof, String(getProofAmountToBack.data.eth_amount))
-                    .call({ from: account });
+                const claimedApi = await AirDropContract.methods.claimed(getProofAmountToBack.data.proof, String(getProofAmountToBack.data.eth_amount)).call({ from: account });
 
                 let [claimed] = await Promise.all([claimedApi]);
 
                 dispatch({
-                    type: 'GET_AIRDROP_CLAIMED_SUCCESS',
+                    type: "GET_AIRDROP_CLAIMED_SUCCESS",
                     payload: {
                         claimed: claimed,
                     },

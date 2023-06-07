@@ -17,10 +17,10 @@ const BeforeMunieRewardSection = () => {
 
     // add to Reward Token
     const addRewardToken = async () => {
-        const tokenAddress = "0xC7483FbDB5c03E785617a638E0f22a08da10084B";
-        const tokenSymbol = "HAN";
+        const tokenAddress = "0x5052fa4a2a147eaAa4c0242e9Cc54a10A4f42070";
+        const tokenSymbol = "HANeP";
         const tokenDecimals = 18;
-        const tokenImage = "https://raw.githubusercontent.com/hanchain-paykhan/hanchain/3058eecc5d26f980db884f1318da6c4de18a7aea/logo/logo.svg";
+        // const tokenImage = "https://raw.githubusercontent.com/hanchain-paykhan/hanchain/3058eecc5d26f980db884f1318da6c4de18a7aea/logo/logo.svg";
 
         try {
             const wasAdded = await window.ethereum?.request({
@@ -31,7 +31,7 @@ const BeforeMunieRewardSection = () => {
                         address: tokenAddress,
                         symbol: tokenSymbol,
                         decimals: tokenDecimals,
-                        image: tokenImage,
+                        // image: tokenImage,
                     },
                 },
             });
@@ -70,14 +70,14 @@ const BeforeMunieRewardSection = () => {
                 <p>
                     Estimated Interest : 0
                     <FiRefreshCcw className="allRefreshMunieClaimIcon" />
-                    HAN
+                    HANeP
                 </p>
             </div>
             <div className="amountTokenMunieRewardAccSection">
-                <p>Accumulated Interest : 0 HAN</p>
+                <p>Accumulated Interest : 0 HANeP</p>
             </div>
             <div className="amountTokenRewardMunieTxtSection">
-                <p>Rewarded Interest : 0 HAN </p>
+                <p>Rewarded Interest : 0 HANeP </p>
             </div>
             <div className="rewardsClaimMunieBtnSection">
                 <button className="cant-spr-learn-more" disabled={true}>
@@ -85,13 +85,12 @@ const BeforeMunieRewardSection = () => {
                 </button>
             </div>
             <div className="logoRewardContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
-                <img src={HanLogo} onClick={addRewardToken} className="hanIcon" alt="HanIcon" />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
+                <div className="HanEpTxtContinaer">
+                    <span className="HanEpTxt" onClick={addRewardToken}>
+                        HANeP
+                    </span>
+                </div>
             </div>
         </div>
     );

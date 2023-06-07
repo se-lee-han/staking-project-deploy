@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { OptimismRedLogo } from "../../../../assets/_index";
-import { MusiKhanLogo } from "../../../../img/_index";
+import { MusiLogoXBack, OptimismRedLogo } from "../../../../assets/_index";
 import Loading from "../../../SprStakingPage/Loading";
 import { useDispatch, useSelector } from "react-redux";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -80,13 +79,13 @@ const L2SwapSection = () => {
                             <div className="musiStakingL2SwapPickerSection">
                                 {successL2SwapTokenApprove === false ? (
                                     <button className="musiStakingL2SwapPicker_SelectBtn" onClick={openL2SwapModal}>
-                                        <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                        <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                         <span>{L2SwapSymbol}</span>
                                         <MdKeyboardArrowDown size="15" />
                                     </button>
                                 ) : (
                                     <button className="musiStakingL2SwapPicker_2SelectBtn">
-                                        <img src={MusiKhanLogo} alt="MusikhanLogo"></img>
+                                        <img src={MusiLogoXBack} alt="MusikhanLogo"></img>
                                         <span>{L2SwapSymbol}</span>
                                         {/* <MdKeyboardArrowDown size="15" /> */}
                                     </button>

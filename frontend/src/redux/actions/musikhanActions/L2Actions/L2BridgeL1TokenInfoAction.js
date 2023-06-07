@@ -1,6 +1,5 @@
-import { MusikhanContract } from "../../../../config/MusikhanConfig";
+import { MusikhanContract, web3 } from "../../../../config/MusikhanConfig";
 // import { MusikhanContract } from "../../../../config/MusikhanConfigTest";
-import Web3 from "web3";
 
 function L2BridgeL1TokenInfoAct(account) {
     return async (dispatch) => {
@@ -19,7 +18,7 @@ function L2BridgeL1TokenInfoAct(account) {
                         getL1TokenInfo: getL1TokenInfoApi,
                         mintL2TokenName: getL1TokenName,
                         mintL2TokenSymbol: getL1TokenSymbol,
-                        getL1TokenAmount: Web3.utils.fromWei(String(getL1TokenAmount), "ether"),
+                        getL1TokenAmount: web3.utils.fromWei(String(getL1TokenAmount), "ether"),
                         getL1TokenL1Ca: getL1TokenL1Ca,
                         getL1TokenL2Ca: getL1TokenL2Ca,
                     },

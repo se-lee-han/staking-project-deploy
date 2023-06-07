@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./SprAirDropSection.scss";
 import { FiRefreshCcw } from "react-icons/fi";
-import { SheepooriLogoBackX } from "../../../../img/_index";
+import { SprLogoBackX } from "../../../../assets/_index";
 
 const SprAirDropSection = () => {
     const { account } = useSelector((state) => state.account);
@@ -20,7 +20,7 @@ const SprAirDropSection = () => {
         <>
             <div className="airDropSprSection">
                 <div className="airDropSprLogoSection">
-                    <img src={SheepooriLogoBackX} alt="SprLogo" />
+                    <img src={SprLogoBackX} alt="SprLogo" />
                 </div>
                 <div className="airDropSprTxt">
                     <a>NFT Munie</a>
