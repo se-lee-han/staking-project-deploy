@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import './UniV2RewardSection.scss';
-import { networksAction } from '../../redux/actions/networksAction';
-import { FiRefreshCcw } from 'react-icons/fi';
-import { uniV2RewardVIewAction } from '../../redux/actions/uniV2StakingActions/uniV2RewardVIewAction';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "./UniV2RewardSection.scss";
+import { networksAction } from "../../redux/actions/networksAction";
+import { FiRefreshCcw } from "react-icons/fi";
+import { uniV2RewardVIewAction } from "../../redux/actions/uniV2StakingActions/uniV2RewardVIewAction";
 
 const UniV2RewardSection = () => {
     const dispatch = useDispatch();
-    const [checkChainId, setCheckChainId] = useState('');
+    const [checkChainId, setCheckChainId] = useState("");
     const { account } = useSelector((state) => state.account);
-    const {
-        usdcRakis6StakedAmount,
-        usdcRakis6StakedrewardReleased,
-        uniV2StakedunclaimedReward,
-        uniV2RewardView,
-        uniV2TotalSupply,
-    } = useSelector((state) => state.uniV2View);
+    const { uniV2StakedAmount, usdcRakis6StakedrewardReleased, uniV2StakedunclaimedReward, uniV2RewardView, uniV2TotalSupply } = useSelector((state) => state.uniV2View);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -23,16 +17,16 @@ const UniV2RewardSection = () => {
 
     // add to Reward Token
     const addRewardToken = async () => {
-        const tokenAddress = '0x5052fa4a2a147eaAa4c0242e9Cc54a10A4f42070';
-        const tokenSymbol = 'HANeP';
+        const tokenAddress = "0x5052fa4a2a147eaAa4c0242e9Cc54a10A4f42070";
+        const tokenSymbol = "HANeP";
         const tokenDecimals = 18;
         // const tokenImage = "https://raw.githubusercontent.com/hanchain-paykhan/hanchain/3058eecc5d26f980db884f1318da6c4de18a7aea/logo/logo.svg";
 
         try {
             const wasAdded = await window.ethereum?.request({
-                method: 'wallet_watchAsset',
+                method: "wallet_watchAsset",
                 params: {
-                    type: 'ERC20',
+                    type: "ERC20",
                     options: {
                         address: tokenAddress,
                         symbol: tokenSymbol,
@@ -43,9 +37,9 @@ const UniV2RewardSection = () => {
             });
 
             if (wasAdded) {
-                console.log('Thanks for your interest!');
+                console.log("Thanks for your interest!");
             } else {
-                console.log('Your loss!');
+                console.log("Your loss!");
             }
         } catch (error) {
             console.log(error);
@@ -61,11 +55,11 @@ const UniV2RewardSection = () => {
     }, [account]);
 
     useEffect(() => {
-        if (window.ethereum?.chainId === '0x1') {
-            setCheckChainId('0x1');
+        if (window.ethereum?.chainId === "0x1") {
+            setCheckChainId("0x1");
         }
-        if (window.ethereum?.chainId === '0xa') {
-            setCheckChainId('Oxa');
+        if (window.ethereum?.chainId === "0xa") {
+            setCheckChainId("Oxa");
         }
     }, [window.ethereum?.chainId]);
     return (
@@ -75,15 +69,12 @@ const UniV2RewardSection = () => {
                     <p>TOTAL STAKED : {uniV2TotalSupply}</p>
                 </div>
                 <div className="uniV2-Staking-Reward-StakeAmount-Section">
-                    <p>STAKED : {usdcRakis6StakedAmount} </p>
+                    <p>STAKED : {uniV2StakedAmount} </p>
                 </div>
                 <div className="uniV2-Staking-Reward-EstSection">
                     <p>
                         Estimated Interest : {uniV2RewardView}
-                        <FiRefreshCcw
-                            className="uniV2-Staking-Reward-RefreshIcon"
-                            onClick={changeUsdcRakis6RewardState}
-                        />
+                        <FiRefreshCcw className="uniV2-Staking-Reward-RefreshIcon" onClick={changeUsdcRakis6RewardState} />
                         HANeP
                     </p>
                 </div>
@@ -101,12 +92,7 @@ const UniV2RewardSection = () => {
                 </div>
             </>
             <div className="logoContainer">
-                <img
-                    src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
-                    onClick={changeEthereumNetWork}
-                    className="opIcon"
-                    alt="EthereumIcon"
-                />
+                <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880" onClick={changeEthereumNetWork} className="opIcon" alt="EthereumIcon" />
                 <div className="HanEpTxtContinaer">
                     <span className="HanEpTxt" onClick={addRewardToken}>
                         HANeP
