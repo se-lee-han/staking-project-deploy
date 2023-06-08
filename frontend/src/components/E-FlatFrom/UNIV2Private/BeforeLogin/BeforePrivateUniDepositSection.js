@@ -69,10 +69,10 @@ const BeforePrivateUniDepositSection = () => {
             </>
             <div className="eplat-PrUni-Deposit-APR-Container">
                 <div className="eplat-PrUni-Deposit-APR-Title">
-                    <a>0.000694953927154714 HANeP</a>
+                    <a>APR</a>
                 </div>
                 <div className="eplat-PrUni-Deposit-APR-Info">
-                    <a>for each HANeP per second</a>
+                    <a>%</a>
                 </div>
             </div>
             <>
