@@ -68,10 +68,10 @@ const BeforePrivateUniRewardSection = () => {
                 </div>
                 <div className="eplat-PrUni-Reward-APR-Container">
                     <div className="eplat-PrUni-Reward-APR-Title">
-                        <a>0.000694953927154714 HANeP</a>
+                        <a>APR</a>
                     </div>
                     <div className="eplat-PrUni-Reward-APR-Info">
-                        <a>for each HANeP per second</a>
+                        <a>%</a>
                     </div>
                 </div>
                 <div className="eplat-PrUni-Reward-EstSection">
