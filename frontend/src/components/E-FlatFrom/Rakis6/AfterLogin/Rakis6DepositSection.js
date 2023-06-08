@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Rakis6DepositSection.scss";
-import Web3 from "web3";
+
 import { FaEye } from "react-icons/fa";
 import { HiOutlineLockClosed } from "react-icons/hi";
 import Swal from "sweetalert2";
@@ -12,6 +12,7 @@ import Loading from "../../../SprStakingPage/Loading";
 import { rakis6AirDropViewAction } from "../../../../redux/actions/airdropActions/rakis6Actions/rakis6AirDropViewAction";
 import { rakis6AirDropRewardViewAcion } from "../../../../redux/actions/airdropActions/rakis6Actions/rakis6AirDropRewardViewAction";
 import { rakis6AirDropAprAction } from "../../../../redux/actions/airdropActions/rakis6Actions/rakis6AirDropAprAction";
+import { web3 } from "../../../../config/StakingRakis6Config";
 
 const Rakis6DepositSection = () => {
     const dispatch = useDispatch();
@@ -123,15 +124,15 @@ const Rakis6DepositSection = () => {
     };
 
     const setRakis6Approve = () => {
-        let rakis6StakingAmount = document.getElementById("maxRakis6StakeAmount").value;
-        const rakis6Stakingnum = Web3.utils.toWei(String(rakis6StakingAmount), "ether");
-        dispatch(rakis6AirDropApproveAction.rakis6AirDropApproveAct(account, rakis6Stakingnum));
+        let rakisAp6StakingAmount = document.getElementById("maxRakis6ApStakeAmount").value;
+        const rakis6ApStakingnum = web3.utils.toWei(String(rakisAp6StakingAmount), "ether");
+        dispatch(rakis6AirDropApproveAction.rakis6AirDropApproveAct(account, rakis6ApStakingnum));
     };
 
     const setRakis6Staking = () => {
-        let rakis6StakingAmount = document.getElementById("maxRakis6StakeAmount").value;
-        const rakis6Stakingnum = Web3.utils.toWei(String(rakis6StakingAmount), "ether");
-        dispatch(rakis6AirDropStakeAction.rakis6AirDropStakeAct(account, rakis6Stakingnum, stakingPassword));
+        let rakis6StStakingAmount = document.getElementById("maxRakis6StStakeAmount").value;
+        const rakis6StStakingnum = web3.utils.toWei(String(rakis6StStakingAmount), "ether");
+        dispatch(rakis6AirDropStakeAction.rakis6AirDropStakeAct(account, rakis6StStakingnum, stakingPassword));
     };
 
     useEffect(() => {
@@ -159,40 +160,12 @@ const Rakis6DepositSection = () => {
                     <p>Available Quota : {canStakedQuatoAmount}</p>
                 </div>
             </>
-            {/* <div className="rakis6-AirDrop-Deposit-APR-Container">
+            <div className="rakis6-AirDrop-Deposit-APR-Container">
                 <div className="rakis6-AirDrop-Deposit-APR-Title">
                     <a>APR</a>
                 </div>
                 <div className="rakis6-AirDrop-Deposit-APR-Info">
                     <a>{HanQuantityLpQuantityPerYear1HanValue}%</a>
-                </div>
-            </div> */}
-            <div className="stakingMunieAmountContainer">
-                <div className="stakingMunieAmountTitle">
-                    <div className="stakingMunieAmountTxt">
-                        <a>0.000000048445704606 HAN</a>
-                    </div>
-
-                    {/* <div className="tooltip-container">
-                            <i className="info-icon material-icons">
-                                <HelpIcon />
-                            </i>
-                            <div className="tooltip-content">
-                                <span>
-                                    The right to possess digital content forever and get yourself a Sheepoori card -Ms. Caring one of three sheep siblings
-                                    characters from Sewoori Union for AdKhan: Advertising Platform
-                                </span>
-                                <span className="align-right">
-                                    {" "}
-                                    <a href="https://medium.com/@HanIdentity/as-the-second-staking-of-the-hanchain-project-e29da8da25e3" target="_blank">
-                                        Read More
-                                    </a>
-                                </span>
-                            </div>
-                        </div> */}
-                </div>
-                <div className="stakingMunieAmountNum">
-                    <a>for each 1Rakis6 per second</a>
                 </div>
             </div>
             {canStakedQuatoAmount ? (
@@ -202,7 +175,7 @@ const Rakis6DepositSection = () => {
                             <p>Available : {rakis6StakingBalanceOf}</p>
                         </div>
                         <div className="rakis6-AirDrop-Deposit-StakedAmountSection">
-                            <input type="number" onChange={changeRakis6DepositAmount} step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" value={allowance}></input>
+                            <input type="number" onChange={changeRakis6DepositAmount} step="0.000000000000000001" id="maxRakis6StStakeAmount" placeholder="0" value={allowance}></input>
                             <p>RAKIS-6</p>
                             <button className="rakis6-AirDrop-Deposit-AmountMaxBtn">Max</button>
                         </div>
@@ -241,7 +214,7 @@ const Rakis6DepositSection = () => {
                             <p>Available : {rakis6StakingBalanceOf}</p>
                         </div>
                         <div className="rakis6-AirDrop-Deposit-AmountSection">
-                            <input type="number" step="0.00000000000001" id="maxRakis6StakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
+                            <input type="number" step="0.00000000000001" id="maxRakis6StStakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
                             <p>RAKIS-6</p>
                             <button className="rakis6-AirDrop-Deposit-AmountMaxBtn" onClick={changeMaxDepositAmount}>
                                 Max
@@ -259,7 +232,7 @@ const Rakis6DepositSection = () => {
                             <p>Available : {rakis6StakingBalanceOf}</p>
                         </div>
                         <div className="rakis6-AirDrop-Deposit-AmountSection">
-                            <input type="number" step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
+                            <input type="number" step="0.000000000000000001" id="maxRakis6StStakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
                             <p>RAKIS-6</p>
                             <button className="rakis6-AirDrop-Deposit-AmountMaxBtn" onClick={changeMaxDepositAmount}>
                                 Max
@@ -278,7 +251,7 @@ const Rakis6DepositSection = () => {
                             <p>Available : {rakis6StakingBalanceOf}</p>
                         </div>
                         <div className="rakis6-AirDrop-Deposit-Approve-AmountSection">
-                            <input type="number" step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
+                            <input type="number" step="0.000000000000000001" id="maxRakis6ApStakeAmount" placeholder="0" onChange={changeRakis6DepositAmount} value={rakis6StakingAmount}></input>
                             <p>RAKIS-6</p>
                             <button className="rakis6-AirDrop-Deposit-AmountMaxBtn" onClick={changeMaxDepositAmount}>
                                 Max
@@ -299,7 +272,7 @@ const Rakis6DepositSection = () => {
                             <p>Available : {rakis6StakingBalanceOf}</p>
                         </div>
                         <div className="rakis6-AirDrop-Deposit-StakedAmountSection">
-                            <input type="number" step="0.000000000000000001" id="maxRakis6StakeAmount" placeholder="0" value={rakis6StakingAmount}></input>
+                            <input type="number" step="0.000000000000000001" id="maxRakis6StStakeAmount" placeholder="0" value={rakis6StakingAmount}></input>
                             <p>RAKIS-6</p>
                             <button className="rakis6-AirDrop-Deposit-AmountMaxBtn">Max</button>
                         </div>
@@ -339,10 +312,10 @@ const Rakis6DepositSection = () => {
                 </div>
             )}
             <div className="logoContainer">
-                <img src={OptimismRedLogo} onClick={changeOpNetwork} className="opIcon" alt="OptimismIcon" />
+                <img src={OptimismRedLogo} onClick={changeOpNetwork} className="opIcon" />
                 {/* <img src={OptimismRedLogo} onClick={() => handleNetworkSwitch("optimism")} className="opIcon" /> */}
-                <img src={ArrakisBlackIcon} onClick={addStakingToken} className="arrakisIcon" alt="ArrakisIcon" />
-                <img src={HanLogo} onClick={addRewardToken} className="hanIcon" alt="HanIcon" />
+                <img src={ArrakisBlackIcon} onClick={addStakingToken} className="arrakisIcon" />
+                <img src={HanLogo} onClick={addRewardToken} className="hanIcon" />
             </div>
         </div>
     );

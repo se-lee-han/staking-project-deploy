@@ -9,10 +9,10 @@ import Web3 from "web3";
 const UniV2WithdrawSection = () => {
     const dispatch = useDispatch();
     const [checkChainId, setCheckChainId] = useState("");
-    const [usdcHanStakingWithdrawAmount, setUsdcHanStakingWithdrawAmount] = useState("");
+    const [uniV2WithdrawAmount, setUniV2WithdrawAmount] = useState("");
 
     const { account } = useSelector((state) => state.account);
-    const { usdcRakis6StakedAmount, uniV2TotalSupply } = useSelector((state) => state.uniV2View);
+    const { uniV2StakedAmount, uniV2TotalSupply } = useSelector((state) => state.uniV2View);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -49,18 +49,18 @@ const UniV2WithdrawSection = () => {
     };
 
     const changeUsdcMaxWithdrawAmount = () => {
-        setUsdcHanStakingWithdrawAmount(usdcRakis6StakedAmount);
+        setUniV2WithdrawAmount(uniV2StakedAmount);
     };
 
     const changeUsdcRakis6Amount = (e) => {
         const pattern = /^(\d{0,4}([.]\d{0,18})?)?$/;
         if (pattern.test(e.target.value)) {
-            setUsdcHanStakingWithdrawAmount(e.target.value);
+            setUniV2WithdrawAmount(e.target.value);
         }
     };
 
     const setUsdcRakis6UnStake = () => {
-        let hanRakis6UnStakeAmount = document.getElementById("maxhanRakis6UnStakeAmount").value;
+        let hanRakis6UnStakeAmount = document.getElementById("maxUniV2UnStakeAmount").value;
         const hanRakis6UnStakeNum = Web3.utils.toWei(String(hanRakis6UnStakeAmount), "ether");
         dispatch(uniV2UnStakeAction.uniV2UnStakeAct(account, hanRakis6UnStakeNum));
     };
@@ -80,12 +80,12 @@ const UniV2WithdrawSection = () => {
                     <p>TOTAL STAKED : {uniV2TotalSupply}</p>
                 </div>
                 <div className="uniV2-Staking-Withdraw-StakeAmount-Section">
-                    <p>STAKED : {usdcRakis6StakedAmount} </p>
+                    <p>STAKED : {uniV2StakedAmount} </p>
                 </div>
             </>
 
             <div className="uniV2-Staking-Withdraw-AmountSection">
-                <input type="number" step="0.000000000000000001" id="maxhanRakis6UnStakeAmount" placeholder="0" onChange={changeUsdcRakis6Amount} value={usdcHanStakingWithdrawAmount}></input>
+                <input type="number" step="0.000000000000000001" id="maxUniV2UnStakeAmount" placeholder="0" onChange={changeUsdcRakis6Amount} value={uniV2WithdrawAmount}></input>
                 <p>HAN</p>
                 <button className="uniV2-Staking-Withdraw-AmountMaxBtn" onClick={changeUsdcMaxWithdrawAmount}>
                     Max
@@ -97,9 +97,9 @@ const UniV2WithdrawSection = () => {
 
             <div className="uniV2-Staking-WithDraw-BtnContainer">
                 <div className="uniV2-Staking-Withdraw-Can-BtnSection">
-                    {usdcHanStakingWithdrawAmount === "" ? (
+                    {uniV2WithdrawAmount === "" ? (
                         <button className="uniV2-Staking-Withdraw-SelectBtn">ENTER AMOUNT</button>
-                    ) : usdcRakis6StakedAmount === "0" || usdcHanStakingWithdrawAmount > usdcRakis6StakedAmount ? (
+                    ) : uniV2StakedAmount === "0" || uniV2WithdrawAmount > uniV2StakedAmount ? (
                         <button className="uniV2-Staking-Withdraw-SelectBtn" disabled={true}>
                             INSUFFICIENT RAKIS-6 BALANCE
                         </button>

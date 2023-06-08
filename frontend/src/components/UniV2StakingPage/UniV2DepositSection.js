@@ -15,7 +15,7 @@ const UniV2DepositSection = () => {
     const [uniV2StakingAmount, setUniV2StakingAmount] = useState("");
     const { account } = useSelector((state) => state.account);
 
-    const { uniV2StakingTokenBalance, successUniV2Approve, uniV2ApproveState, usdcRakis6StakedAmount, uniV2TotalSupply } = useSelector((state) => state.uniV2View);
+    const { uniV2StakingTokenBalance, successUniV2Approve, uniV2ApproveState, uniV2StakedAmount, uniV2TotalSupply } = useSelector((state) => state.uniV2View);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -95,7 +95,7 @@ const UniV2DepositSection = () => {
                     <p>TOTAL STAKED : {uniV2TotalSupply} </p>
                 </div>
                 <div className="uniV2-Staking-Deposit-StakeAmount-Section">
-                    <p>STAKED : {usdcRakis6StakedAmount} </p>
+                    <p>STAKED : {uniV2StakedAmount} </p>
                 </div>
             </>
             <>
