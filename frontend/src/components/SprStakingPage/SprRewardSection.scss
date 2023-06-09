@@ -92,3 +92,22 @@
     height: 30px;
     cursor: pointer;
 }
+
+.logoContainer {
+    display: flex;
+    justify-content: right;
+    margin-right: 39.998px;
+}
+
+.HanEpTxtContinaer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HanEpTxt {
+    cursor: pointer;
+    font-size: 17px;
+    color: #39a2db;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
+}
