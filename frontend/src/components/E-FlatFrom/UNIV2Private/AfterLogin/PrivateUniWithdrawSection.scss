@@ -3,8 +3,7 @@
     position: absolute;
     top: -9%;
     left: 2%;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
     font-size: 16px;
 }
@@ -13,8 +12,7 @@
     position: absolute;
     top: -3%;
     left: 2%;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
     font-size: 16px;
 }
@@ -31,8 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }
 
 .eplat-PrUni-Withdraw-APR-Title a {
@@ -44,8 +41,7 @@
     align-items: center;
     padding-left: 5px;
     justify-content: center;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }
 
 .eplat-PrUni-Withdraw-APR-Info a {
@@ -263,4 +259,17 @@ button.eplat-PrUni-Withdraw-CanBtn:active {
 button.eplat-PrUni-Withdraw-CanBtn:active::before {
     -webkit-transform: translate3d(0, 0, -1em);
     transform: translate3d(0, 0, -1em);
+}
+
+.HanEpTxtContinaer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HanEpTxt {
+    cursor: pointer;
+    font-size: 17px;
+    color: #39a2db;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }

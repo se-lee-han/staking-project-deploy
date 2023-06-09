@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { connectAccount } from "../../redux/actions/connectAccount";
+import "./OldHanEPlatFromPage.scss";
 import {
     MusiCompensationSection,
     MusiConnectWalletSection,

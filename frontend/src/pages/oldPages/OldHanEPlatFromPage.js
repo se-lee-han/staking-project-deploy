@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { HanLogo } from "../../assets/_index";
+import "./OldHanEPlatFromPage.scss";
 import {
     MusiCompensationSection,
     MusiConnectWalletSection,

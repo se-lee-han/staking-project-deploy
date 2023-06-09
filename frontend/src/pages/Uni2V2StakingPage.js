@@ -66,7 +66,7 @@ const Uni2V2StakingPage = () => {
     }, [window.ethereum?.chainId]);
 
     return (
-        <div className="hanChainStakingMainContainer">
+        <div className="usdcHanLpStakingMainContainer">
             <UniV2TopSection />
             <Tabs className="Tabs">
                 <UniV2ConnectWalletSection />

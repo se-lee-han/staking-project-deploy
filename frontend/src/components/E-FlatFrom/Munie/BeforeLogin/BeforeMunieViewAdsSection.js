@@ -86,7 +86,6 @@ const BeforeMunieViewAdsSection = () => {
                                                         // onClick={()=>window.open(`https://www.youtube.com/channel/UCekUY9Bc3J9adN2tQ-uDXqA/videos`,'_blank')}
                                                     ></div>
                                                     <div className="allMunieStakingInfoNameSection">
-                                                        <p>Sheepoori # {item.tokenId} </p>
                                                         <p>{item.name}</p>
                                                     </div>
                                                 </div>
