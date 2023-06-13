@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { networksAction } from "../../../../redux/actions/networksAction";
 import "./PrivateUniDepositSection.scss";
-import { HanLogo } from "../../../../assets/_index";
 import { FaEye } from "react-icons/fa";
 import { HiOutlineLockClosed } from "react-icons/hi";
 import { UniV2PrivateViewAction } from "../../../../redux/actions/airdropActions/UniV2PrivateActions/UniV2PrivateViewAction";

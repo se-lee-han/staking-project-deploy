@@ -3,8 +3,7 @@
     position: absolute;
     top: -10%;
     left: 2%;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
     font-size: 16px;
 }
@@ -13,8 +12,7 @@
     position: absolute;
     top: -3%;
     left: 2%;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
     font-size: 16px;
 }
@@ -26,8 +24,6 @@
 .uniV2-Staking-Deposit-TokenBalanceSection p {
     font-size: 24.997px;
 }
-
-
 
 .uniV2-Staking-Deposit-APR-Container {
     position: absolute;
@@ -41,8 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }
 
 .uniV2-Staking-Deposit-APR-Title a {
@@ -54,18 +49,15 @@
     align-items: center;
     padding-left: 5px;
     justify-content: center;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }
 
 .uniV2-Staking-Deposit-APR-Info a {
     font-size: 24.997px;
 }
 
-
 .uniV2-Staking-Deposit-StakedAmountSection {
     display: flex;
-    /* background-color: yellow; */
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -112,7 +104,6 @@
 
 .uniV2-Staking-Deposit-AmountSection {
     display: flex;
-    /* background-color: yellow; */
     justify-content: center;
     align-items: center;
     margin-bottom: 51px;
@@ -169,12 +160,9 @@
     border-bottom: none;
     border-radius: 1.5em;
     cursor: pointer;
-    /* color: #72CEF2; */
     font-size: 20px;
     text-shadow: #39a2db 0px 0px 1px, #39a2db 0px 0px 1px, #39a2db 0px 0px 1px, #39a2db 0px 0px 1px, #39a2db 0px 0px 1px, #39a2db 0px 0px 1px;
-    // color: #0f1b40;
 }
-
 
 .uniV2-Staking-Deposit-Approve-AmountSection {
     display: flex;
@@ -222,9 +210,6 @@
     margin-left: 24.997px;
 }
 
-// input:focus {
-//     box-shadow: 0 0 15px #82e6fc, 0 0 25px #b4f0fd, 0 0 35px #ffffff;
-// }
 input::placeholder {
     color: #a6a6a6;
 }
@@ -373,6 +358,5 @@ button.uniV2-Staking-Deposit-CanBtn:active::before {
     cursor: pointer;
     font-size: 17px;
     color: #39a2db;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }

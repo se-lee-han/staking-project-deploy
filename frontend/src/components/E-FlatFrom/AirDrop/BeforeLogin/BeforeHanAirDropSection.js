@@ -4,7 +4,6 @@ import { FiRefreshCcw } from "react-icons/fi";
 import { HanLogo } from "../../../../assets/_index";
 import { hanAirDropClaimAction } from "../../../../redux/actions/airdropActions/hanActions/hanAirDropClaimAction";
 import { hanAirDropTimeStampAction } from "../../../../redux/actions/airdropActions/hanActions/hanAirDropTimeStampAction";
-import AirDropLoading from "../../../AirDropPage/AirDropLoading";
 import Swal from "sweetalert2";
 
 const BeforeHanAirDropSection = () => {

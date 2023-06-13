@@ -1,5 +1,4 @@
 import { StakingTokenContract, StakingPrivateUniV2Contract, web3 } from "../../../../config/new/StakingPrivateUniV2Config";
-// import { StakingTokenContract, StakingPrivateRakis6Contract } from "../../../../config/new/StakingPrivateRakis6";
 
 function UniV2PrivateViewAct(account) {
     return async (dispatch) => {

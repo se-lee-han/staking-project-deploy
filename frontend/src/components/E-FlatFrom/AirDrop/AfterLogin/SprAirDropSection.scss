@@ -25,7 +25,6 @@
 }
 
 .airDropSprBtn {
-    // display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
 }
@@ -53,8 +52,6 @@
 }
 .airDropSprTimeStampInfo a {
     color: #47fac2;
-    // color: #47fac2;
-    // box-shadow: #0a1126;
 }
 .sprDayDate {
     margin-right: 10px;
@@ -68,7 +65,6 @@
 }
 
 .airDropSprReFreshTimeStamp {
-    // margin-left: 5px;
     cursor: not-allowed;
 }
 
@@ -127,7 +123,6 @@ button.spr-learn-more:active::before {
 
 /* --------------------Muni Cant Button -------------------------- */
 .cant-spr-learn-more {
-    // margin-top: 13px;
     font-weight: 600;
     width: 200px;
     height: 50.002px;

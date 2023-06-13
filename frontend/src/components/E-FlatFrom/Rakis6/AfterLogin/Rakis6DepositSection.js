@@ -162,10 +162,10 @@ const Rakis6DepositSection = () => {
             </>
             <div className="rakis6-AirDrop-Deposit-APR-Container">
                 <div className="rakis6-AirDrop-Deposit-APR-Title">
-                    <a>APR</a>
+                    <a>0.000000048445704606 HAN</a>
                 </div>
                 <div className="rakis6-AirDrop-Deposit-APR-Info">
-                    <a>{HanQuantityLpQuantityPerYear1HanValue}%</a>
+                    <a>for each 1Rakis6 per second</a>
                 </div>
             </div>
             {canStakedQuatoAmount ? (

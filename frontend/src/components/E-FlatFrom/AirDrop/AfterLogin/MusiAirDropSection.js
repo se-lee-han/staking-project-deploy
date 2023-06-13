@@ -6,7 +6,6 @@ import { FiRefreshCcw } from "react-icons/fi";
 import MusiTokenListModal from "./Modal/MusiTokenListModal";
 import { musiAirDropTimeStampAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropTimeStampAction";
 import { musiAirDropClaimAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropClaimAction";
-import AirDropLoading from "../../../AirDropPage/AirDropLoading";
 import { musiAirDropViewAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropViewAction";
 import { musiAirDropTokenListAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropTokenListAction";
 import { musiAirDropBackDataInfoAction } from "../../../../redux/actions/airdropActions/musiActions/musiAirDropBackDataInfoAction";
@@ -102,29 +101,24 @@ const MusiAirDropSection = () => {
                             <MusiTokenListModal open={musiTokenListModal} close={closeMusiTokenListModal} header="Modal heading"></MusiTokenListModal>
                         </div>
                     )}
-                    {getLatestPrice ? (
-                        musiCanClaim === true ? (
-                            <div className="airDropMusiBtn">
-                                <button className="musi-learn-more" onClick={musiAirDropClaim}>
-                                    Claim
-                                </button>
-                            </div>
-                        ) : musiClaimed === true ? (
-                            <div className="airDropMusiBtn">
-                                <button className="cant-musi-learn-more" disabled={true}>
-                                    Already Claimed
-                                </button>
-                            </div>
-                        ) : (
-                            <div className="airDropMusiBtn">
-                                <button className="cant-musi-learn-more" disabled={true}>
-                                    Nothing to Claim
-                                </button>
-                            </div>
-                        )
+
+                    {musiCanClaim === true ? (
+                        <div className="airDropMusiBtn">
+                            <button className="musi-learn-more" onClick={musiAirDropClaim}>
+                                Claim
+                            </button>
+                        </div>
+                    ) : musiClaimed === true ? (
+                        <div className="airDropMusiBtn">
+                            <button className="cant-musi-learn-more" disabled={true}>
+                                Already Claimed
+                            </button>
+                        </div>
                     ) : (
                         <div className="airDropMusiBtn">
-                            <AirDropLoading />
+                            <button className="cant-musi-learn-more" disabled={true}>
+                                Nothing to Claim
+                            </button>
                         </div>
                     )}
 

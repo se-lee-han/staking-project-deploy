@@ -1,7 +1,3 @@
-// .musikhan-SignIn-ModalTopTitleSection {
-//     color: black;
-// }
-
 .musikhan-SignIn-ModalTopTitleSection {
     font-size: 24px;
     justify-content: space-between;
@@ -12,16 +8,14 @@
 }
 
 .musikhan-SignIn-ModalTokenInfoContainer {
-    // padding: 16px;
     padding-left: 8px;
     padding-right: 8px;
     border-top: 1px solid #dee2e6;
 }
-//..
+
 // Personal Section
 .airDrop-SignUp-Agree-Personal-Section {
     display: flex;
-    // justify-content: center;
     align-items: center;
 }
 
@@ -33,20 +27,13 @@
     margin-right: 10px;
     margin-top: 20px;
     margin-bottom: 10px;
-    // color: #fff;
 }
-
-// .airDrop-SignUp-Agree-Personal-Section label {
-//     color: black;
-// }
 
 // Scroll Box
 
 /* Element scroll */
 .airDrop-SignIn-Modal-Agree-Personal-scrollBox {
     position: relative;
-    // padding: 10px;
-    // margin-left: 50px;
     padding-left: 10px;
     padding-right: 10px;
     width: 95%;
@@ -61,7 +48,6 @@
 .airDrop-SignIn-Modal-Agree-Personal-scrollBox .airDrop-SignIn-Modal-Agree-Personal-scrollBoxInner {
     width: 100%;
     height: 100%;
-    // overflow: hidden;
     overflow-y: auto;
 }
 

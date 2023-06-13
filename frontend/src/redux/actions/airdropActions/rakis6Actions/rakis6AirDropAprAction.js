@@ -1,8 +1,7 @@
 import { WETHContract, RewardTokenContract, ArrakisContract, web3 } from "../../../../config/StakingRakis6Config";
-import BigNumber from "bignumber.js";
 
 function rakis6AirDropAprAct() {
-    const AmountBN = new BigNumber("1000000000000000000");
+    const AmountBN = web3.utils.toBN("1000000000000000000");
 
     return async (dispatch) => {
         try {

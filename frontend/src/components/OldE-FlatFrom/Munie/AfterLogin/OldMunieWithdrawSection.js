@@ -17,6 +17,7 @@ const OldMunieWithdrawSection = () => {
     const [myStakedOldMunieTokenId, setMyStakedOldMunieTokenId] = useState("");
     const { account } = useSelector((state) => state.account);
     const { oldMunieWithdrawStakedAmount, stakedOldMunieTokenId, oldMunieStakedTokenIds } = useSelector((state) => state.oldMunieStakingView);
+    const { mainTabArr } = useSelector((state) => state.networks);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -122,7 +123,7 @@ const OldMunieWithdrawSection = () => {
             dispatch(oldMunieStakingViewAction.oldMunieStakingViewAct(account));
             dispatch(oldMunieWithdrawListAction.oldMunieWithdrawListAct(account));
         }
-    }, [stakedOldMunieTokenId]);
+    }, [mainTabArr]);
 
     return (
         <div>

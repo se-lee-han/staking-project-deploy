@@ -107,7 +107,6 @@
     border-bottom: none;
     border-radius: 1.5em;
     cursor: pointer;
-    /* color: #72CEF2; */
     font-size: 20px;
     text-shadow: #24b5ee 0px 0px 1px, #24b5ee 0px 0px 1px, #24b5ee 0px 0px 1px, #24b5ee 0px 0px 1px, #24b5ee 0px 0px 1px, #24b5ee 0px 0px 1px;
     color: #0f1b40;
@@ -115,14 +114,12 @@
 
 .rakis6-AirDrop-Select-Token-Btn {
     display: flex;
-    // justify-content: flex-end;
     background-color: #39a2db;
     align-items: center;
     border: 0.104vw solid rgba(0, 0, 0, 0.3);
     border-radius: 0.75em;
     font-family: "SCDream8";
     font-size: 15px;
-    // color: #39a2db;
     color: black;
     cursor: pointer;
 }
@@ -150,7 +147,6 @@
 }
 
 .rakis6-AirDrop-WithDraw-TimeSection {
-    // margin-top: 7px;
     font-size: 14px;
 }
 .rakis6-AirDrop-WithDraw-TimeSection a {
@@ -188,11 +184,6 @@
 .unStakeCantBtnSection {
     margin-top: 61px;
 }
-
-// .rakis6-AirDrop-Withdraw-Can-BtnSection {
-//     padding-top: 7px;
-//     margin-bottom: 10px;
-// }
 
 .unStakeCantTxt {
     font-size: 35px;

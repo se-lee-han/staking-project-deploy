@@ -1,11 +1,9 @@
 // import Navbar from "./Global/Navbar";
-import AprToolTip from "./Global/AprToolTip";
 import Loading from "./SprStakingPage/Loading";
 import AirDropLoading from "./AirDropPage/AirDropLoading";
 import AirDropAgreeTerm from "./AirDropPage/AirDropAgreeTerm";
 import AirDropSignEmail from "./AirDropPage/AirDropSignEmail";
 import AirDropSignComplete from "./AirDropPage/AirDropSignComplete";
-import SwitchChainModal from "./Global/SwitchChainModal";
 import LoginTermsModal from "./AirDropPage/Login/LoginTermsModal";
 import LoginPrivacyModal from "./AirDropPage/Login/LoginPrivacyModal";
 import LoginFooter from "./AirDropPage/Login/LoginFooter";
@@ -41,13 +39,11 @@ import SprTopSection from "./SprStakingPage/SprTopSection";
 
 export {
     // Navbar,
-    AprToolTip,
     Loading,
     AirDropLoading,
     AirDropAgreeTerm,
     AirDropSignEmail,
     AirDropSignComplete,
-    SwitchChainModal,
     LoginTermsModal,
     LoginPrivacyModal,
     LoginFooter,

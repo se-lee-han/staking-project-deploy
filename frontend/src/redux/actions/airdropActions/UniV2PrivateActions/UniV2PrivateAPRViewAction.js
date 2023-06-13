@@ -2,7 +2,7 @@ import BigNumber from "bignumber.js";
 import { StakingPrivateUniV2Contract, uniV2Contract, web3 } from "../../../../config/new/StakingPrivateUniV2Config";
 
 function UniV2PrivateAPRViewAct(account) {
-    const AmountBN = new BigNumber("1000000000000000000");
+    const AmountBN = web3.utils.toBN("1000000000000000000");
 
     return async (dispatch) => {
         try {
@@ -25,7 +25,6 @@ function UniV2PrivateAPRViewAct(account) {
                 const truncatedValue = parseFloat(calculatedValue);
 
                 const stakingPrUniV2APR = parseFloat((hanEpTokenPerLpToken * 60 * 60 * 24 * 365 * truncatedValue * 100).toFixed(2));
-                console.log(stakingPrUniV2APR);
 
                 dispatch({
                     type: "PRIVATE_UNIV2_APR",

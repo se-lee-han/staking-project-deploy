@@ -1,5 +1,4 @@
 import { StakingPrivateUniV2Contract } from "../../../../config/new/StakingPrivateUniV2Config";
-// import { StakingPrivateRakis6Contract } from "../../../../config/new/StakingPrivateRakis6";
 import Swal from "sweetalert2";
 
 function UniV2PrivateStakeAct(account, rakis6Stakingnum, privateRakis6Password) {

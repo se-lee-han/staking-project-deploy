@@ -72,11 +72,9 @@ const OldMunieRewardSection = () => {
     }, [window.ethereum?.chainId]);
 
     useEffect(() => {
-        if (account) {
-            dispatch(oldMunieStakingViewAction.oldMunieStakingViewAct(account));
-            dispatch(oldMunieStakingResultViewAction.oldMunieStakingResultViewAct(account));
-        }
-    }, []);
+        dispatch(oldMunieStakingViewAction.oldMunieStakingViewAct(account));
+        dispatch(oldMunieStakingResultViewAction.oldMunieStakingResultViewAct(account));
+    }, [account]);
     return (
         <div>
             <div className="stakingMunieAmountContainer">

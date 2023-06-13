@@ -7,10 +7,10 @@ import { StakingContract, StakingTokenContract, RewardTokenContract, StakingAddr
 //     WETHContract,
 //     ArrakisContract,
 // } from "../../../config/StakingRakis6ConfigTest";
-import BigNumber from "bignumber.js";
 
 function stakingViewAct(account) {
-    const AmountBN = new BigNumber("1000000000000000000");
+    // const AmountBN = new BigNumber("1000000000000000000");
+    const AmountBN = web3.utils.toBN("1000000000000000000");
 
     return async (dispatch) => {
         try {

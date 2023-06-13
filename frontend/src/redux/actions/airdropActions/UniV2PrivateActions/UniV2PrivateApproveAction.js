@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 import { StakingTokenContract, StakingPrivateUniV2Address } from "../../../../config/new/StakingPrivateUniV2Config";
-// import { StakingTokenContract, StakingPrivateRakis6Address } from "../../../../config/new/StakingPrivateRakis6";
 
 function UniV2PrivateApproveAct(account, rakis6PrStakingnum) {
     return async (dispatch) => {

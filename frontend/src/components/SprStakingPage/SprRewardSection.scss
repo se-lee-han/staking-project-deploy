@@ -1,12 +1,4 @@
 // ------------------ Rewards  ------------------ //
-.allTokenSprRewardsContainer {
-    // position: relative;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, 0%);
-    // width: 100vh;
-}
-
 .allRewardsSPRV2CumulativeSection {
     display: flex;
     color: black;
@@ -36,9 +28,6 @@
 
 .amountTokenSprRewardAccSection {
     display: flex;
-    // position: relative;
-    // width: 100vh;
-    // margin-right: -99.998px;
     justify-content: center;
 }
 .amountTokenRewardSection p {
@@ -68,8 +57,6 @@
 .logoRewardContainer {
     display: flex;
     justify-content: flex-end;
-    // justify-content: right;
-    // margin-left: 40px;
     margin-right: 39.998px;
 }
 

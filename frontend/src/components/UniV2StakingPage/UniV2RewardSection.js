@@ -4,6 +4,7 @@ import "./UniV2RewardSection.scss";
 import { networksAction } from "../../redux/actions/networksAction";
 import { FiRefreshCcw } from "react-icons/fi";
 import { uniV2RewardVIewAction } from "../../redux/actions/uniV2StakingActions/uniV2RewardVIewAction";
+import { uniV2ClaimAction } from "../../redux/actions/uniV2StakingActions/uniV2ClaimAction";
 
 const UniV2RewardSection = () => {
     const dispatch = useDispatch();
@@ -50,6 +51,10 @@ const UniV2RewardSection = () => {
         dispatch(uniV2RewardVIewAction.uniV2RewardVIewAct(account));
     };
 
+    const setUsdcClaim = () => {
+        dispatch(uniV2ClaimAction.uniV2ClaimAct(account));
+    };
+
     useEffect(() => {
         dispatch(uniV2RewardVIewAction.uniV2RewardVIewAct(account));
     }, [account]);
@@ -88,7 +93,15 @@ const UniV2RewardSection = () => {
                 {/* 리워드 안될때 상태 추가 */}
 
                 <div className="uniV2-Staking-Rewards-ClaimBtnSection">
-                    <button className="uniV2-Staking-Reward-CanBtn">CLAIM</button>
+                    {uniV2RewardView + uniV2StakedunclaimedReward <= 0 ? (
+                        <button className="uniV2-Staking-Reward-CantBtn" disabled={true}>
+                            NOTHING TO CLAIM
+                        </button>
+                    ) : (
+                        <button className="uniV2-Staking-Reward-CanBtn" onClick={setUsdcClaim}>
+                            CLAIM
+                        </button>
+                    )}
                 </div>
             </>
             <div className="logoContainer">

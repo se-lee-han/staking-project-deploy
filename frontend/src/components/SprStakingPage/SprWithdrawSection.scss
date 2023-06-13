@@ -19,7 +19,6 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    // border: 3px solid black;
     cursor: not-allowed;
 }
 
@@ -29,17 +28,9 @@
     font-size: 20px;
 }
 
-// .sprUnStakingChoiceImgContainer {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
 .sprUnStakingChoiceImgSection {
     width: 150px;
     height: 150px;
-    // border: 3px solid black;
 }
 
 .sprBeforeSelectButton {
@@ -51,7 +42,6 @@
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    // height: 99.998px;
     font-family: Arial;
     font-size: 15px;
     font-weight: bold;
@@ -76,7 +66,6 @@
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    // height: 99.998px;
     font-family: Arial;
     font-size: 15px;
     font-weight: bold;
@@ -89,7 +78,6 @@
 .sprUnStakingComImgSection {
     width: 150px;
     height: 150px;
-    // border: 3px solid black;
 }
 
 .sprUnStakeComBtnSection {
@@ -107,8 +95,6 @@
 // ------------------ Slider Section ---------------//
 .mainUnSlider {
     width: 100%;
-    /* margin-right: 100px; */
-    // margin-left: 10%;
 }
 
 .sprUnSlider {
@@ -118,19 +104,7 @@
 }
 
 #sprUnStakingImgIdCardContainer {
-    // padding-left: 50px;
     display: inline-block;
-    // width: 150px;
-    // height: 150px;
-}
-
-.sprUnStakingImgContainer {
-    // display: flex;
-    // width: 150px;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // height: 200px;
 }
 
 .sprUnStakingImgCard {
@@ -141,7 +115,6 @@
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // border: 3px solid black;
 }
 
 .modalTitleTxt p {

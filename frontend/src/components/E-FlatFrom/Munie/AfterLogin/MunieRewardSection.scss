@@ -1,12 +1,4 @@
 // ------------------ Rewards  ------------------ //
-.allTokenMunieRewardsContainer {
-    // position: relative;
-    // left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, 0%);
-    // width: 100vh;
-}
-
 .allRewardsMunieCumulativeSection {
     display: flex;
     color: black;
@@ -21,7 +13,6 @@
 }
 
 .allRefreshMunieClaimIcon {
-    // margin-top: 10px;
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
@@ -29,9 +20,6 @@
 
 .amountTokenMunieRewardAccSection {
     display: flex;
-    // position: relative;
-    // width: 100vh;
-    // margin-right: -99.998px;
     justify-content: center;
 }
 .amountTokenRewardSection p {
@@ -61,16 +49,13 @@
 .stakedMunieCanAmountSection {
     position: absolute;
     top: 1%;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
     font-size: 15px;
 }
 .logoRewardContainer {
     display: flex;
     justify-content: flex-end;
-    // justify-content: right;
-    // margin-left: 40px;
     margin-right: 39.998px;
 }
 

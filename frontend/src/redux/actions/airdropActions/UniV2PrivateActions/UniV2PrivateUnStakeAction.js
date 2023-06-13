@@ -1,6 +1,5 @@
 import Swal from "sweetalert2";
 import { StakingPrivateUniV2Contract } from "../../../../config/new/StakingPrivateUniV2Config";
-// import { StakingPrivateRakis6Contract } from "../../../../config/new/StakingPrivateRakis6";
 
 function UniV2PrivateUnStakeAct(account, privateWithdrawIndex) {
     return async () => {

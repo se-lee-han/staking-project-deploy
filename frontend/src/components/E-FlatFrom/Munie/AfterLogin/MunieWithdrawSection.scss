@@ -29,21 +29,9 @@
     font-size: 20px;
 }
 
-// .munieUnStakingChoiceImgContainer {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-// }
-
-.munieUnStakingChoiceImgContainer {
-    margin-top: 26px;
-}
-
 .munieUnStakingChoiceImgSection {
     width: 150px;
     height: 150px;
-    // border: 3px solid black;
 }
 
 .munieBeforeSelectButton {
@@ -55,7 +43,6 @@
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    // height: 99.998px;
     font-family: Arial;
     font-size: 15px;
     font-weight: bold;
@@ -80,7 +67,6 @@
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    // height: 99.998px;
     font-family: Arial;
     font-size: 15px;
     font-weight: bold;
@@ -93,7 +79,6 @@
 .munieUnStakingComImgSection {
     width: 150px;
     height: 150px;
-    // border: 3px solid black;
 }
 
 .munieUnStakeComBtnSection {
@@ -111,8 +96,6 @@
 // ------------------ Slider Section ---------------//
 .mainUnSlider {
     width: 100%;
-    /* margin-right: 100px; */
-    // margin-left: 10%;
 }
 
 .munieUnSlider {
@@ -122,19 +105,7 @@
 }
 
 #munieUnStakingImgIdCardContainer {
-    // padding-left: 50px;
     display: inline-block;
-    // width: 150px;
-    // height: 150px;
-}
-
-.munieUnStakingImgContainer {
-    // display: flex;
-    // width: 150px;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // height: 200px;
 }
 
 .munieUnStakingImgCard {
@@ -145,7 +116,6 @@
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // border: 3px solid black;
 }
 
 .modalTitleTxt p {
@@ -167,4 +137,32 @@
 
 .munieUnStakingImgCard input {
     zoom: 2;
+}
+
+#sliderLeftBtn {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    left: 0;
+    color: #1e62d0;
+}
+
+#sliderRightBtn:hover {
+    opacity: 0.4;
+}
+
+#sliderRightBtn {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    right: 0;
+    color: #1e62d0;
+}
+
+#sliderLeftBtn:hover {
+    opacity: 0.4;
+}
+
+::marker {
+    color: transparent;
 }

@@ -62,7 +62,6 @@
 
 .han-Staking-ModalTokenInfoContainer {
     padding: 16px;
-    // border-bottom: 1px solid #dee2e6;
     border-top: 1px solid #dee2e6;
 }
 
@@ -73,7 +72,6 @@
     height: 30px;
     border: 1px solid black;
     font-size: 14px;
-    /* margin: 28px 32px 16px; */
     padding: 10px 12px;
 }
 
@@ -82,7 +80,6 @@
 }
 
 .han-Staking-ModalTokensSearchInput {
-    // height: 30px;
     background-color: inherit;
     border: none;
     margin-left: 15px;
@@ -122,14 +119,11 @@
     width: 100%;
     height: 400px;
     margin-top: 10px;
-    // background-color: blue;
 }
 
 .han-Staking-Modal-Title {
     display: flex;
     flex-direction: row;
-    // align-items: center;
-    // justify-content: center;
 }
 
 .han-Staking-Modal-Title a {
@@ -157,11 +151,9 @@
 }
 
 .han-Staking-TokenList_PickerToken {
-    // margin-left: 10px;
     list-style: none;
     margin: 0;
     height: 100%;
-    // max-height: 452px;
     overflow-y: scroll;
     padding: 0 0 12px;
 }
@@ -172,14 +164,12 @@
     height: 60px;
     justify-content: space-between;
     margin: 0 8px;
-    // padding-left: 24px;
     padding-right: 12px;
 }
 
 .musikhan-TokenList_PickerToken li:hover {
     cursor: pointer;
     background-color: #21262c5d;
-    // opacity: 0.5;
 }
 
 .han-Staking-TokenListTokenImgTextSection {
@@ -207,7 +197,6 @@
     flex: 50%;
     width: 140px;
     line-height: 16px;
-    // margin-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,14 +210,10 @@
 
 .han-Staking-TokenListSymbolSection {
     width: 140px;
-    // flex: 50%;
     display: flex;
     justify-content: flex-end;
     margin-right: 12px;
-    // margin-left: 30px;
-    // justify-content: flex-end;
     align-items: center;
-    // margin-left: 100px;
 }
 
 .han-Staking-TokenListSymbolSection h2 {
@@ -262,7 +247,6 @@
     flex: 50%;
     width: 140px;
     line-height: 16px;
-    // margin-left: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,14 +260,10 @@
 
 .han-Staking-TokenListSymbolSection {
     width: 140px;
-    // flex: 50%;
     display: flex;
     justify-content: flex-end;
     margin-right: 12px;
-    // margin-left: 30px;
-    // justify-content: flex-end;
     align-items: center;
-    // margin-left: 100px;
 }
 
 .han-Staking-TokenListSymbolSection h2 {

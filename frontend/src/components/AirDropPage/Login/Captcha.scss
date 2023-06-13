@@ -92,7 +92,6 @@
 }
 
 .captchaEmailContainer {
-    // display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -102,14 +101,6 @@
     width: 10px;
     height: 10px;
 }
-
-// .captchaEmailSection {
-//     border: 1px solid black;
-// }
-
-// .captchaEmailSection {
-//     display: flex;
-// }
 
 .captchaEmailSection h3 {
     color: black;
@@ -140,13 +131,11 @@
     display: flex;
     position: absolute;
     right: 54%;
-    // top: 2%;
     bottom: 40%;
     background-color: #fff;
     width: 40px;
     height: 40px;
     margin-left: 10px;
-    // background-color: yellow;
     background-image: url("../../../assets/images/refresh2.png");
     background-size: cover;
 }
@@ -155,11 +144,6 @@
     opacity: 0.6;
 }
 
-// .captchaSection {
-//     display: flex;
-//     justify-content: center;
-//     flex-direction: column;
-// }
 .checkId-ModalTokensSearchInputSection {
     align-items: center;
     display: flex;
@@ -168,7 +152,6 @@
     border: 1px solid black;
     font-size: 20px;
     margin-top: 10px;
-    /* margin: 28px 32px 16px; */
     padding: 10px 12px;
     width: 85%;
     margin-left: 20px;
@@ -181,7 +164,6 @@
 }
 
 .checkId-ModalTokensSearchInput {
-    // height: 30px;
     background-color: inherit;
     border: none;
     margin-left: 30px;
@@ -198,8 +180,6 @@
     height: 30px;
     border: 1px solid black;
     font-size: 20px;
-    // margin-top: 10px;
-    /* margin: 28px 32px 16px; */
     padding: 10px 12px;
     width: 85%;
     margin-left: 20px;
@@ -212,7 +192,6 @@
 }
 
 .checkId-captchaInput {
-    // height: 30px;
     background-color: inherit;
     border: none;
     margin-left: 30px;

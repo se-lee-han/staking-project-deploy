@@ -18,6 +18,7 @@ const MunieWithdrawSection = () => {
     const [myStakedMunieTokenId, setMyStakedMunieTokenId] = useState("");
     const { account } = useSelector((state) => state.account);
     const { withdrawStakedAmount, stakedMunieTokenId, munieStakedTokenIds } = useSelector((state) => state.munieStakingView);
+    const { mainTabArr } = useSelector((state) => state.networks);
 
     const changeEthereumNetWork = () => {
         dispatch(networksAction.changeEthereumNetWorkAct());
@@ -118,16 +119,12 @@ const MunieWithdrawSection = () => {
         }
     }, [window.ethereum?.chainId]);
 
-    // useEffect(() => {
-    //     if (account) {
-    //         dispatch(munieStakingViewAction.munieStakingViewAct(account));
-    //         dispatch(munieWithdrawListAction.munieWithdrawListAct(account));
-    //     }
-    // }, [stakedMunieTokenId]);
     useEffect(() => {
-        dispatch(munieStakingViewAction.munieStakingViewAct(account));
-        dispatch(munieWithdrawListAction.munieWithdrawListAct(account));
-    }, [account]);
+        if (account) {
+            dispatch(munieStakingViewAction.munieStakingViewAct(account));
+            dispatch(munieWithdrawListAction.munieWithdrawListAct(account));
+        }
+    }, [mainTabArr]);
 
     return (
         <div>

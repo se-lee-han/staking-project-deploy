@@ -3,8 +3,7 @@
     position: absolute;
     top: -9%;
     left: 2%;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
     font-size: 16px;
 }
@@ -13,8 +12,7 @@
     position: absolute;
     top: -3%;
     left: 2%;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
     font-size: 16px;
 }
@@ -34,8 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }
 
 .eplat-UniV2-Deposit-APR-Title a {
@@ -47,8 +44,7 @@
     align-items: center;
     padding-left: 5px;
     justify-content: center;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
 }
 
 .eplat-UniV2-Deposit-APR-Info a {
@@ -220,8 +216,7 @@
 .eplat-UniV2-Deposit-LockedTxt {
     font-size: 15px;
     padding-top: 30px;
-    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px,
-        #0a1126 0px 0px 3.998px;
+    text-shadow: #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px, #0a1126 0px 0px 3.998px;
     color: #72cef2;
 }
 
@@ -263,9 +258,7 @@
     color: #39a2db;
     font-family: "Poppins", sans-serif;
 }
-// input:focus {
-//     box-shadow: 0 0 15px #82e6fc, 0 0 25px #b4f0fd, 0 0 35px #ffffff;
-// }
+
 input::placeholder {
     color: #a6a6a6;
 }
@@ -279,58 +272,7 @@ input::placeholder {
     font-size: 19px;
     color: #39a2db;
     cursor: pointer;
-    // display: none;
 }
-
-// fieldset {
-//     color: #555;
-//     font-family: sans-serif;
-//     border: none;
-//     position: relative;
-// }
-
-// fieldset > * {
-//     display: block;
-// }
-
-// fieldset::after {
-//     content: "___  ___  ___  ___  ___  ___";
-//     display: block;
-//     position: absolute;
-//     top: 35px;
-//     white-space: pre;
-// }
-
-// label {
-//     font-size: 14px;
-//     margin-bottom: 6px;
-// }
-
-// input#password-input {
-//     position: relative;
-//     font-size: 16px;
-//     z-index: 2;
-//     border: none;
-//     background: transparent;
-//     width: 300px;
-//     text-indent: 9px;
-//     letter-spacing: 25.6px;
-//     font-family: Courier;
-// }
-
-// input#password-input:focus {
-//     outline: none;
-// }
-
-// span.hint {
-//     margin-top: 8px;
-//     font-size: 12px;
-//     font-style: italic;
-// }
-
-// span.hint::before {
-//     content: "* ";
-// }
 
 .eplat-UniV2-DepositStakeBtnSection {
     display: flex;

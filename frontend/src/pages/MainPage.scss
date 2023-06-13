@@ -12,7 +12,6 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    // font-family: "SCDream";
     font-weight: bold;
 }
 
@@ -60,7 +59,6 @@
     display: flex;
     padding: 12px 0px;
     border-radius: 1rem;
-    // background-color: red;
 }
 
 .hanChainPriceLogoSection {
@@ -93,8 +91,6 @@
     text-align: center;
     clear: both;
     font-size: 12px;
-    // padding: 8px 0;
-    // background-color: yellow;
 }
 
 .test2 a {
@@ -131,7 +127,6 @@
     margin-left: 10px;
     color: #d94040;
 }
-//123124124
 
 // -------------------AirDrop Section ------------------- //
 .airDropSection {
@@ -146,12 +141,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // top: 0;
 }
 
 .airDropSection a {
     text-decoration-line: none;
-    // color: black;
 }
 
 .airDropTxt1 {
@@ -168,7 +161,6 @@
     display: flex;
     margin-top: 90px;
     justify-content: center;
-    // align-items: center;
 }
 
 // ------------------- ARRAKIS SHEEPOORI Container ------------------- //
@@ -202,7 +194,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .stakingBoxHanepLogoSection img {
@@ -245,15 +236,11 @@
     color: white;
     direction: ltr;
 
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
 
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
 
-    /* Support for IE. */
     font-feature-settings: "liga";
 }
 
@@ -274,8 +261,6 @@
             transition-delay: 0s;
             top: -200px;
             left: -20%;
-            // right: 200px;
-
             width: 300px;
             height: 150px;
             font-size: 13px;
@@ -310,18 +295,7 @@
         text-decoration: underline;
         color: yellow;
     }
-    //   .align-main-right {
-    //     text-align: left;
-    //     a {
-    //       font-size: 13px;
 
-    //       color: yellow;
-    //       text-decoration: none;
-    //       &:hover {
-    //         text-decoration: underline;
-    //       }
-    //     }
-    //   }
     &:after {
     }
 }
@@ -332,7 +306,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .stakingBoxArrakisLogoSection img {
@@ -506,16 +479,9 @@
     white-space: nowrap;
     color: white;
     direction: ltr;
-
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
     font-feature-settings: "liga";
 }
 .material-main-spri-icons:hover {
@@ -523,7 +489,6 @@
 }
 
 .tooltip-main-spri-container {
-    // margin-right: 10px;
     position: relative;
     padding-top: 5px;
     font-size: 13px;
@@ -536,8 +501,6 @@
             transition-delay: 0s;
             top: -110px;
             left: -20%;
-            // right: 200px;
-
             width: 300px;
             height: 100px;
             font-size: 13px;
@@ -572,18 +535,6 @@
         text-decoration: underline;
         color: yellow;
     }
-    //   .align-main-right {
-    //     text-align: left;
-    //     a {
-    //       font-size: 13px;
-
-    //       color: yellow;
-    //       text-decoration: none;
-    //       &:hover {
-    //         text-decoration: underline;
-    //       }
-    //     }
-    //   }
     &:after {
     }
 }
@@ -595,7 +546,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .stakingBoxHanLogoSection img {
@@ -604,7 +554,6 @@
 }
 .stakingBoxHanTxtSection {
     color: #fff;
-    // margin: 0 2.5% 0 10px;
     margin-left: 10px;
     font-size: 28px;
 }
@@ -638,16 +587,9 @@
     white-space: nowrap;
     color: white;
     direction: ltr;
-
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
     font-feature-settings: "liga";
 }
 .material-main-han-icons:hover {
@@ -655,7 +597,6 @@
 }
 
 .tooltip-main-han-container {
-    // margin-right: 10px;
     position: relative;
     padding-top: 5px;
     font-size: 13px;
@@ -668,8 +609,6 @@
             transition-delay: 0s;
             top: -110px;
             left: -20%;
-            // right: 200px;
-
             width: 300px;
             height: 100px;
             font-size: 13px;
@@ -704,18 +643,6 @@
         text-decoration: underline;
         color: yellow;
     }
-    //   .align-main-right {
-    //     text-align: left;
-    //     a {
-    //       font-size: 13px;
-
-    //       color: yellow;
-    //       text-decoration: none;
-    //       &:hover {
-    //         text-decoration: underline;
-    //       }
-    //     }
-    //   }
     &:after {
     }
 }
@@ -752,7 +679,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .poolBoxHanEpLogoSection img {
@@ -788,7 +714,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .poolBoxWethLogoSection img {
@@ -824,7 +749,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .poolBoxUsdcLogoSection img {
@@ -859,7 +783,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .poolBoxSpriLogoSection img {
@@ -894,7 +817,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    // background-color: red;
 }
 
 .poolBoxMunieLogoSection img {
@@ -934,7 +856,6 @@
     bottom: 0;
     width: 100%;
     height: 50px;
-    /* background-color: white; */
 }
 
 .home-eth {
@@ -966,10 +887,8 @@
     color: #fff;
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    // margin-top: 10px;
 }
 .home-2Spr {
     color: #fff;
@@ -993,7 +912,6 @@
     justify-content: flex-end;
     align-items: center;
     position: absolute;
-    /*    width: 100%;*/
     bottom: 0;
     right: 0;
     margin: 0 30px 20px 0;
@@ -1012,7 +930,6 @@
 .home-footer .logoimg:hover {
     opacity: 1;
     transition-duration: 0.5s;
-    /*    box-shadow: 0 4px 11px rgba(248 249 250 / 35%);*/
 }
 
 .ether {
@@ -1119,16 +1036,9 @@
     white-space: nowrap;
     color: white;
     direction: ltr;
-
-    /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
     font-feature-settings: "liga";
 }
 .material-main-spr-icons:hover {
@@ -1148,8 +1058,6 @@
             transition-delay: 0s;
             top: -110px;
             left: -20%;
-            // right: 200px;
-
             width: 300px;
             height: 100px;
             font-size: 13px;
@@ -1184,732 +1092,6 @@
         text-decoration: underline;
         color: yellow;
     }
-    //   .align-main-right {
-    //     text-align: left;
-    //     a {
-    //       font-size: 13px;
-
-    //       color: yellow;
-    //       text-decoration: none;
-    //       &:hover {
-    //         text-decoration: underline;
-    //       }
-    //     }
-    //   }
     &:after {
-    }
-}
-//  ------------------- 반응형 ------------------- //
-@media screen and (max-width: 1330px) {
-    .mainPageStakingContainer {
-        margin-right: 20px;
-    }
-
-    .mainPageStakingBoxSection {
-        width: 500px;
-    }
-
-    .stakingBoxArrakisLogoSection img {
-        width: 59px;
-        height: 60px;
-    }
-
-    .stakingBoxArrakisTxtSection {
-        color: #fff;
-        margin-left: 10px;
-        font-size: 20px;
-    }
-
-    .stakingBoxArrakisBtnSection {
-        padding-left: 5%;
-    }
-
-    .stakingBoxArrakisBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-
-    .stakingBoxSpriLogoSection img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .stakingBoxSpriTxtSection {
-        color: #fff;
-        margin-left: 10px;
-        font-size: 21px;
-    }
-
-    .stakingBoxSpriBtnSection {
-        padding-left: 15%;
-    }
-
-    .stakingBoxSpriBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-
-    .stakingBoxHanTxtSection {
-        color: #fff;
-        margin-left: 10px;
-        font-size: 27px;
-    }
-
-    .stakingBoxHanBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-
-    .stakingBoxHanBtnSection {
-        padding-left: 24%;
-    }
-
-    .tooltip-rakis6-main-content {
-        top: -180px;
-        left: -15%;
-        width: 200px;
-        height: 120px;
-        font-size: 12px;
-    }
-
-    .tooltip-main-spri-content {
-        top: -90px;
-        left: -15%;
-        width: 200px;
-        height: 80px;
-        font-size: 12px;
-    }
-
-    .mainPagePoolContainer {
-        margin-left: 20px;
-    }
-
-    .mainPagePoolBoxSection {
-        width: 500px;
-    }
-
-    .poolBoxWethLogoSection img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .poolBoxWethTxtSection {
-        color: #fff;
-        margin: 0 2.5% 0 10px;
-        font-size: 23px;
-    }
-
-    .poolBoxWethBtnSection {
-        padding-left: 22%;
-    }
-
-    .poolBoxWethBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-
-    .poolBoxUsdcLogoSection img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .poolBoxUsdcTxtSection {
-        color: #fff;
-        margin: 0 2.5% 0 10px;
-        font-size: 23px;
-    }
-    .poolBoxUsdcBtnSection {
-        padding-left: 23%;
-    }
-
-    .poolBoxUsdcBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-
-    .poolBoxSpriLogoSection img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .poolBoxSpriTxtSection {
-        color: #fff;
-        margin: 0 2.5% 0 10px;
-        font-size: 23px;
-    }
-
-    .poolBoxSpriBtnSection {
-        padding-left: 11.5%;
-    }
-
-    .poolBoxSpriBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-
-    .poolBoxMunieLogoSection img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .poolBoxMunieTxtSection {
-        color: #fff;
-        margin: 0 2.5% 0 10px;
-        font-size: 22px;
-    }
-
-    .poolBoxMunieBtnSection {
-        padding-left: 33.5%;
-    }
-
-    .poolBoxMunieBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-}
-
-@media only screen and (max-width: 1046px) {
-    .mainPagePoolTitleSection {
-        font-size: 20px;
-        color: #fff;
-        position: absolute;
-        top: -18%;
-        left: 2%;
-    }
-    .mainPageLogoTitleContainer {
-        font-size: 40px;
-        margin-left: 20px;
-    }
-
-    .mainPageTitleTxtSection {
-        font-size: 30px;
-    }
-
-    .hanChainPriceContainer {
-        width: 150px;
-        height: 90px;
-        right: 2%;
-        top: 10%;
-    }
-
-    .hanChainPriceSection {
-        height: 40px;
-        padding: 8px 0px;
-    }
-
-    .hanChainPriceLogoSection img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .test2 {
-        height: 20px;
-        font-size: 10px;
-    }
-
-    .hanChainPriceTitleSection {
-        font-size: 12px;
-    }
-
-    .hanChainPriceAmountSection {
-        font-size: 14px;
-    }
-
-    .hanChainPriceUnitSection {
-        font-size: 10px;
-    }
-
-    .hanChainPrice24hPercentageInSection,
-    .hanChainPrice24HPercentageDeSection {
-        font-size: 12px;
-        margin-left: 5px;
-    }
-
-    .airDropSection {
-        right: 2%;
-        top: 25%;
-        height: 40px;
-        border-radius: 8px;
-        width: 150px;
-        font-size: 14px;
-    }
-
-    .airDropTxt2 {
-        margin-left: 3px;
-    }
-
-    .mainPageStakingPoolContainer {
-        margin-top: 80px;
-    }
-
-    .mainPageStakingContainer {
-        margin-right: 15px;
-    }
-
-    .mainPageStakingTitleSection {
-        font-size: 20px;
-        top: -18%;
-        left: 1%;
-    }
-
-    .mainPageStakingContainer {
-        margin-right: 15px;
-    }
-
-    .mainPageStakingBoxSection {
-        width: 400px;
-    }
-
-    .stakingBoxArrakisTxtSection {
-        font-size: 14px;
-    }
-    .stakingBoxSpriTxtSection {
-        font-size: 15px;
-    }
-
-    .stakingBoxArrakisBtnSection {
-        padding-left: 2%;
-    }
-
-    .stakingBoxSpriBtnSection {
-        padding-left: 10%;
-    }
-
-    .tooltip-rakis6-main-content {
-        top: -150px;
-        left: -10%;
-        width: 150px;
-        height: 90px;
-        font-size: 10px;
-    }
-
-    .tooltip-main-spri-content {
-        top: -70px;
-        left: -10%;
-        width: 150px;
-        height: 60px;
-        font-size: 10px;
-    }
-
-    .mainPagePoolContainer {
-        margin-left: 15px;
-    }
-
-    .mainPagePoolBoxSection {
-        width: 400px;
-    }
-
-    .poolBoxWethTxtSection,
-    .poolBoxUsdcTxtSection {
-        font-size: 18px;
-    }
-
-    .poolBoxSpriTxtSection {
-        font-size: 17px;
-    }
-
-    .poolBoxWethBtnSection {
-        padding-left: 15%;
-    }
-
-    .poolBoxUsdcBtnSection {
-        padding-left: 16.5%;
-    }
-
-    .poolBoxSpriBtnSection {
-        padding-left: 7%;
-    }
-
-    .poolBoxMunieTxtSection {
-        font-size: 17px;
-    }
-
-    .poolBoxMunieBtnSection {
-        padding-left: 26%;
-    }
-
-    .home-eth {
-        margin-top: 20px;
-        margin-bottom: 5%;
-    }
-
-    .home-2 {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .home-2Spr {
-        flex-wrap: nowrap;
-    }
-
-    .home-footer {
-        margin: 0 10px 20px 0;
-    }
-
-    .home-footer .logoimg a img {
-        width: 20px;
-    }
-
-    .ether {
-        margin-right: 5px;
-        padding: 2px 6px;
-    }
-
-    .ether .ether_txt {
-        width: auto;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .tooltip-main-spr-container {
-        font-size: 12px;
-    }
-
-    .tooltip-main-spr-content {
-        top: -160px;
-        left: -10%;
-        width: 220px;
-        height: 80px;
-        font-size: 12px;
-    }
-
-    .stakingBoxHanLogoSection img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .stakingBoxHanTxtSection {
-        color: #fff;
-        margin-left: 10px;
-        font-size: 18px;
-    }
-}
-
-@media only screen and (max-width: 840px) {
-    .mainPageTopPaddingSection {
-        padding-top: 30px;
-    }
-
-    .mainPageLogoTitleContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        font-weight: bold;
-        font-size: 30px;
-        border-left: 5px solid #0a93eb;
-        padding-left: 10px;
-        margin-left: 30px;
-    }
-
-    .hanChainPriceContainer {
-        width: 150px;
-        height: 90px;
-        right: 2%;
-        top: 4%;
-    }
-
-    .hanChainPriceSection {
-        height: 40px;
-        padding: 8px 0px;
-    }
-
-    .hanChainPriceLogoSection img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .test2 {
-        height: 20px;
-        font-size: 10px;
-    }
-
-    .hanChainPriceTitleSection {
-        font-size: 12px;
-    }
-
-    .hanChainPriceAmountSection {
-        font-size: 14px;
-    }
-
-    .hanChainPriceUnitSection {
-        font-size: 10px;
-    }
-
-    .hanChainPrice24hPercentageInSection,
-    .hanChainPrice24HPercentageDeSection {
-        font-size: 12px;
-        margin-left: 5px;
-    }
-
-    .airDropSection {
-        right: 2%;
-        top: 17%;
-        height: 40px;
-        border-radius: 8px;
-        width: 150px;
-        font-size: 14px;
-    }
-
-    .airDropTxt2 {
-        margin-left: 3px;
-    }
-
-    .mainPageStakingPoolContainer {
-        margin-top: 40px;
-    }
-
-    .mainPageStakingContainer {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 43%;
-        left: 52%;
-        transform: translate(-50%, -50%);
-    }
-
-    .mainPageStakingPoolContainer {
-        display: flex;
-        // margin-top: 140px;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .mainPageStakingTitleSection {
-        font-size: 20px;
-        top: -26%;
-        left: 2%;
-    }
-
-    .stakingBoxHanSection {
-        width: 95%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .mainPageStakingBoxSection {
-        width: 400px;
-        height: 200px;
-        padding-top: 3%;
-        padding-left: 5%;
-        padding-bottom: 3%;
-        border-radius: 30px;
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .stakingBoxArrakisSection {
-        width: 95%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .stakingBoxArrakisLogoSection img {
-        width: 59px;
-        height: 60px;
-    }
-
-    .stakingBoxArrakisTxtSection {
-        font-size: 14px;
-    }
-
-    .tooltip-rakis6-main-container {
-        position: relative;
-        padding-top: 5px;
-        font-size: 13px;
-        font-family: sans-serif;
-    }
-
-    .stakingBoxArrakisBtnSection {
-        padding-left: 2%;
-    }
-
-    .stakingBoxArrakisBtnSection a {
-        color: #fff;
-        width: 92px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 9.994px;
-        text-align: center;
-        padding: 18px 0;
-        font-size: 14.7px;
-        display: block;
-        text-decoration: none;
-    }
-
-    .stakingBoxSpriSection {
-        width: 95%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .mainPagePoolContainer {
-        // margin-left: 15px;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        top: 72%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .mainPagePoolBoxSection {
-        width: 400px;
-        height: 260px;
-        padding-top: 3%;
-        padding-left: 5%;
-        padding-bottom: 3%;
-        border-radius: 30px;
-        background-color: rgba(255, 255, 255, 0.3);
-        box-sizing: border-box;
-    }
-
-    .poolBoxWethSection {
-        width: 95%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .poolBoxUsdcSection {
-        width: 95%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .poolBoxSpriSection {
-        width: 95%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-
-    .poolBoxMunieSection {
-        width: 95%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .mainPageLogoTitleContainer {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        font-weight: bold;
-        font-size: 30px;
-        border-left: 5px solid #0a93eb;
-        padding-left: 10px;
-        margin-left: 30px;
-    }
-
-    .mainPageTitleTxtSection {
-        font-size: 25px;
-    }
-
-    .mainPageLogoSection img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .hanChainPriceContainer {
-        width: 150px;
-        height: 90px;
-        right: 47%;
-        top: 12%;
-    }
-
-    .hanChainPriceSection {
-        height: 40px;
-        padding: 8px 0px;
-    }
-
-    .hanChainPriceTitleSection {
-        font-size: 12px;
-    }
-
-    .hanChainPriceAmountSection {
-        font-size: 14px;
-    }
-
-    .hanChainPriceUnitSection {
-        font-size: 10px;
-    }
-
-    .hanChainPrice24hPercentageInSection,
-    .hanChainPrice24HPercentageDeSection {
-        font-size: 12px;
-        margin-left: 5px;
-    }
-
-    .test2 {
-        height: 20px;
-        font-size: 10px;
-    }
-
-    .airDropSection {
-        right: 16%;
-        top: 18%;
-        height: 40px;
-        border-radius: 8px;
-        width: 150px;
-        font-size: 14px;
     }
 }

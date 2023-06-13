@@ -34,12 +34,10 @@ import PrivateUniRewardSection from "./UNIV2Private/AfterLogin/PrivateUniRewardS
 import PrivateUniV2TopSection from "./UNIV2Private/PrivateUniV2TopSection";
 import PrivateUniConnectWalletSection from "./UNIV2Private/PrivateUniConnectWalletSection";
 
-
 import UniV2DepositSection from "./UNI-V2/AfterLogin/UniV2DepositSection";
 import UniV2RewardSection from "./UNI-V2/AfterLogin/UniV2RewardSection";
 import UniV2WithdrawSection from "./UNI-V2/AfterLogin/UniV2WithdrawSection";
 import UniV2ConnectWalletSection from "./UNI-V2/UniV2ConnectWalletSection";
-
 
 //Before Login Component
 //AirDrop
@@ -76,7 +74,6 @@ import BeforeUniV2DepositSection from "./UNI-V2/BeforeLogin/BeforeUniV2DepositSe
 import BeforeUniV2RewardSection from "./UNI-V2/BeforeLogin/BeforeUniV2RewardSection";
 import BeforeUniV2WithdrawSection from "./UNI-V2/BeforeLogin/BeforeUniV2WithdrawSection";
 
-
 export {
     // After
     L1BridgeL2DepositSection,
@@ -105,9 +102,9 @@ export {
     MunieConnectWalletSection,
     SignInUpTopSection,
     //Private UniV2Staking
-    PrivateUniDepositSection ,
+    PrivateUniDepositSection,
     PrivateUniWithdrawSection,
-    PrivateUniRewardSection ,
+    PrivateUniRewardSection,
     PrivateUniV2TopSection,
     PrivateUniConnectWalletSection,
     // UniV2
@@ -134,15 +131,15 @@ export {
     BeforeMunieRewardSection,
     BeforeMunieWithdrawSection,
     BeforeMunieViewAdsSection,
-    
+
     //UniV2,
     BeforeUniV2DepositSection,
     BeforeUniV2RewardSection,
     BeforeUniV2WithdrawSection,
     //
-    
+
     //Private UniV2Staking
-    BeforePrivateUniDepositSection ,
-    BeforePrivateUniRewardSection ,
+    BeforePrivateUniDepositSection,
+    BeforePrivateUniRewardSection,
     BeforePrivateUniWithdrawSection,
 };

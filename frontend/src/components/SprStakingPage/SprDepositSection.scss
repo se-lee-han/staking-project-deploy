@@ -23,7 +23,6 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    // border: 3px solid black;
     cursor: not-allowed;
 }
 .cantStakingSprBtn {
@@ -33,16 +32,6 @@
 }
 
 //  -----------------Deposit Slider Section -------------------- //
-// .mainSlider {
-//   width: 100%;
-// }
-
-.sprSlider {
-    // width: 200px;
-    // height: 150px;
-    // position: relative;
-}
-
 .sprStakingImgContainer {
     display: flex;
     flex-direction: column;
@@ -58,7 +47,6 @@
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // border: 3px solid black;
 }
 
 .alice-carousel__prev-btn,
@@ -97,7 +85,6 @@
     align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // border: 3px solid black;
 }
 
 .alice-carousel__prev-btn {
@@ -127,7 +114,6 @@
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
-    // border: 3px solid black;
 }
 
 .sprStakingBeforeChoiceImgSection:hover {
@@ -144,7 +130,6 @@
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    // height: 99.998px;
     font-family: Arial;
     font-size: 15px;
     font-weight: bold;

@@ -86,7 +86,7 @@ const UniV2WithdrawSection = () => {
 
             <div className="uniV2-Staking-Withdraw-AmountSection">
                 <input type="number" step="0.000000000000000001" id="maxUniV2UnStakeAmount" placeholder="0" onChange={changeUsdcRakis6Amount} value={uniV2WithdrawAmount}></input>
-                <p>HAN</p>
+                <p>UNI-V2</p>
                 <button className="uniV2-Staking-Withdraw-AmountMaxBtn" onClick={changeUsdcMaxWithdrawAmount}>
                     Max
                 </button>
